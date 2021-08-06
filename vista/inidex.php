@@ -1,1 +1,1 @@
-<h1>Estamos en el index</h1>
+<h1>Estamos en el iddndex</h1>
