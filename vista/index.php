@@ -334,7 +334,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menú Navegación</li>
         <li class="active treeview">
-          <a onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')">
+          <a onclick="cargar_contenido('contenido_principal','Usuario/vista_usuario_listar.php')">
             <i class="fa fa-dashboard"></i> <span>Usuario</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
