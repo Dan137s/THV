@@ -1,7 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION['S_IDUSUARIO'])){
+	header('Location: ../vista/index.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>::..Trato Hecho Vecino::..</title>
+	<title>Login V4</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -32,27 +39,25 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				
 					<span class="login100-form-title p-b-49">
-						INICIAR SESIÓN
+						INICIAR SESI&Oacute;N
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Escriba o verifique #usuario">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
 						<span class="label-input100">Usuario</span>
-						<input class="input100" type="text" name="username" placeholder="Escriba el usuario" id="txt_usu" 
-						autocomplete="new-password">
+						<input class="input100" type="text" name="username" placeholder="Escriba el usuario" id="txt_usu" autocomplete="new-password">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Escriba o verifique #contraseña">
-						<span class="label-input100">Contraseña</span>
-						<input class="input100" type="password" name="pass" placeholder="Escriba la contraseña" txt_con>
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100">Contrase&ntilde;a</span>
+						<input class="input100" type="password" name="pass" placeholder="Escriba la contrase&ntilde;a" id="txt_con">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 					
 					<div class="text-right p-t-8 p-b-31">
 						<a href="#">
-							Olvidaste la contraseña?
+							Olvidaste la contrase&ntilde;a?
 						</a>
 					</div>
 					
@@ -78,18 +83,17 @@
 							<i class="fa fa-google"></i>
 						</a>
 					</div>
-
-				
 			</div>
 		</div>
 	</div>
 	
 
 	<div id="dropDownSelect1"></div>
-	
+
 <!--===============================================================================================-->
 	<script src="vendor/sweetalert2/sweetalert2.js"></script>
 <!--===============================================================================================-->
+	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -109,7 +113,7 @@
 	<script src="../js/usuario.js"></script>
 
 </body>
-<<script>
+<script>
 txt_usu.focus();
 </script>
 </html>
