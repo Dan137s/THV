@@ -346,10 +346,10 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Menú de navegación</li>
+        <li class="header">MENÚ DE ADMINISTRADOR</li>
         <li class="active treeview">
           <a onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')">
-            <i class="fa fa-dashboard"></i> <span>Usuario</span>
+            <i class="fa fa-users"></i> <span>Usuarios</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -358,16 +358,17 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
+            <span>Menú</span>
             <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Registro de requerimiento.</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Presupuesto</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Bitácora de seguimiento</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Encuesta de opinión
+</a></li>
           </ul>
         </li>
         <li>
