@@ -37,7 +37,7 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('images/colo.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 					<span class="login100-form-title p-b-49">
 						INICIAR SESI&Oacute;N
@@ -45,7 +45,7 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
 						<span class="label-input100">Usuario</span>
-						<input class="input100" type="text" name="username" placeholder="Escriba el usuario" id="txt_usu" autocomplete="new-password">
+						<input class="input100" type="text" name="username" placeholder="Escriba el su rut 12.345.678-9" id="txt_usu" autocomplete="new-password">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
@@ -71,16 +71,16 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 					</div><br>
 
 					<div class="flex-c-m">
-						<a href="#" class="login100-social-item bg1">
+						<a href="https://www.facebook.com/tratohechovecino" class="login100-social-item bg1">
 							<i class="fa fa-facebook"></i>
 						</a>
 
-						<a href="#" class="login100-social-item bg2">
-							<i class="fa fa-twitter"></i>
+						<a href="https://www.tratohechovecino.cl" class="login100-social-item bg2">
+							<i class="fa fa-link"></i>
 						</a>
 
-						<a href="#" class="login100-social-item bg3">
-							<i class="fa fa-google"></i>
+						<a href="https://www.youtube.com/watch?v=O2mnaUOELTM" class="login100-social-item bg3">
+							<i class="fa fa-youtube"></i>
 						</a>
 					</div>
 			</div>
