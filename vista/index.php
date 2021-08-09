@@ -59,8 +59,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
   <header class="main-header">
     <!-- Logo -->
     <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- mini logo for sfidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>T</b>HV</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Fundación</b>THC</span>
     </a>
@@ -346,7 +346,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">Menú de navegación</li>
         <li class="active treeview">
           <a onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')">
             <i class="fa fa-dashboard"></i> <span>Usuario</span>
