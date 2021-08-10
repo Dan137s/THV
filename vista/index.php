@@ -302,15 +302,17 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
               </!--li>
               <!-- Menu Footer-->
               <li class="user-footer">
-              <li class="pull-right">
+              <li class="pull-left">
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
+
               <div class="pull-right">
                   <a href="../controlador/usuario/controlador_cerrar_session.php" class="btn btn-default btn-flat">Cerrar Sesión</a>
                 </div>
                 <div class="pull-right">
                   <a href="#" class="btn btn-default btn-flat">Mi Perfil</a>
                 </div>
+             
                 
               </li>
             </ul>
@@ -362,7 +364,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
-            <span>Menú</span>
+            <span>Registros</span>
             <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
             </span>
@@ -376,7 +378,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="#">
             <i class="fa fa-th"></i> <span>Widgets</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
@@ -441,7 +443,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
         <li>
-          <a href="pages/calendar.html">
+          <a href="#">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
@@ -450,7 +452,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </a>
         </li>
         <li>
-          <a href="pages/mailbox/mailbox.html">
+          <a href="#">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
@@ -511,7 +513,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
           </ul>
         </li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
