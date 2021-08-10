@@ -53,16 +53,16 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
   font-size:1.6rem !important;
 }
 </style>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-black-light sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a  href="https://www.tratohechovecino.cl" class="logo">
       <!-- mini logo for sfidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>T</b>HV</span>
+      <span class="logo-mini"><b>F</b>THV</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Fundación</b>THC</span>
+      <span class="logo-lg"><b>FUNDACIÓN</b>THC</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -87,7 +87,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../Plantilla/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="../Plantilla/dist/img/perfil.png" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -100,7 +100,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../Plantilla/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../Plantilla/dist/img/perfil.png" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -273,21 +273,21 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../Plantilla/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../Plantilla/dist/img/perfil.png" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $_SESSION['S_USER']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../Plantilla/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../Plantilla/dist/img/perfil.png" class="img-circle" alt="User Image">
 
                 <p>
                   <?php echo $_SESSION['S_USER']; ?> 
                 </p>
               </li>
               <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
+              <!--li class="user-body">
+                <div-- class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
                   </div>
@@ -297,17 +297,21 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
                   <div class="col-xs-4 text-center">
                     <a href="#">Friends</a>
                   </div>
-                </div>
+                </div-->
                 <!-- /.row -->
-              </li>
+              </!--li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+              <li class="pull-right">
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+              <div class="pull-right">
+                  <a href="../controlador/usuario/controlador_cerrar_session.php" class="btn btn-default btn-flat">Cerrar Sesión</a>
                 </div>
                 <div class="pull-right">
-                  <a href="../controlador/usuario/controlador_cerrar_session.php" class="btn btn-default btn-flat">Salir</a>
+                  <a href="#" class="btn btn-default btn-flat">Mi Perfil</a>
                 </div>
+                
               </li>
             </ul>
           </li>
@@ -326,7 +330,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../Plantilla/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../Plantilla/dist/img/perfil.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $_SESSION['S_USER']; ?></p>
