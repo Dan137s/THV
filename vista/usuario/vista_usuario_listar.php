@@ -93,6 +93,43 @@
         </div>
     </div>
 </form>
+<form autocomplete="false" onsubmit="return false">
+    <div class="modal fade" id="modal_editar" role="dialog">
+        <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><b>Editar De Usuario</b></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-lg-12">
+                    <input type="text" id="txtidusuario">
+                    <label for="">Usuario</label>
+                    <input type="text" class="form-control" id="txtusu_editar" placeholder="Ingrese usuario" disabled><br>
+                </div>
+           
+                <div class="col-lg-12">
+                    <label for="">Sexo</label>
+                    <select class="js-example-basic-single" name="state" id="cbm_sexo_editar" style="width:100%;">
+                        <option value="M">MASCULINO</option>
+                        <option value="F">FEMENINO</option>
+                    </select><br><br>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">Rol</label>
+                    <select class="js-example-basic-single" name="state" id="cbm_rol" style="width:100%;">
+                    </select><br><br>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="Modificar_Usuario()"><i class="fa fa-check"><b>&nbsp;Modificar</b></i></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
+</form>
 <script>
 $(document).ready(function() {
     listar_usuario();

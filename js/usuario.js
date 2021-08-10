@@ -104,7 +104,7 @@ function listar_usuario() {
                     }
                 }
             },
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'><i class='fa fa-check'></i></button>" }
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='desactivar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'><i class='fa fa-check'></i></button>" }
         ],
 
         "language": idioma_espanol,
@@ -158,6 +158,22 @@ $('#tabla_usuario').on('click', '.desactivar', function() {
             Modificar_Estatus(data.usu_id, 'INACTIVO');
         }
     })
+})
+
+
+$('#tabla_usuario').on('click', '.editar', function() {
+    var data = table.row($(this).parents('tr')).data();
+    if (table.row(this).child.isShown()) {
+        var data = table.row(this).data();
+    }
+
+    $("#modal_editar").modal({ backdrop: 'static', keyboard: false })
+    $("#modal_editar").modal('show');
+    $("txtidusuario").val(data.usu_id);
+    $("txtusu_editar").val(data.usu_nombre);
+    $("cmb_sexo_editar").val(data.usu_sexo).trigger("change");
+    $("cmb_rol_editar").val(data.rol_id).trigger("change");
+
 })
 
 function Modificar_Estatus(idusuario, estatus) {
