@@ -57,6 +57,16 @@
 			}
         }
 
+		function Modificar_Datos_Usuario($idusuario,$sexo,$rol){
+            $sql = "call SP_MODIFICAR_DATOS_USUARIO('$idusuario','$sexo','$rol')";
+			if ($consulta = $this->conexion->conexion->query($sql)) {
+				return 1;
+				
+			}else{
+				return 0;
+			}
+        }
+
         function Registrar_Usuario($usuario,$contra,$sexo,$rol){
             $sql = "call SP_REGISTRAR_USUARIO('$usuario','$contra','$sexo','$rol')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {

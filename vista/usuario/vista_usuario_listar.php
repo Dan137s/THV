@@ -99,11 +99,11 @@
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Editar De Usuario</b></h4>
+            <h4 class="modal-title"><b>Editar Usuario</b></h4>
             </div>
             <div class="modal-body">
                 <div class="col-lg-12">
-                    <input type="text" id="txtidusuario">
+                    <input type="text" id="txtidusuario" hidden>
                     <label for="">Usuario</label>
                     <input type="text" class="form-control" id="txtusu_editar" placeholder="Ingrese usuario" disabled><br>
                 </div>
@@ -117,7 +117,7 @@
                 </div>
                 <div class="col-lg-12">
                     <label for="">Rol</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_rol" style="width:100%;">
+                    <select class="js-example-basic-single" name="state" id="cbm_rol_editar" style="width:100%;">
                     </select><br><br>
                 </div>
 
