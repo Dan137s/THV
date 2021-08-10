@@ -58,7 +58,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
   <header class="main-header">
     <!-- Logo -->
-    <a  href="https://www.tratohechovecino.cl" class="logo">
+    <a  href="index.php" class="logo">
       <!-- mini logo for sfidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>F</b>THV</span>
       <!-- logo for regular state and mobile devices -->
@@ -361,6 +361,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
         </li>
+        <!--
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
@@ -517,7 +518,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -554,9 +555,9 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.18
+      <b>Version</b> 1
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="#">IP SANTO TOMÁS</a>.</strong> Team Dark Flames
     reserved.
   </footer>
 
