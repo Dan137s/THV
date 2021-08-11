@@ -411,3 +411,38 @@ function LimpiarEditarContra() {
     $("#txtcontranu_editar").val("");
     $("#txtcontraactual_editar").val("");
 }
+
+function AbrirModalRestablecer() {
+    $("#modal_restablecer_contra").modal({ backdrop: 'static', keyboard: false })
+    $("#modal_restablecer_contra").modal('show');
+    $("#modal_restablecer_contra").on('shown.bs.modal', function() {
+        $("#txt_email").focus();
+    })
+}
+
+function Restablecer_Contra() {
+    var email = $("#txt_email").val();
+    if (email.length == 0) {
+        return Swal.fire("Mensaje de advertencia", "Llene los campos en blanco", "warning");
+    }
+    var caracteres = "abcdefghijkmnopqrstuvwxyzABCDEFGHIJKMNOPQRSTUVWXYZ0123456789";
+    var contrasena = "";
+    for (var i = 0; i < 6; i++) {
+        contrasena += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+    //alert(contrasena);
+
+    $.ajax({
+        url: '../controlador/usuario/controlador_restablecer_contra.php',
+        type: 'post',
+        data: {
+            email: email,
+            contrasena: contrasena
+        }
+
+    }).done(function(resp) {
+        alert(resp);
+
+    })
+
+}
