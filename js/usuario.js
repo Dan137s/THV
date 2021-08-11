@@ -330,6 +330,7 @@ function TraerDatosUsuario() {
     }).done(function(resp) {
         var data = JSON.parse(resp);
         if (data.length > 0) {
+            $("#txtcontra_bd").val(data[0][2]);
             if (data[0][3] === "M") {
                 $("#img_nav").attr("src", "../Plantilla/dist/img/avatar5.png");
                 $("#img_subnav").attr("src", "../Plantilla/dist/img/avatar5.png");
@@ -343,4 +344,70 @@ function TraerDatosUsuario() {
 
         }
     })
+}
+
+function AbrirModalEditarContra() {
+    $("#modal_editar_contra").modal({ backdrop: 'static', keyboard: false })
+    $("#modal_editar_contra").modal('show');
+    $("#modal_editar_contra").on('shown.bs.modal', function() {
+        $("#txtcontraactual_editar").focus();
+    })
+}
+
+function Editar_Contra() {
+    var idusuario = $("#txtidprincipal").val();
+    var contrabd = $("#txtcontra_bd").val();
+    var contraescrita = $("#txtcontraactual_editar").val();
+    var contranu = $("#txtcontranu_editar").val();
+    var contrare = $("#txtcontrare_editar").val();
+    if (contraescrita.lenght == 0 || contranu.length == 0 || contrare.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (contranu != contrare) {
+        return Swal.fire("Mensaje De Advertencia", "La nueva contraseña no coincide con el campo anterior ", "warning");
+    }
+
+    $.ajax({
+        url: '../controlador/usuario/controlador_contra_modificar.php',
+        type: 'post',
+        data: {
+            idusuario: idusuario,
+            contrabd: contrabd,
+            contraescrita: contraescrita,
+            contranu: contranu
+        }
+
+    }).done(function(resp) {
+
+        if (resp > 0) {
+            if (resp == 1) {
+
+                $("#modal_editar_contra").modal('hide');
+                LimpiarEditarContra();
+                Swal.fire("Mensaje De Confirmacion", "Contraseña actualizada correctamente", "success")
+                    .then((value) => {
+
+                        TraerDatosUsuario();
+
+                    });
+            } else {
+                Swal.fire("Mensaje De Error", "La Contraseña actual ingresada no coincide con la que tenemos en nuestra base de datos", "error");
+
+            }
+
+        } else {
+            Swal.fire("Mensaje De Error", "No se pudo actualizar la contraseña", "error");
+        }
+
+    })
+
+
+}
+
+function LimpiarEditarContra() {
+
+    $("#txtcontrare_editar").val("");
+    $("#txtcontranu_editar").val("");
+    $("#txtcontraactual_editar").val("");
 }

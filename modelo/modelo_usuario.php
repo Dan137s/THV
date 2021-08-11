@@ -70,6 +70,18 @@
 			}
         }
 
+
+		
+		function Modificar_Contra_Usuario($idusuario,$contranu){
+            $sql = "call SP_MODIFICAR_CONTRA_USUARIO('$idusuario','$contranu')";
+			if ($consulta = $this->conexion->conexion->query($sql)) {
+				return 1;
+				
+			}else{
+				return 0;
+			}
+        }
+
 		function Modificar_Datos_Usuario($idusuario,$sexo,$rol){
             $sql = "call SP_MODIFICAR_DATOS_USUARIO('$idusuario','$sexo','$rol')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
