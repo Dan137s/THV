@@ -441,7 +441,16 @@ function Restablecer_Contra() {
         }
 
     }).done(function(resp) {
-        alert(resp);
+        if (resp > 0) {
+            if (resp == 1) {
+                Swal.fire("Mensaje De Confirmaci&#243;n", "Su contrase&#241;a fue restablecida con exito al correo: " + email + "", "success");
+            } else {
+                Swal.fire("Mensaje De Advertencia", "El correo ingresado no registra en nuestro sistema", "warning");
+            }
+
+        } else {
+            Swal.fire("Mensaje De Error", "No se pudo restablecer su contrase&#241;a", "error");
+        }
 
     })
 
