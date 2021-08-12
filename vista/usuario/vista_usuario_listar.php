@@ -27,7 +27,9 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Usuario</th>
+                        <th>Rut Usuario</th>
+                        
+                        <th>Correo</th>
                         <th>Rol</th>
                         <th>Sexo</th>
                         <th>Estatus</th>
@@ -37,7 +39,9 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>Usuario</th>
+                        <th>Rut Usuario</th>
+                        
+                        <th>Correo</th>
                         <th>Rol</th>
                         <th>Sexo</th>
                         <th>Estatus</th>
@@ -60,8 +64,8 @@
             </div>
             <div class="modal-body">
                 <div class="col-lg-12">
-                    <label for="">Usuario</label>
-                    <input type="text" class="form-control" id="txt_usu" placeholder="Ingrese usuario"><br>
+                    <label for="">Rut Usuario</label>
+                    <input type="text" minlength="12" maxlength="12" class="form-control" id="txt_usu" placeholder="rut a registrar ej: 12.345.678-9"><br>
                 </div>
                 <div class="col-lg-12">
                     <label for="">Email</label>
@@ -115,6 +119,13 @@
                 </div>
            
                 <div class="col-lg-12">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" id="txt_email_editar" placeholder="Ingrese Correo">
+                    <label for="" id="emailOK_editar" style="color:red;"></label>
+                    <input type="text" id="validar_email_editar" hidden>
+                </div>
+
+                <div class="col-lg-12">
                     <label for="">Sexo</label>
                     <select class="js-example-basic-single" name="state" id="cbm_sexo_editar" style="width:100%;">
                         <option value="M">MASCULINO</option>
@@ -161,6 +172,21 @@ document.getElementById('txt_email').addEventListener('input',function(){
     }
 });    
 
+
+document.getElementById('txt_email_editar').addEventListener('input',function(){
+    campo=event.target;
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i; //Formato correo
+    if(emailRegex.test(campo.value)){
+        $(this).css("border","");
+        $("#emailOK_editar").html("");
+        $("#validar_email_editar").val("correcto");
+
+    }else{
+        $(this).css("border","1px solid red");
+        $("#emailOK_editar").html("Email Incorrecto");
+        $("#validar_email_editar").val("incorrecto");
+    }
+}); 
 
 
 $('.box').boxWidget({

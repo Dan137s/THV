@@ -106,6 +106,7 @@ function listar_usuario() {
         "columns": [
             { "data": "posicion" },
             { "data": "usu_nombre" },
+            { "data": "usu_email" },
             { "data": "rol_nombre" },
             {
                 "data": "usu_sexo",
@@ -194,6 +195,7 @@ $('#tabla_usuario').on('click', '.editar', function() {
     $("#modal_editar").modal('show');
     $("#txtidusuario").val(data.usu_id);
     $("#txtusu_editar").val(data.usu_nombre);
+    $("#txt_email_editar").val(data.usu_email);
     $("#cmb_sexo_editar").val(data.usu_sexo).trigger("change");
     $("#cmb_rol_editar").val(data.rol_id).trigger("change");
 
@@ -314,8 +316,16 @@ function Modificar_Usuario() {
     var idusuario = $("#txtidusuario").val();
     var sexo = $("#cbm_sexo_editar").val();
     var rol = $("#cbm_rol_editar").val();
+    var email = $("#txt_email_editar").val();
+    var validaremail = $("#validar_email_editar").val();
     if (idusuario.length == 0 || sexo.length == 0 || rol.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+
+
+    if (validaremail == "incorrecto") {
+        return Swal.fire("Mensaje de advertencia", "El formato de email es incorrecto", "Ingrese un formato valido", "warning");
     }
 
     $.ajax({
@@ -324,13 +334,14 @@ function Modificar_Usuario() {
         data: {
             idusuario: idusuario,
             sexo: sexo,
-            rol: rol
+            rol: rol,
+            email: email
         }
     }).done(function(resp) {
         if (resp > 0) {
             TraerDatosUsuario();
             $("#modal_editar").modal('hide');
-            Swal.fire("Mensaje De Confirmacion", "Datos actualizados correctamente", "success")
+            Swal.fire("Mensaje De Confirmacion", "Datos Actualizados Correctamente", "success")
                 .then((value) => {
 
                     table.ajax.reload();
