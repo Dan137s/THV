@@ -199,7 +199,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img id="img_nav" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $_SESSION['S_USER']; ?></span>
+              <span class="hidden-xs">[<?php echo $_SESSION['S_USER'];?>]</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -207,7 +207,10 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
                 <img id="img_subnav" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $_SESSION['S_USER']; ?> 
+                  Administrador </br>
+                  [
+                  <?php  echo $_SESSION['S_USER']; ?> 
+                  ]
                 </p>
               </li>
               <!-- Menu Body -->
@@ -261,7 +264,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <img id="img_lateral" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><?php echo $_SESSION['S_USER']; ?></p>
+          <p> Administrador </br>[<?php echo $_SESSION['S_USER']; ?>]</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
