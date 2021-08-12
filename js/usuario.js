@@ -14,11 +14,28 @@ function VerificarUsuario() {
         }
     }).done(function(resp) {
         if (resp == 0) {
-            Swal.fire("Mensaje De Error", 'Revise sus credenciales incorrectas', "error");
+
+            $.ajax({
+                url: '../controlador/usuario/controlador_intento_modificar.php',
+                type: 'post',
+                data: {
+                    usuario: usu
+                }
+
+            }).done(function(resp) {
+                Swal.fire("Mensaje De Advertencia", "Credenciales incorrectas, Intentos fallidos : " + (parseInt(resp) + 1) + " Para acceder a su cuenta restablesca su contra", "warning");
+            })
+
         } else {
+
             var data = JSON.parse(resp);
             if (data[0][5] === 'INACTIVO') {
                 return Swal.fire("Mensaje De Advertencia", "Lo sentimos el usuario " + usu + " se encuentra suspendido, comuniquese con el administrador", "warning");
+            }
+
+
+            if (data[0][7] == 2) {
+                return Swal.fire("Mensaje De Advertencia", "Su cuenta actualmente esta bloqueada, para desbloquear restablesca su contrase\u00f1a", "warning");
             }
             $.ajax({
                 url: '../controlador/usuario/controlador_crear_session.php',
