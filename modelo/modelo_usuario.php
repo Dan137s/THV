@@ -82,8 +82,8 @@
 			}
         }
 
-		function Modificar_Datos_Usuario($idusuario,$sexo,$rol,$email){
-            $sql = "call SP_MODIFICAR_DATOS_USUARIO('$idusuario','$sexo','$rol','$email')";
+		function Modificar_Datos_Usuario($idusuario,$sexo,$rol,$email,$alias){
+            $sql = "call SP_MODIFICAR_DATOS_USUARIO('$idusuario','$sexo','$rol','$email','$alias')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				return 1;
 				
@@ -92,8 +92,8 @@
 			}
         }
 
-        function Registrar_Usuario($usuario,$contra,$sexo,$rol,$email){
-            $sql = "call SP_REGISTRAR_USUARIO('$usuario','$contra','$sexo','$rol','$email')";
+        function Registrar_Usuario($usuario,$contra,$sexo,$rol,$email,$alias){
+            $sql = "call SP_REGISTRAR_USUARIO('$usuario','$contra','$sexo','$rol','$email','$alias')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]);

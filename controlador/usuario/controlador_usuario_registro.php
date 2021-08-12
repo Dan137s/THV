@@ -7,7 +7,8 @@
     $sexo = htmlspecialchars($_POST['sexo'],ENT_QUOTES,'UTF-8');
     $rol = htmlspecialchars($_POST['rol'],ENT_QUOTES,'UTF-8');
     $email = htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8');
-    $consulta = $MU->Registrar_Usuario($usuario,$contra,$sexo,$rol,$email);
+    $alias = htmlspecialchars($_POST['alias'],ENT_QUOTES,'UTF-8');
+    $consulta = $MU->Registrar_Usuario($usuario,$contra,$sexo,$rol,$email,$alias);
     echo $consulta;
 
 ?>

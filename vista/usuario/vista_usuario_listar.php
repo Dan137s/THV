@@ -28,8 +28,8 @@
                     <tr>
                         <th>#</th>
                         <th>Rut Usuario</th>
-                        
                         <th>Correo</th>
+                        <th>Nombre</th>
                         <th>Rol</th>
                         <th>Sexo</th>
                         <th>Estatus</th>
@@ -40,8 +40,8 @@
                     <tr>
                         <th>#</th>
                         <th>Rut Usuario</th>
-                        
                         <th>Correo</th>
+                        <th>Nombre</th>
                         <th>Rol</th>
                         <th>Sexo</th>
                         <th>Estatus</th>
@@ -66,6 +66,10 @@
                 <div class="col-lg-12">
                     <label for="">Rut Usuario</label>
                     <input type="text" minlength="12" maxlength="12" class="form-control" id="txt_usu" placeholder="rut a registrar ej: 12.345.678-9"><br>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" id="txt_alias" placeholder="Nombre Usuario"><br>
                 </div>
                 <div class="col-lg-12">
                     <label for="">Email</label>
@@ -116,6 +120,10 @@
                     <input type="text" id="txtidusuario" hidden>
                     <label for="">Usuario</label>
                     <input type="text" class="form-control" id="txtusu_editar" placeholder="Ingrese usuario" disabled><br>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" id="txt_alias_editar" placeholder="Nombre Usuario"><br>
                 </div>
            
                 <div class="col-lg-12">

@@ -107,6 +107,7 @@ function listar_usuario() {
             { "data": "posicion" },
             { "data": "usu_nombre" },
             { "data": "usu_email" },
+            { "data": "usu_alias" },
             { "data": "rol_nombre" },
             {
                 "data": "usu_sexo",
@@ -195,6 +196,7 @@ $('#tabla_usuario').on('click', '.editar', function() {
     $("#modal_editar").modal('show');
     $("#txtidusuario").val(data.usu_id);
     $("#txtusu_editar").val(data.usu_nombre);
+    $("#txt_alias_editar").val(data.usu_alias);
     $("#txt_email_editar").val(data.usu_email);
     $("#cmb_sexo_editar").val(data.usu_sexo).trigger("change");
     $("#cmb_rol_editar").val(data.rol_id).trigger("change");
@@ -266,6 +268,7 @@ function Registrar_Usuario() {
     var contra2 = $("#txt_con2").val();
     var sexo = $("#cbm_sexo").val();
     var rol = $("#cbm_rol").val();
+    var alias = $("#txt_alias").val();
     var email = $("#txt_email").val();
     var validaremail = $("#validar_email").val();
     if (usu.length == 0 || contra.length == 0 || contra.length == 0 || contra2.length == 0 || sexo.length == 0 || rol.length == 0) {
@@ -289,7 +292,8 @@ function Registrar_Usuario() {
             contrasena: contra,
             sexo: sexo,
             rol: rol,
-            email: email
+            email: email,
+            alias: alias
 
         }
     }).done(function(resp) {
@@ -316,6 +320,7 @@ function Modificar_Usuario() {
     var idusuario = $("#txtidusuario").val();
     var sexo = $("#cbm_sexo_editar").val();
     var rol = $("#cbm_rol_editar").val();
+    var alias = $("#txt_alias_editar").val();
     var email = $("#txt_email_editar").val();
     var validaremail = $("#validar_email_editar").val();
     if (idusuario.length == 0 || sexo.length == 0 || rol.length == 0) {
@@ -335,7 +340,8 @@ function Modificar_Usuario() {
             idusuario: idusuario,
             sexo: sexo,
             rol: rol,
-            email: email
+            email: email,
+            alias: alias
         }
     }).done(function(resp) {
         if (resp > 0) {
