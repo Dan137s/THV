@@ -64,6 +64,12 @@
                     <input type="text" class="form-control" id="txt_usu" placeholder="Ingrese usuario"><br>
                 </div>
                 <div class="col-lg-12">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" id="txt_email" placeholder="Ingrese Correo">
+                    <label for="" id="emailOK" style="color:red;"></label>
+                    <input type="text" id="validar_email" hidden>
+                </div>
+                <div class="col-lg-12">
                     <label for="">Contrase&ntilde;a</label>
                     <input type="password" class="form-control" id="txt_con1" placeholder="Ingrese contrase&ntilde;a"><br>
                 </div>
@@ -139,4 +145,30 @@ $(document).ready(function() {
         $("#txt_usu").focus();  
     })
 } );
+
+document.getElementById('txt_email').addEventListener('input',function(){
+    campo=event.target;
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i; //Formato correo
+    if(emailRegex.test(campo.value)){
+        $(this).css("border","");
+        $("#emailOK").html("");
+        $("#validar_email").val("correcto");
+
+    }else{
+        $(this).css("border","1px solid red");
+        $("#emailOK").html("Email Incorrecto");
+        $("#validar_email").val("incorrecto");
+    }
+});    
+
+
+
+$('.box').boxWidget({
+    animationSpeed  : 500,
+    collapseTrigger : '[data-widget="collapse"]',
+    removeTrigger   : '[data-widget="remove"]',
+    collapseIcon    : 'fa-minus',
+    expandIcon      : 'fa-plus',
+    removeIcon      : 'fa-times'
+})
 </script>

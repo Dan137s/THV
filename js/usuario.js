@@ -23,7 +23,13 @@ function VerificarUsuario() {
                 }
 
             }).done(function(resp) {
-                Swal.fire("Mensaje De Advertencia", "Credenciales incorrectas, Intentos fallidos : " + (parseInt(resp) + 1) + " Para acceder a su cuenta restablesca su contra", "warning");
+                if (resp == 2) {
+                    Swal.fire("Mensaje De Advertencia", "Credenciales incorrectas, Intentos fallidos : " + (parseInt(resp) + 1) + " Para acceder a su cuenta restablesca su contra", "warning");
+
+                } else {
+                    Swal.fire("Mensaje De Advertencia", "Credenciales incorrectas, Intentos fallidos : " + (parseInt(resp) + 1) + " ", "warning");
+
+                }
             })
 
         } else {
@@ -258,12 +264,19 @@ function Registrar_Usuario() {
     var contra2 = $("#txt_con2").val();
     var sexo = $("#cbm_sexo").val();
     var rol = $("#cbm_rol").val();
+    var email = $("#txt_email").val();
+    var validaremail = $("#validar_email").val();
     if (usu.length == 0 || contra.length == 0 || contra.length == 0 || contra2.length == 0 || sexo.length == 0 || rol.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
     if (contra != contra2) {
         return Swal.fire("Mensaje De Advertencia", "Las contraseñas deben coincidir", "warning");
+    }
+
+
+    if (validaremail == "incorrecto") {
+        return Swal.fire("Mensaje de advertencia", "El formato de email es incorrecto", "Ingrese un formato valido", "warning");
     }
 
     $.ajax({
@@ -273,7 +286,9 @@ function Registrar_Usuario() {
             usuario: usu,
             contrasena: contra,
             sexo: sexo,
-            rol: rol
+            rol: rol,
+            email: email
+
         }
     }).done(function(resp) {
         if (resp > 0) {
