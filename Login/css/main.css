@@ -206,11 +206,11 @@ iframe {
 }
 
 .bg1 {
-    background-color: #061e55
+    background-color: #174dca
 }
 
 .bg2 {
-    background-color: #1da0f290
+    background-color: #0ddd3af1
 }
 
 .bg3 {
@@ -245,7 +245,7 @@ iframe {
 
 .wrap-login100 {
     width: 500px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.912);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -396,8 +396,8 @@ iframe {
     width: 300%;
     height: 100%;
     background: #a64bf4;
-    background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-    background: -o-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -webkit-linear-gradient(right, #00de6f, #fc00ff, #00dbde, #fc00ff);
+    background: -o-linear-gradient(right, #00de6f, #fc00ff, #00dbde, #fc00ff);
     background: -moz-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
     background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
     top: 0;
@@ -411,7 +411,7 @@ iframe {
 .login100-form-btn {
     font-family: Poppins-Medium;
     font-size: 16px;
-    color: #fff;
+    color: rgb(214, 250, 52);
     line-height: 1.2;
     text-transform: uppercase;
     display: -webkit-box;
@@ -524,7 +524,7 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Responsive ]*/
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     .wrap-login100 {
         padding-left: 15px;
         padding-right: 15px;
