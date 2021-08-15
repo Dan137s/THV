@@ -39,7 +39,7 @@
           <!-- /. box -->
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">En Construcción</h3>
+              <h3 class="box-title">En Construcción Mano De Obras</h3>
             </div>
             <div class="box-body">
               <div class="btn-group" style="width: 100%; margin-bottom: 10px;">

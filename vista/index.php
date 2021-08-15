@@ -65,7 +65,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       
       <span class="logo-mini"><b>F</b>THV</span>
       <!-- logo for regular state and mobile devices -->
-      
+     
       <span class="logo-lg"><b>FUNDACIÓN</b>THC  </span>
       
     </a>
@@ -291,7 +291,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         <li class="header">MENÚ DE ADMINISTRADOR</li>
        
         <li class="treeview">
-          <a ">
+          <a>
             <i class="fa fa-pencil-square-o"></i> <span>Registros</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -305,15 +305,21 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
 
-        <li class="active treeview">
-        <a href = #>
+
+        <li class="treeview">
+          <a>
             <i class="fa fa-usd"></i> <span>Presupuesto</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_mdo.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
+          </ul>
         </li>
-        <li>
+
+
 
         <li class="active treeview">
         <a href = #>

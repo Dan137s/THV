@@ -54,9 +54,9 @@ function VerificarUsuario() {
             }).done(function(resp) {
                 let timerInterval
                 Swal.fire({
-                    title: 'BIENVENIDO AL SISTEMA',
+                    title: 'BIENVENIDO AL SISTEMA TRATO HECHO VECINO',
                     html: 'Usted sera redireccionado en <b></b> milisegundos.',
-                    timer: 500,
+                    timer: 600,
                     timerProgressBar: true,
                     onBeforeOpen: () => {
                         Swal.showLoading()
@@ -68,7 +68,7 @@ function VerificarUsuario() {
                                     b.textContent = Swal.getTimerLeft()
                                 }
                             }
-                        }, 100)
+                        }, 150)
                     },
                     onClose: () => {
                         clearInterval(timerInterval)
@@ -366,6 +366,12 @@ function LimpiarRegistro() {
     $("#txt_usu").val("");
     $("#txt_con1").val("");
     $("#txt_con2").val("");
+    $("#cbm_sexo").val("");
+    $("#txt_email").val("");
+    $("#txt_alias").val("");
+    $("#cbm_rol").val("");
+
+
 }
 
 function TraerDatosUsuario() {
