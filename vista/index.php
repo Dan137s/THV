@@ -11,7 +11,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fundación|Trato Hecho Vecino..:</title>
+<link rel="icon" href="../plantilla/dist/img/ico2.ico">
+  <title> Fundación|Trato Hecho Vecino..:</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -59,11 +60,16 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
   <header class="main-header">
     <!-- Logo -->
     <a  href="index.php" class="logo">
+    
       <!-- mini logo for sfidebar mini 50x50 pixels -->
+      
       <span class="logo-mini"><b>F</b>THV</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>FUNDACIÓN</b>THC</span>
+      
+      <span class="logo-lg"><b>FUNDACIÓN</b>THC  </span>
+      
     </a>
+    
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
@@ -235,7 +241,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </li>
 
               <div class="pull-right">
-                  <a href="../controlador/usuario/controlador_cerrar_session.php" class="btn btn-default btn-flat">Cerrar Sesión</a>
+                  <a href="../controlador/usuario/controlador_cerrar_session.php" class="btn btn-default btn-flat" >Cerrar Sesión</a>
                 </div>
 
                 <div class="pull-right">
@@ -294,13 +300,14 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <ul class="treeview-menu">
             <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')"><i class="fa fa-address-book-o"></i> Usuarios</a></li>
             <li><a href = #><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
-            <li><a href = #><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>
           </ul>
         </li>
 
         <li class="active treeview">
         <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Presupuesto</span>
+            <i class="fa fa-usd"></i> <span>Presupuesto</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
