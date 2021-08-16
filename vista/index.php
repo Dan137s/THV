@@ -311,7 +311,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </a>
           <ul class="treeview-menu">
             <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')"><i class="fa fa-address-book-o"></i> Usuarios</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> Hospederias</a></li>
+            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_registro_hospe.php')"><i class="fa fa-address-book-o"></i> Hospederia</a></li>
             <li><a href = #><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
             <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>
             <li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>
