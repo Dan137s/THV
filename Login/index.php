@@ -8,7 +8,7 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Fundación|Trato Hecho Vecino|:</title>
+	<title>Fundación|Trato Hecho Vecino|</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	

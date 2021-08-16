@@ -213,10 +213,13 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
                 <img id="img_subnav" class="img-circle" alt="User Image">
 
                 <p>
-                  Administrador </br>
+                  Usuario </br>
+                  <?php  echo $_SESSION['S_ROL']; ?> 
                   [
                   <?php  echo $_SESSION['S_USER']; ?> 
                   ]
+                  
+                  
                 </p>
               </li>
               <!-- Menu Body -->
@@ -270,7 +273,10 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <img id="img_lateral" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p> Administrador </br>[<?php echo $_SESSION['S_USER']; ?>]</p>
+          <p> </br>[<?php echo $_SESSION['S_USER']; ?>]
+          <?php  echo $_SESSION['S_ROL']; ?> 
+        </p>
+         
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -288,9 +294,14 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       <!-- sidebar menu: : style can be found in sidebar.less -->
       
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MENÚ DE ADMINISTRADOR</li>
+        <li class="header"><i class="fa fa-bars" aria-hidden="true"></i> MENÚ PANEL ADMINISTRATIVO </li>
        
+       <!-- #############################################################################################[Menú para el Administrador] -->
         <li class="treeview">
+          <?php
+          if($_SESSION['S_ROL']=='ADMINISTRADOR'){
+
+          ?>
           <a>
             <i class="fa fa-pencil-square-o"></i> <span>Registros</span>
             <span class="pull-right-container">
@@ -349,9 +360,175 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <?php 
+          }
+          ?>
+            <?php
+          if($_SESSION['S_ROL']=='ADMINISTRADOR'){
+
+          ?>
+           <?php 
+          }
+          ?>
+        </li>
+        <li>
+
+ <!-- #############################################################################################[Menú para el Trabajador] -->
+ <li class="treeview">
+        <?php
+          if($_SESSION['S_ROL']=='TRABAJADOR'){
+
+          ?>
+          <a>
+            <i class="fa fa-pencil-square-o"></i> <span>Registros</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <!--<li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')"><i class="fa fa-address-book-o"></i> Usuarios</a></li> -->
+            <li><a href = #><i class="fa fa-file-text-o"></i> Hospederias</a></li>
+            <!--<li><a href = #><i class="fa fa-file-text-o"></i> Requerimientos</a></li>-->
+            <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>
+          </ul>
+        </li>
+
+
+        <li class="treeview">
+          <a>
+            <i class="fa fa-usd"></i> <span>Presupuesto</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_mdo.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
+          </ul>
+        </li>
+
+
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Encuentas de opinión</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Observaciones</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+
+          <?php 
+          }
+          ?>
+            <?php
+          if($_SESSION['S_ROL']=='TRABAJADOR'){
+
+          ?>
+           <?php 
+          }
+          ?>
         </li>
         <li>
           
+<!-- #############################################################################################[Menú para el Vecino] -->
+<li class="treeview">
+        <?php
+          if($_SESSION['S_ROL']=='VECINO'){
+
+          ?>
+          <a>
+            <i class="fa fa-pencil-square-o"></i> <span>Registros</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <!-- <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')"><i class="fa fa-address-book-o"></i> Usuarios</a></li> -->
+            <!--<li><a href = #><i class="fa fa-file-text-o"></i> Hospederias</a></li>-->
+            <li><a href = #><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
+            <!-- <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>-->
+            <!--<li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>-->
+          </ul>
+        </li>
+
+
+        <li class="treeview">
+          <a>
+            <i class="fa fa-usd"></i> <span>Presupuesto</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_mdo.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
+          </ul>
+        </li>
+
+
+
+        <!--<li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li> -->
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Encuentas de opinión</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+
+        <!--<li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Observaciones</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a> -->
+
+          <?php 
+          }
+          ?>
+            <?php
+          if($_SESSION['S_ROL']=='VECINO'){
+
+          ?>
+           <?php 
+          }
+          ?>
+        </li>
+        <li>
+
         <!--onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_calendario.php')-->
         <!--
         <li class="treeview">
