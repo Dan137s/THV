@@ -12,7 +12,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="icon" href="../plantilla/dist/img/ico2.ico">
-  <title> Fundación|Trato Hecho Vecino..:</title>
+  <title> Fundación|Trato Hecho Vecino|:</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -295,7 +295,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       <!-- sidebar menu: : style can be found in sidebar.less -->
       
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header"><i class="fa fa-bars" aria-hidden="true"></i> MENÚ PANEL ADMINISTRATIVO </li>
+        <li class="header"><i class="fa fa-bars" aria-hidden="true"></i> MENÚ PANEL <?php  echo $_SESSION['S_ROL']; ?> </li>
        
        <!-- #############################################################################################[Menú para el Administrador] -->
         <li class="treeview">
