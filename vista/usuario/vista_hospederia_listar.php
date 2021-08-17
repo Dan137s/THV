@@ -127,44 +127,14 @@
 </form>
 <script>
 $(document).ready(function() {
-    listar_usuario();
+    
     $('.js-example-basic-single').select2();
-    listar_combo_rol();
+    
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_usu").focus();  
     })
 } );
 
-document.getElementById('txt_email').addEventListener('input',function(){
-    campo=event.target;
-    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i; //Formato correo
-    if(emailRegex.test(campo.value)){
-        $(this).css("border","");
-        $("#emailOK").html("");
-        $("#validar_email").val("correcto");
-
-    }else{
-        $(this).css("border","1px solid red");
-        $("#emailOK").html("Email Incorrecto");
-        $("#validar_email").val("incorrecto");
-    }
-});    
-
-
-document.getElementById('txt_email_editar').addEventListener('input',function(){
-    campo=event.target;
-    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i; //Formato correo
-    if(emailRegex.test(campo.value)){
-        $(this).css("border","");
-        $("#emailOK_editar").html("");
-        $("#validar_email_editar").val("correcto");
-
-    }else{
-        $(this).css("border","1px solid red");
-        $("#emailOK_editar").html("Email Incorrecto");
-        $("#validar_email_editar").val("incorrecto");
-    }
-}); 
 
 
 $('.box').boxWidget({
