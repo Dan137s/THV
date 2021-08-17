@@ -129,7 +129,6 @@
 $(document).ready(function() {
     
     $('.js-example-basic-single').select2();
-    
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_usu").focus();  
     })
