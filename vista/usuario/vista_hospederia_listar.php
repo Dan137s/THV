@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../js/usuario.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/hospederia.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
@@ -23,11 +23,12 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_usuario" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_hospederia" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
+                        <th>Dirección</th>
                         <th>Dirección</th>
                        
                     </tr>
@@ -36,6 +37,7 @@
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
+                        <th>Dirección</th>
                         <th>Dirección</th>
                     </tr>
                 </tfoot>
@@ -127,7 +129,7 @@
 </form>
 <script>
 $(document).ready(function() {
-    
+    listar_hospederia();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_usu").focus();  
