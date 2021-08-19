@@ -32,6 +32,9 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+
+	<link rel="stylesheet" href="estilos.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -69,6 +72,8 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 							</button>
 						</div>
 					</div><br>
+					
+				
 
 					<div class="flex-c-m">
 						<a href="https://www.facebook.com/tratohechovecino" class="login100-social-item bg1">
@@ -87,6 +92,11 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 		</div>
 	</div>
 	
+	<!--Efecto de las burbujas-->
+		<div class="burbujas">
+				<div class="burbuja"></div>
+		</div>
+
 
 	<div id="dropDownSelect1"></div>
 
@@ -115,6 +125,8 @@ if(isset($_SESSION['S_IDUSUARIO'])){
         </div>
         </div>
     </div>
+
+
 
 <!--===============================================================================================-->
 	<script src="vendor/sweetalert2/sweetalert2.js"></script>
