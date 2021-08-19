@@ -34,7 +34,7 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	
 
-	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="css/estilos.css">
 <!--===============================================================================================-->
 </head>
 <body>
