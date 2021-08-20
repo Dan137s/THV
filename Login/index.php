@@ -95,6 +95,10 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 	<!--Efecto de las burbujas-->
 		<div class="burbujas">
 				<div class="burbuja"></div>
+				<div class="burbuja"></div>
+				<div class="burbuja"></div>
+				<div class="burbuja"></div>
+				<div class="burbuja"></div>
 		</div>
 
 

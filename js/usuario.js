@@ -54,7 +54,7 @@ function VerificarUsuario() {
             }).done(function(resp) {
                 let timerInterval
                 Swal.fire({
-                    title: 'BIENVENIDO AL SISTEMA TRATO HECHO VECINO',
+                    title: 'Bienvenido Al Sistema Trato Hecho Vecino',
                     html: 'Usted sera redireccionado en <b></b> milisegundos.',
                     timer: 600,
                     timerProgressBar: true,
@@ -103,6 +103,9 @@ function listar_usuario() {
             "url": "../controlador/usuario/controlador_usuario_listar.php",
             type: 'POST'
         },
+        "order": [
+            [1, 'asc']
+        ],
         "columns": [
             { "data": "posicion" },
             { "data": "usu_nombre" },
