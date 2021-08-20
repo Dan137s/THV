@@ -1,6 +1,6 @@
 <script type="text/javascript" src="../js/hospederia_t.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
-    <div class="box box-warning box-solid">
+    <div class="box box-danger box-solid">
         <div class="box-header with-border">
               <h3 class="box-title">[HOSPEDERIAS-ASOCIADAS] EN SISTEMA</h3>
 
@@ -29,8 +29,6 @@
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Dirección</th>
-                        
-                       
                     </tr>
                 </thead>
                 <tfoot>
@@ -38,7 +36,6 @@
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Dirección</th>
-                       
                     </tr>
                 </tfoot>
             </table>
@@ -56,8 +53,6 @@ $(document).ready(function() {
         $("#txt_usu").focus();  
     })
 } );
-
-
 
 $('.box').boxWidget({
     animationSpeed  : 500,
