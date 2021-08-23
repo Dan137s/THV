@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../js/usuario.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/requerimiento.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
@@ -23,7 +23,7 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_usuario" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_requerimiento" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -133,11 +133,13 @@
 </form>
 <script>
 $(document).ready(function() {
-    
+    listar_requerimiento();
     $('.js-example-basic-single').select2();
+    listar_combo_rol();
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_usu").focus();  
     })
+    
 } );
 
 

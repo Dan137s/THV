@@ -264,7 +264,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <img id="img_lateral" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p> <?php  echo $_SESSION['S_ROL']; ?></br> </br>Rut[<?php echo $_SESSION['S_USER']; ?>]
+          <p> <?php  echo $_SESSION['S_ROL']; ?></br> </br>RUT[<?php echo $_SESSION['S_USER']; ?>]
          
         </p>
          
