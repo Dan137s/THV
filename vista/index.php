@@ -377,7 +377,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_hospederia_listar.php')"><i class="fa fa-file-text-o"></i> Hospederia</a></li>
+          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_hospederia_listar_t.php')"><i class="fa fa-file-text-o"></i> Hospederias</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
             <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>
             <li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>
@@ -942,8 +942,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Editar_Contra()"><i class="fa fa-check"><b>&nbsp;Modificar</b></i></button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
+                <button class="btn btn-success" onclick="Editar_Contra()"><i class="fa fa-check"><b>&nbsp;Modificar</b></i></button>
+                
             </div>
         </div>
         </div>

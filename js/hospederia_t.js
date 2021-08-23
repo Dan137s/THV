@@ -23,20 +23,7 @@ function listar_hospederia() {
             { "defaultContent": "" },
             { "data": "hospederia_nombre" },
             { "data": "hospederia_direccion" },
-            { "data": "hospederia_data" },
-            {
-                "data": "hospederia_estatus",
-                render: function(data, type, row) {
-                    if (data == 'ACTIVO') {
-                        return "<span class='label label-success'>" + data + "</span>";
-                    } else {
-                        return "<span class='label label-danger'>" + data + "</span>";
-                    }
-                }
-            },
 
-
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
         ],
 
         "language": idioma_espanol,

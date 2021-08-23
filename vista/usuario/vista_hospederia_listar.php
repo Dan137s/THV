@@ -29,7 +29,9 @@
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Dirección</th>
-                        <th>Dirección</th>
+                        <th>Fecha</th>
+                        <th>Estatus</th>
+                        <th>Acción</th>
                        
                     </tr>
                 </thead>
@@ -38,7 +40,9 @@
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Dirección</th>
-                        <th>Dirección</th>
+                        <th>Fecha</th>
+                        <th>Estatus</th>
+                        <th>Acción</th>
                     </tr>
                 </tfoot>
             </table>
