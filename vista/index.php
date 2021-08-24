@@ -516,6 +516,91 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         </li>
         <li>
 
+          
+<!-- #############################################################################################[Menú para junta vecinal] -->
+
+
+<li class="treeview">
+        <?php
+          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
+
+          ?>
+          <a>
+            <i class="fa fa-pencil-square-o"></i> <span>Registros</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_hospederia_listar_t.php')"><i class="fa fa-file-text-o"></i> Hospederias</a></li>
+            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>
+          </ul>
+        </li>
+
+
+        <li class="treeview">
+          <a>
+            <i class="fa fa-usd"></i> <span>Presupuesto</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_mdo.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
+          </ul>
+        </li>
+
+
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Encuentas de opinión</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>Observaciones</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+
+          <?php 
+          }
+          ?>
+            <?php
+          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
+
+          ?>
+           <?php 
+          }
+          ?>
+        </li>
+        <li>  
+          
+        
+
+
+
+
         <!--onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_calendario.php')-->
         <!--
         <li class="treeview">
