@@ -583,6 +583,14 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>F</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
 
           <?php 
           }
