@@ -526,30 +526,31 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
           ?>
           <a>
-            <i class="fa fa-pencil-square-o"></i> <span>Registros</span>
+            <i class="fa fa-pencil-square-o"></i> <span>A</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_hospederia_listar_t.php')"><i class="fa fa-file-text-o"></i> Hospederias</a></li>
-            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>
+         
+            <li><a href = #><i class="fa fa-file-text-o"></i> A-1</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> A-2</a></li>
           </ul>
         </li>
 
 
         <li class="treeview">
           <a>
-            <i class="fa fa-usd"></i> <span>Presupuesto</span>
+            <i class="fa fa-usd"></i> <span>B</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_mdo.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>B-1</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i>B-2</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i>B-3</a></li>
           </ul>
         </li>
 
@@ -557,7 +558,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
         <li class="active treeview">
         <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+            <i class="fa fa-file-text-o"></i> <span>C</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -567,7 +568,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
         <li class="active treeview">
         <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Encuentas de opinión</span>
+            <i class="fa fa-file-text-o"></i> <span>D</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -577,7 +578,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
         <li class="active treeview">
         <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Observaciones</span>
+            <i class="fa fa-file-text-o"></i> <span>E</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
