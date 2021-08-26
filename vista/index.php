@@ -331,8 +331,9 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_mdo.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora A</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
         </li>
 
