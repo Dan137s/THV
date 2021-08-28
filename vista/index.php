@@ -325,13 +325,13 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
         <li class="treeview">
           <a>
-          <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+          <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href = #><i class="fa fa-file-text-o"></i>Seguimiento</a></li>
+            <li><a href = #><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
@@ -406,13 +406,13 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         </li>
         <li class="treeview">
           <a>
-          <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+          <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = #><i class="fa fa-file-text-o"></i>Seguimiento</a></li>
+          <li><a href = #><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
@@ -512,13 +512,13 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
         <li class="treeview">
           <a>
-          <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+          <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = #><i class="fa fa-file-text-o"></i>Seguimiento</a></li>
+          <li><a href = #><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
