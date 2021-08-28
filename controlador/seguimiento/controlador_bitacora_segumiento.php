@@ -1,6 +1,6 @@
 <?php
-    require '../../modelo/modelo_requerimiento.php';
-    $MR = new Modelo_Requerimiento();//Instancio todas las funciones del modelo
+    require '../../modelo/modelo_bitacora_requerimiento.php';
+    $MR = new Modelo_bitacora_requerimiento();//Instancio todas las funciones del modelo
     $consulta = $MR->listar_requerimiento();
     if($consulta){
         echo json_encode($consulta);
