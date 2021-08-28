@@ -1,8 +1,8 @@
 <script type="text/javascript" src="../js/requerimiento.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
-    <div class="box box-warning box-solid">
+    <div class="box box-success box-solid">
         <div class="box-header with-border">
-              <h3 class="box-title">[BUSQUEDA DE REQUERIMENTOS] EN SISTEMA</h3>
+              <h3 class="box-title">[BUSQUEDA DE REQUERIMENTOS EN EL SISTEMA] BITACORA</h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -19,9 +19,9 @@
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <!--<div class="col-lg-2">
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
-                </div>
+                </div>-->
             </div>
             <table id="tabla_requerimiento" class="display responsive nowrap" style="width:100%">
                 <thead>
