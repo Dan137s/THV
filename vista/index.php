@@ -331,7 +331,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora A</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i>Seguimiento</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
@@ -412,7 +412,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora A</a></li>
+          <li><a href = #><i class="fa fa-file-text-o"></i>Seguimiento</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
@@ -507,6 +507,20 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas A</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas B</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a>
+          <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href = #><i class="fa fa-file-text-o"></i>Seguimiento</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
         </li>
 
