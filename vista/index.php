@@ -412,7 +412,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = #><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
+          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>
@@ -518,7 +518,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = #><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
+          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
             
             <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
           </ul>

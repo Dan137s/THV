@@ -13,9 +13,9 @@
             <!-- /.box-header -->
             <div class="box-body">
             <div class="form-group">
-                <div class="col-lg-10">
+                <div class="col-lg-15">
                     <div class="input-group">
-                        <input type="text" class="global_filter form-control" id="global_filter" placeholder="Ingresar dato a buscar">
+                        <input type="text" class="global_filter form-control" id="global_filter" placeholder="Ingresar ticket a buscar">
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
