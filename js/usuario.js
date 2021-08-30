@@ -309,7 +309,7 @@ function Registrar_Usuario() {
                         table.ajax.reload();
                     });
             } else {
-                return Swal.fire("Mensaje De Advertencia", "Lo sentimos, el nombre del usuario ya se encuentra en nuestra base de datos", "warning");
+                return Swal.fire("Mensaje De Advertencia", "Lo sentimos, el rut de este usuario ya se encuentra en nuestra base de datos", "warning");
             }
         } else {
             Swal.fire("Mensaje De Error", "Lo sentimos, no se pudo completar el registro", "error");

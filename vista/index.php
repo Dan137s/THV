@@ -115,7 +115,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
                   </li>
                 </ul>
               </li>
-              <li class="footer"><a href="#">Ver todo</a></li>
+              <li class="footer"><a href="#" onclick="cargar_contenido('contenido_principal','usuario/vista_requerimiento_listar.php')">Ver todo</a></li>
             </ul>
           </li>
           <?php 
@@ -323,26 +323,33 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         </li>
 
 
-
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+        <li class="treeview">
+          <a>
+          <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
+          </ul>
         </li>
-        <li>
 
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Encuentas de opinión</span>
+        <li class="treeview">
+          <a>
+          <i class="fa fa-file-text-o"></i> <span>Encuestas de opinión</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas A</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas B</a></li>
+          </ul>
         </li>
-        <li>
 
         <li class="active treeview">
         <a href = #>
@@ -397,28 +404,33 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
           </ul>
         </li>
-
-
-
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
+        <li class="treeview">
+          <a>
+          <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
+          </ul>
         </li>
-        <li>
 
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Encuentas de opinión</span>
+        <li class="treeview">
+          <a>
+          <i class="fa fa-file-text-o"></i> <span>Encuestas de opinión</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas A</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas B</a></li>
+          </ul>
         </li>
-        <li>
 
         <li class="active treeview">
         <a href = #>
@@ -484,16 +496,34 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </a>
         </li>
         <li> -->
-
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Encuentas de opinión</span>
+        <li class="treeview">
+          <a>
+          <i class="fa fa-file-text-o"></i> <span>Encuestas de opinión</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas A</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas B</a></li>
+          </ul>
         </li>
-        <li>
+
+        <li class="treeview">
+          <a>
+          <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
+          </ul>
+        </li>
+
 
         <!--<li class="active treeview">
         <a href = #>
@@ -515,6 +545,100 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           ?>
         </li>
         <li>
+
+          
+<!-- #############################################################################################[Menú para junta vecinal] -->
+
+
+<li class="treeview">
+        <?php
+          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
+
+          ?>
+          <a>
+            <i class="fa fa-pencil-square-o"></i> <span>A</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+         
+            <li><a href = #><i class="fa fa-file-text-o"></i> A-1</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i> A-2</a></li>
+          </ul>
+        </li>
+
+
+        <li class="treeview">
+          <a>
+            <i class="fa fa-usd"></i> <span>B</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            
+            <li><a href = #><i class="fa fa-file-text-o"></i>B-1</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i>B-2</a></li>
+            <li><a href = #><i class="fa fa-file-text-o"></i>B-3</a></li>
+          </ul>
+        </li>
+
+
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>C</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>D</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>E</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          
+        <li class="active treeview">
+        <a href = #>
+            <i class="fa fa-file-text-o"></i> <span>F</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+
+          <?php 
+          }
+          ?>
+            <?php
+          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
+
+          ?>
+           <?php 
+          }
+          ?>
+        </li>
+        <li>  
+          
+        
+
+
+
 
         <!--onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_calendario.php')-->
         <!--
