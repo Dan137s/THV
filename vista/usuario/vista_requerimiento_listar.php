@@ -32,7 +32,7 @@
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
                         <th>Estado</th>
-                       
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -43,6 +43,7 @@
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
                         <th>Estado</th>
+                        <th>Acción</th>
                     </tr>
                 </tfoot>
             </table>
@@ -57,23 +58,25 @@
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registre Hospederia</b></h4>
+            <h4 class="modal-title"><b>Registre Requerimiento</b></h4>
             </div>
             <div class="modal-body">
                 <div class="col-lg-12">
-                    <label for="">Nombre Hospederia</label>
-                    <input type="text" class="form-control" id="txt_nomh" placeholder="Nombre de la hospederia"><br>
+                    <label for="">N° Reporte</label>
+                    <input type="text" class="form-control" id="txt_nomh" placeholder="Ingrese numero de Reporte"><br>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">N° Presupuesto</label>
+                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese monto del presupuesto"><br>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">Nombre vecino</label>
+                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese nombre del vecino"><br>
                 </div>
                 <div class="col-lg-12">
                     <label for="">Dirección</label>
-                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese la Dirección"><br>
+                    <input type="text" class="form-control" id="txt_nomh" placeholder="Ingrese la dirección"><br>
                 </div>
-                <div class="col-lg-12">
-                    <label for="">Comuna</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_comuna" style="width:100%;">
-                    </select><br><br>
-                </div>
-
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary" onclick="Registrar_Usuario()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>

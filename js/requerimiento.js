@@ -26,12 +26,14 @@ function listar_requerimiento() {
             {"data": "requerimiento_estado",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
-                        return 'ACTIVO';
+                        return "<span class='label label-success'>" + data + "</span>";
                     } else {
-                        return 'INACTIVO';
+                        return "<span class='label label-danger'>" + data + "</span>";
                     }
                 }
             },
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
+        
            ],
 
         "language": idioma_espanol,
