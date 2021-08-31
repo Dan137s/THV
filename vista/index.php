@@ -819,7 +819,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              En construcción
+              Proximamente en construcción
             </div>
             <!-- /.box-body -->
             
