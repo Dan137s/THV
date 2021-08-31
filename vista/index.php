@@ -115,7 +115,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
                   </li>
                 </ul>
               </li>
-              <li class="footer"><a href="#" onclick="cargar_contenido('contenido_principal','usuario/vista_requerimiento_listar.php')">Ver todo</a></li>
+              <li class="footer"><a href="#" onclick="cargar_contenido('contenido_principal','usuario/vista_requerimientos_admin.php')">Ver todo</a></li>
             </ul>
           </li>
           <?php 
