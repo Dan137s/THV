@@ -39,7 +39,7 @@
           <!-- /. box -->
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">En Construcción Mano De Obras</h3>
+              <h3 class="box-title">Proximamente Area En Construcción Mano De Obras</h3>
             </div>
             <div class="box-body">
               <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
@@ -65,7 +65,7 @@
                 <input id="new-event" type="text" class="form-control" placeholder="Event Title">
 
                 <div class="input-group-btn">
-                  <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Add</button>
+                  <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Cotizar</button>
                 </div>
                 <!-- /btn-group -->
               </div>
@@ -73,10 +73,15 @@
             </div>
           </div>
         </div>
+        <div align="center"><img src="../../thv/plantilla/dist/img/hac.png" width="400"
+              height="341">>
+      </div>
+
         <!-- /.col -->
         <div class="col-md-9">
           <div class="box box-primary">
             <div class="box-body no-padding">
+            
               <!-- THE CALENDAR -->
               <div id="calendar"></div>
             </div>
