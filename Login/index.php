@@ -35,6 +35,7 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 	
 
 	<link rel="stylesheet" href="css/estilos.css">
+	
 <!--===============================================================================================-->
 </head>
 <body>
