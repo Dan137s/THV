@@ -66,7 +66,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       <span class="logo-mini"><b>F</b>THV</span>
       <!-- logo for regular state and mobile devices -->
      
-      <span class="logo-lg"><b>FUNDACIÓN</b>THC  </span>
+      <span class="logo-lg"><b>FUNDACIÓN</b>THV  </span>
       
     </a>
     
