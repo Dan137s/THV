@@ -836,8 +836,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
     <div class="pull-right hidden-xs">
       <b>Version</b> 1
     </div>
-    <strong>Copyright &copy; 2021 <a href="#">IP SANTO TOMÁS</a>.</strong> Team Dark Flames
-    reserved.
+    <strong>Desarrollo Tecnológico Experiencia &copy; </strong> THV Coquimbo 2021  <strong> <a href="#">IP SANTO TOMÁS </a></strong>Colabora <strong>Hospederia C. Goudie</strong> Hogar de Cristo <strong> #Team Dark Flames</strong>
+    Area Informatica IPST.
   </footer>
 
   <!-- Control Sidebar -->

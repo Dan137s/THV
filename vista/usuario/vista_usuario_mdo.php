@@ -74,7 +74,7 @@
           </div>
         </div>
         <div align="center"><img src="../../thv/plantilla/dist/img/hac.png" width="400"
-              height="341">>
+              height="341">
       </div>
 
         <!-- /.col -->
