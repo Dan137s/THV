@@ -300,7 +300,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-            //Las pestañas que se cargaran en el menú izquierdo
+            <!--Las pestañas que se cargaran en el menú izquierdo-->
             <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')"><i class="fa fa-address-book-o"></i> Usuarios</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','material/vista_material_listar.php')"><i class="fa fa-file-text-o"></i> Materiales</a></li>
@@ -387,6 +387,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
+          <!--Las pestañas que se cargaran en el menú izquierdo-->
           <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
           <li><a href = #><i class="fa fa-file-text-o"></i> Materiales</a></li>
           <li><a href = #><i class="fa fa-file-text-o"></i> Herramientas</a></li>  
@@ -469,11 +470,11 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-          
-            <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
+
+          <!--Las pestañas que se cargaran en el menú izquierdo-->
+          <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
           </ul>
         </li>
-
 
         <li class="treeview">
           <a>
@@ -488,17 +489,6 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
 
-
-
-        <!--<li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Bitacoras</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li> -->
         <li class="treeview">
           <a>
           <i class="fa fa-file-text-o"></i> <span>Encuestas de opinión</span>
@@ -528,14 +518,6 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         </li>
 
 
-        <!--<li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Observaciones</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a> -->
-
           <?php 
           }
           ?>
@@ -551,8 +533,6 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
           
 <!-- #############################################################################################[Menú para junta vecinal] -->
-
-
 <li class="treeview">
         <?php
           if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
@@ -565,12 +545,11 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-         
+             <!--Las pestañas que se cargaran en el menú izquierdo-->
             <li><a href = #><i class="fa fa-file-text-o"></i> A-1</a></li>
             <li><a href = #><i class="fa fa-file-text-o"></i> A-2</a></li>
           </ul>
         </li>
-
 
         <li class="treeview">
           <a>
@@ -586,8 +565,6 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             <li><a href = #><i class="fa fa-file-text-o"></i>B-3</a></li>
           </ul>
         </li>
-
-
 
         <li class="active treeview">
         <a href = #>
