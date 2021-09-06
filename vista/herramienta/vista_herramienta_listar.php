@@ -29,9 +29,9 @@
                         <th>#</th>
                         <th>N° ID</th>
                         <th>Tipo</th>
+                        <th>Ingreso</th>
                         <th>Marca</th>
                         <th>Modelo</th>
-                        <th>Cantidad</th>
                         <th>Descripcion</th>
                         <th>Acción</th>
                        
@@ -42,9 +42,9 @@
                         <th>#</th>
                         <th>N° ID</th>
                         <th>Tipo</th>
+                        <th>Ingreso</th>
                         <th>Marca</th>
                         <th>Modelo</th>
-                        <th>Cantidad</th>
                         <th>Descripcion</th>
                         <th>Acción</th>
                     </tr>
@@ -83,13 +83,14 @@
                 </div>
 
                 <div class="col-lg-12">
-                    <label for="">Cantidad</label>
-                    <input type="number" class="form-control" id="txt_cantidad" placeholder="Cantidad"><br>
+                    <label for="">Fecha Ingreso</label>
+                    <input type="date" class="form-control" id="txt_cantidad" placeholder="Fecha de Ingreso"><br>
                 </div>
 
                 <div class="col-lg-12">
-                    <label for="">Descripción</label>
+                    <label for="">Descripción de la herramienta</label>
                     <input type="text" class="form-control" id="txt_descripcion" placeholder="Descripción de herramienta"><br>
+                    
                 </div>
 
             </div>
