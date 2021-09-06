@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../js/hospederia.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/herramienta.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
@@ -23,14 +23,16 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_hospederia" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_herramienta" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nombre</th>
-                        <th>Dirección</th>
-                        <th>Fecha</th>
-                        <th>Estatus</th>
+                        <th>N° ID</th>
+                        <th>Tipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Cantidad</th>
+                        <th>Descripcion</th>
                         <th>Acción</th>
                        
                     </tr>
@@ -38,10 +40,12 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>Nombre</th>
-                        <th>Dirección</th>
-                        <th>Fecha</th>
-                        <th>Estatus</th>
+                        <th>N° ID</th>
+                        <th>Tipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Cantidad</th>
+                        <th>Descripcion</th>
                         <th>Acción</th>
                     </tr>
                 </tfoot>
