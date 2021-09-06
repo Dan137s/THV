@@ -57,21 +57,35 @@
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registre Hospederia</b></h4>
+            <h4 class="modal-title"><b>Registro de herramienta</b></h4>
             </div>
+
+             
+            <div class="col-lg-12">
+                    <label for="">Seleccione</label>
+                    <select class="js-example-basic-single" name="tipo_herramienta" id="cbm_tipo_herramienta" style="width:100%;">
+                    </select><br><br>
+                </div>
+
             <div class="modal-body">
                 <div class="col-lg-12">
-                    <label for="">Nombre Hospederia</label>
-                    <input type="text" class="form-control" id="txt_nomh" placeholder="Nombre de la hospederia"><br>
+                    <label for="">Marca de herramienta</label>
+                    <input type="text" class="form-control" id="txt_marca" placeholder="Marca de herramienta"><br>
                 </div>
+            
                 <div class="col-lg-12">
-                    <label for="">Dirección</label>
-                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese la Dirección"><br>
+                    <label for="">Modelo</label>
+                    <input type="text" class="form-control" id="txt_modelo" placeholder="Modelo de herramienta"><br>
                 </div>
+
                 <div class="col-lg-12">
-                    <label for="">Comuna</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_comuna" style="width:100%;">
-                    </select><br><br>
+                    <label for="">Cantidad</label>
+                    <input type="number" class="form-control" id="txt_cantidad" placeholder="Cantidad"><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Descripción</label>
+                    <input type="text" class="form-control" id="txt_descripcion" placeholder="Descripción de herramienta"><br>
                 </div>
 
             </div>
