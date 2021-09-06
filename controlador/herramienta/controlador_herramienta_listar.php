@@ -1,7 +1,7 @@
 <?php
-    require '../../modelo/modelo_hospederia.php';
-    $MH = new Modelo_Hospederia();//Instancio todas las funciones del modelo
-    $consulta = $MH->listar_hospederia();
+    require '../../modelo/modelo_herramienta.php';
+    $MH = new Modelo_Herramienta();//Instancio todas las funciones del modelo
+    $consulta = $MH->listar_herramienta();
     if($consulta){
         echo json_encode($consulta);
     }else{

@@ -1,5 +1,5 @@
-function listar_hospederia() {
-    var tablehospederia = $("#tabla_hospederia").DataTable({
+function listar_herramienta() {
+    var tableherramienta = $("#tabla_herramienta").DataTable({
         "ordering": false,
         "bLengthChange": false,
         "searching": { "regex": false },
@@ -12,7 +12,7 @@ function listar_hospederia() {
         "async": false,
         "processing": true,
         "ajax": {
-            "url": "../controlador/hospederia/controlador_hospederia_listar.php",
+            "url": "../controlador/herramienta/controlador_herramienta_listar.php",
             type: 'POST'
         },
         "order": [
@@ -42,7 +42,7 @@ function listar_hospederia() {
         "language": idioma_espanol,
         select: true
     });
-    document.getElementById("tabla_hospederia_filter").style.display = "none";
+    document.getElementById("tabla_herramienta_filter").style.display = "none";
     $('input.global_filter').on('keyup click', function() {
         filterGlobal();
     });
@@ -52,7 +52,7 @@ function listar_hospederia() {
 
 
     tablehospederia.on('draw.dt', function() {
-        var PageInfo = $('#tabla_hospederia').DataTable().page.info();
+        var PageInfo = $('#tabla_herramienta').DataTable().page.info();
         tablehospederia.column(0, { page: 'current' }).nodes().each(function(cell, i) {
             cell.innerHTML = i + 1 + PageInfo.start;
         });
