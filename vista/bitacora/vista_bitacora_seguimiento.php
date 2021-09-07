@@ -1,8 +1,21 @@
 <script type="text/javascript" src="../js/requerimiento.js?rev=<?php echo time();?>"></script>
+<style>
+      #galeria{
+        display: flex;
+    }
+    #galeria img{
+        width: 85px;
+        height: 85px;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        opacity: 85%;
+    }
+</style>
 <div class="col-md-12">
+    
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
-              <h3 class="box-title">[BUSQUEDA DE REQUERIMENTOS EN EL SISTEMA] BITACORA</h3>
+              <h3 class="box-title">[REPORTES DE REQUERIMIENTOS]</h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -13,15 +26,16 @@
             <!-- /.box-header -->
             <div class="box-body">
             <div class="form-group">
-                <div class="col-lg-15">
-                    <div class="input-group">
-                        <input type="text" class="global_filter form-control" id="global_filter" placeholder="Ingresar ticket a buscar">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <div class="col-lg-10">
+                        <div class="input-group">
+                            <input type="text" class="global_filter form-control" id="global_filter" placeholder="Ingresar dato a buscar">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        </div>
                     </div>
-                </div>
-                <!--<div class="col-lg-2">
-                    <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
-                </div>-->
+                    <div class="col-lg-2">
+                        <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
+                    </div>
+                
             </div>
             <table id="tabla_requerimiento" class="display responsive nowrap" style="width:100%">
                 <thead>
@@ -32,7 +46,7 @@
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
                         <th>Estado</th>
-                       
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -43,6 +57,7 @@
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
                         <th>Estado</th>
+                        <th>Acción</th>
                     </tr>
                 </tfoot>
             </table>
@@ -52,28 +67,37 @@
           <!-- /.box -->
 </div>
 <form autocomplete="false" onsubmit="return false">
-    <div class="modal fade" id="modal_registro" role="dialog">
+    <div class="modal fade" id="modal_registro" role="dialog" >
         <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" style="width: 200%;">
+            <div class="modal-header" >
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registre Hospederia</b></h4>
+            <h4 class="modal-title"><b>Registre Requerimiento</b></h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" >
                 <div class="col-lg-12">
-                    <label for="">Nombre Hospederia</label>
-                    <input type="text" class="form-control" id="txt_nomh" placeholder="Nombre de la hospederia"><br>
+                    <label for="">N° Reporte</label>
+                    <input type="text" class="form-control" id="txt_nomh" placeholder="Ingrese numero de Reporte"><br>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">Imagen adjunta</label>
+                    <input type="file" name='files[]' accept="image/gif, image/jpeg, image/png" class="form-control" onchange="previewMultiple(event)" id="adicionafoto" placeholder="Ingrese numero de Reporte" multiple><br>
+                    <div id="galeria" >
+    
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">Monto de Presupuesto</label>
+                    <input type="" class="form-control" id="txt_alias" placeholder="Ingrese monto del presupuesto"><br>
+                </div>
+                <div class="col-lg-12">
+                    <label for="">Nombre vecino</label>
+                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese nombre del vecino"><br>
                 </div>
                 <div class="col-lg-12">
                     <label for="">Dirección</label>
-                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese la Dirección"><br>
+                    <input type="text" class="form-control" id="txt_nomh" placeholder="Ingrese la dirección"><br>
                 </div>
-                <div class="col-lg-12">
-                    <label for="">Comuna</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_comuna" style="width:100%;">
-                    </select><br><br>
-                </div>
-
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary" onclick="Registrar_Usuario()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
@@ -141,9 +165,6 @@ $(document).ready(function() {
     })
     
 } );
-
-
-
 $('.box').boxWidget({
     animationSpeed  : 500,
     collapseTrigger : '[data-widget="collapse"]',
@@ -152,4 +173,13 @@ $('.box').boxWidget({
     expandIcon      : 'fa-plus',
     removeIcon      : 'fa-times'
 })
+
+function previewMultiple(event){
+        var saida = document.getElementById("adicionafoto");
+        var quantos = saida.files.length;
+        for(i = 0; i < quantos; i++){
+            var urls = URL.createObjectURL(event.target.files[i]);
+            document.getElementById("galeria").innerHTML += '<img src="'+urls+'">';
+        }
+    }
 </script>
