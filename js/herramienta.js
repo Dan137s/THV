@@ -21,11 +21,14 @@ function listar_herramienta() {
         "columns": [
 
             { "defaultContent": "" },
-            { "data": "hospederia_nombre" },
-            { "data": "hospederia_direccion" },
-            { "data": "hospederia_data" },
+            { "data": "herramienta_id" },
+            { "data": "herramienta_tipo_id" },
+            { "data": "herramienta_fecha" },
+            { "data": "herramienta_marca" },
+            { "data": "herramienta_modelo" },
+            { "data": "herramienta_descripcion" },
             {
-                "data": "hospederia_estatus",
+                "data": "herramienta_estatus",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
                         return "<span class='label label-success'>" + data + "</span>";
@@ -51,9 +54,9 @@ function listar_herramienta() {
     });
 
 
-    tablehospederia.on('draw.dt', function() {
+    tableherramienta.on('draw.dt', function() {
         var PageInfo = $('#tabla_herramienta').DataTable().page.info();
-        tablehospederia.column(0, { page: 'current' }).nodes().each(function(cell, i) {
+        tableherramienta.column(0, { page: 'current' }).nodes().each(function(cell, i) {
             cell.innerHTML = i + 1 + PageInfo.start;
         });
     });

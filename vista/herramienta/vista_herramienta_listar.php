@@ -33,6 +33,7 @@
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
+                        <th>Estatus</th>  
                         <th>Acción</th>
                        
                     </tr>
@@ -46,6 +47,7 @@
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
+                        <th>Estatus</th>
                         <th>Acción</th>
                     </tr>
                 </tfoot>
@@ -152,7 +154,7 @@
 </form>
 <script>
 $(document).ready(function() {
-    listar_hospederia();
+    listar_herramienta();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_usu").focus();  

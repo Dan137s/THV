@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../js/hospederia.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/materiales.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
