@@ -27,13 +27,14 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>N° ID</th>
+                        <th>N° Registro</th>
                         <th>Tipo</th>
-                        <th>Ingreso</th>
+                        <th>Serial</th>
+                        <th>Fecha Registro</th>
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
-                        <th>Estatus</th>  
+                        <th>Estatus</th>
                         <th>Acción</th>
                        
                     </tr>
@@ -41,9 +42,10 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>N° ID</th>
+                        <th>N° Registro</th>
                         <th>Tipo</th>
-                        <th>Ingreso</th>
+                        <th>Serial</th>
+                        <th>Fecha Registro</th>
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
@@ -73,20 +75,25 @@
                     </select><br><br>
                 </div>
 
-            <div class="modal-body">
                 <div class="col-lg-12">
-                    <label for="">Marca de herramienta</label>
-                    <input type="text" class="form-control" id="txt_marca" placeholder="Marca de herramienta"><br>
-                </div>
-            
-                <div class="col-lg-12">
-                    <label for="">Modelo</label>
-                    <input type="text" class="form-control" id="txt_modelo" placeholder="Modelo de herramienta"><br>
+                    <label for="">Serial</label>
+                    <input type="text" class="form-control" id="txt_modelo" placeholder="Serial de herramienta"><br>
                 </div>
 
                 <div class="col-lg-12">
                     <label for="">Fecha Ingreso</label>
                     <input type="date" class="form-control" id="txt_cantidad" placeholder="Fecha de Ingreso"><br>
+                </div>
+
+            <div class="modal-body">
+                <div class="col-lg-12">
+                    <label for="">Marca de herramienta</label>
+                    <input type="text" class="form-control" id="txt_marca" placeholder="Marca de herramienta"><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Modelo</label>
+                    <input type="text" class="form-control" id="txt_modelo" placeholder="Modelo de herramienta"><br>
                 </div>
 
                 <div class="col-lg-12">

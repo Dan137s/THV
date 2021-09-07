@@ -23,6 +23,7 @@ function listar_herramienta() {
             { "defaultContent": "" },
             { "data": "herramienta_id" },
             { "data": "herramienta_tipo_id" },
+            { "data": "herramienta_serial" },
             { "data": "herramienta_fecha" },
             { "data": "herramienta_marca" },
             { "data": "herramienta_modelo" },
