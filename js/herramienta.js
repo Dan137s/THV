@@ -24,7 +24,7 @@ function listar_herramienta() {
             { "data": "herramienta_id" },
             { "data": "herramienta_tipo" },
             { "data": "herramienta_serial" },
-            { "data": "herramienta_fecha" },
+            { "data": "herramienta_fecregistro" },
             { "data": "herramienta_marca" },
             { "data": "herramienta_modelo" },
             { "data": "herramienta_descripcion" },
@@ -74,10 +74,9 @@ function AbrirModalRegistro() {
 function Registro_Herramienta() {
     var herramienta = $("#txt_tipo").val();
     var serial = $("#txt_serial").val();
-
-
-    if (herramienta.length == 0 || serial.length == 0) {
-        Swal.fire("Mensaje De Advertencia", "Los campos de herramientas no deben estar incompletos", "warning");
+    var marca = $("#txt_marca").val();
+    if (herramienta.length == 0 || serial.length == 0 || marca.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({
@@ -85,7 +84,8 @@ function Registro_Herramienta() {
         type: 'POST',
         data: {
             h: herramienta,
-            s: serial
+            s: serial,
+            m: marca
 
 
         }

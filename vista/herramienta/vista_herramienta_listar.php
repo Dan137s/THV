@@ -68,14 +68,24 @@
             <h4 class="modal-title"><b>Registro De Herramienta</b></h4>
             </div>
             <div class="modal-body">
-                <div class="col-lg-12">
-                    <label for="">tipo de herramienta</label>
-                    <input type="text" minlength="" maxlength="" class="form-control" id="txt_tipo" placeholder="Tipo de herramienta"><br>
-                </div>
-                <div class="col-lg-12">
+
+            <div class="col-lg-12">
                     <label for="">herramienta serial</label>
-                    <input type="text" minlength="" maxlength="" class="form-control" id="txt_serial" placeholder="Numero Serial"><br>
+                    <input type="text" class="form-control" id="txt_serial" placeholder="Numero Serial"><br>
                 </div>
+
+
+            <div class="col-lg-12">
+                    <label for="">Tipo herramienta</label>
+                    <input type="text" class="form-control" id="txt_tipo" placeholder="Tipo Herramienta"><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Marca herramienta</label>
+                    <input type="text" class="form-control" id="txt_marca" placeholder="Marca Herramienta"><br>
+                </div>
+
+                
 
             </div>
             <div class="modal-footer">
@@ -92,7 +102,7 @@ $(document).ready(function() {
     listar_herramienta();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
-        $("#txt_tipo").focus();  
+        $("#txt_serial").focus();  
     })
 } );
 
