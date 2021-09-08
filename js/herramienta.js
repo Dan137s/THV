@@ -75,7 +75,9 @@ function Registro_Herramienta() {
     var herramienta = $("#txt_tipo").val();
     var serial = $("#txt_serial").val();
     var marca = $("#txt_marca").val();
-    if (herramienta.length == 0 || serial.length == 0 || marca.length == 0) {
+    var modelo = $("#txt_modelo").val();
+    var descripcion = $("#txt_descripcion").val();
+    if (herramienta.length == 0 || serial.length == 0 || marca.length == 0 || modelo.length == 0 || descripcion.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
@@ -85,7 +87,9 @@ function Registro_Herramienta() {
         data: {
             h: herramienta,
             s: serial,
-            m: marca
+            m: marca,
+            mo: modelo,
+            d: descripcion
 
 
         }

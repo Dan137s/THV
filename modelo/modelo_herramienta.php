@@ -21,8 +21,8 @@
 			}
         }
 
-        function Registrar_Herramienta($herramienta, $serial, $marca ){
-            $sql = "call SP_REGISTRAR_HERRAMIENTA('$herramienta', '$serial', '$marca')";
+        function Registrar_Herramienta($herramienta, $serial, $marca, $modelo, $descripcion ){
+            $sql = "call SP_REGISTRAR_HERRAMIENTA('$herramienta', '$serial', '$marca' , '$modelo', '$descripcion')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]); //Retorna valores 

@@ -74,7 +74,6 @@
                     <input type="text" class="form-control" id="txt_serial" placeholder="Numero Serial"><br>
                 </div>
 
-
             <div class="col-lg-12">
                     <label for="">Tipo herramienta</label>
                     <input type="text" class="form-control" id="txt_tipo" placeholder="Tipo Herramienta"><br>
@@ -84,6 +83,17 @@
                     <label for="">Marca herramienta</label>
                     <input type="text" class="form-control" id="txt_marca" placeholder="Marca Herramienta"><br>
                 </div>
+
+                <div class="col-lg-12">
+                    <label for="">Modelo herramienta</label>
+                    <input type="text" class="form-control" id="txt_modelo" placeholder="Modelo Herramienta"><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Descripción herramienta</label>
+                    <input type="text" class="form-control" id="txt_descripcion" placeholder="Descripción Herramienta"><br>
+                </div>
+
 
                 
 
