@@ -27,7 +27,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>N° Registro</th>
+                        <th>N°</th>
                         <th>Tipo</th>
                         <th>Serial</th>
                         <th>Fecha Registro</th>
@@ -42,7 +42,7 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>N° Registro</th>
+                        <th>N°</th>
                         <th>Tipo</th>
                         <th>Serial</th>
                         <th>Fecha Registro</th>
@@ -66,9 +66,15 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title"><b>Registro de herramienta</b></h4>
             </div>    
+
             <div class="col-lg-12">
-                    <label for="">Seleccione</label>
-                    <select class="js-example-basic-single" name="tipo_herramienta" id="cbm_tipo_herramienta" style="width:100%;">
+                    <label for="">Seleccione el tipo</label>
+                    <select class="js-example-basic-single" name="state" id="cbm_estatus" style="width:100%;">
+                        <option value="Manual<">MANUAL</option>
+                        <option value="Electric">ELECTRIC</option>
+                        <option value="Otros">OTROS</option>
+                        
+
                     </select><br><br>
                 </div>
 

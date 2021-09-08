@@ -22,7 +22,7 @@ function listar_herramienta() {
 
             { "defaultContent": "" },
             { "data": "herramienta_id" },
-            { "data": "herramienta_tipo_id" },
+            { "data": "herramienta_tipo" },
             { "data": "herramienta_serial" },
             { "data": "herramienta_fecha" },
             { "data": "herramienta_marca" },
@@ -68,5 +68,10 @@ function listar_herramienta() {
 function AbrirModalRegistro() {
     $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
     $("#modal_registro").modal('show');
+
+}
+
+function Registro_Herramienta() {
+    var procedimiento = $("#")
 
 }
