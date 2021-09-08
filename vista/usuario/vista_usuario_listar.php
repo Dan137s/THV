@@ -30,9 +30,9 @@
                         <th>Rut Usuario</th>
                         <th>Correo</th>
                         <th>Nombre</th>
-                        <th>Rol</th>
+                        <th>Tipo</th>
                         <th>Sexo</th>
-                        <th>Estatus</th>
+                        <th>Estado</th>
                         <th>Acci&oacute;n</th>
                     </tr>
                 </thead>
@@ -42,9 +42,9 @@
                         <th>Rut Usuario</th>
                         <th>Correo</th>
                         <th>Nombre</th>
-                        <th>Rol</th>
+                        <th>Tipo</th>
                         <th>Sexo</th>
-                        <th>Estatus</th>
+                        <th>Estado</th>
                         <th>Acci&oacute;n</th>
                     </tr>
                 </tfoot>

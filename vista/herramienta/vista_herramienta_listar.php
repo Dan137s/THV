@@ -34,7 +34,7 @@
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
-                        <th>Estatus</th>
+                        <th>Estado</th>
                         <th>Acción</th>
                        
                     </tr>
@@ -49,7 +49,7 @@
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
-                        <th>Estatus</th>
+                        <th>Estado</th>
                         <th>Acción</th>
                     </tr>
                 </tfoot>
@@ -70,6 +70,7 @@
             <div class="col-lg-12">
                     <label for="">Seleccione el tipo</label>
                     <select class="js-example-basic-single" name="state" id="cbm_estatus" style="width:100%;">
+                        <option value="">--</option>
                         <option value="Manual<">MANUAL</option>
                         <option value="Electric">ELECTRIC</option>
                         <option value="Otros">OTROS</option>
@@ -106,7 +107,7 @@
                 </div>
 
                 <div class="col-lg-12">
-                    <label for="">Estatus</label>
+                    <label for="">Estado</label>
                     <select class="js-example-basic-single" name="state" id="cbm_estatus" style="width:100%;">
                         <option value="ACTIVO<">ACTIVO</option>
                         <option value="INACTIVO">INACTIVO</option>
