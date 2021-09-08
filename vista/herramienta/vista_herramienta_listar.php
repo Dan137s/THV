@@ -62,13 +62,13 @@
 <div class="modal fade" id="modal_registro" role="dialog">
         <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <div class="modal-header" style="text-align:center;">
+            <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title"><b>Registro de herramienta</b></h4>
             </div>    
 
             <div class="col-lg-12">
-                    <label for="">Seleccione el tipo</label>
+                    <label for="">Seleccione el tipo herramienta</label>
                     <select class="js-example-basic-single" name="state" id="cbm_estatus" style="width:100%;">
                         <option value="">--</option>
                         <option value="Manual<">MANUAL</option>
@@ -82,11 +82,6 @@
                 <div class="col-lg-12">
                     <label for="">Serial</label>
                     <input type="text" class="form-control" id="txt_modelo" placeholder="Serial de herramienta"><br>
-                </div>
-
-                <div class="col-lg-12">
-                    <label for="">Fecha Ingreso</label>
-                    <input type="date" class="form-control" id="txt_cantidad" placeholder="Fecha de Ingreso"><br>
                 </div>
 
             <div class="modal-body">
