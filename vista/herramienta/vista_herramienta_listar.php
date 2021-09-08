@@ -59,70 +59,40 @@
     </div>
           <!-- /.box -->
 </div>
+
 <div class="modal fade" id="modal_registro" role="dialog">
         <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registro de herramienta</b></h4>
-            </div>    
-
-            <div class="col-lg-12">
-                    <label for="">Seleccione el tipo herramienta</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_estatus" style="width:100%;">
-                        <option value="">--</option>
-                        <option value="Manual<">MANUAL</option>
-                        <option value="Electric">ELECTRIC</option>
-                        <option value="Otros">OTROS</option>
-                        
-
-                    </select><br><br>
-                </div>
-
-                <div class="col-lg-12">
-                    <label for="">Serial</label>
-                    <input type="text" class="form-control" id="txt_modelo" placeholder="Serial de herramienta"><br>
-                </div>
-
+            <h4 class="modal-title"><b>Registro De Herramienta</b></h4>
+            </div>
             <div class="modal-body">
                 <div class="col-lg-12">
-                    <label for="">Marca de herramienta</label>
-                    <input type="text" class="form-control" id="txt_marca" placeholder="Marca de herramienta"><br>
+                    <label for="">tipo de herramienta</label>
+                    <input type="text" minlength="" maxlength="" class="form-control" id="txt_tipo" placeholder="Tipo de herramienta"><br>
                 </div>
-
                 <div class="col-lg-12">
-                    <label for="">Modelo</label>
-                    <input type="text" class="form-control" id="txt_modelo" placeholder="Modelo de herramienta"><br>
-                </div>
-
-                <div class="col-lg-12">
-                    <label for="">Descripción de la herramienta</label>
-                    <input type="text" class="form-control" id="txt_descripcion" placeholder="Descripción de herramienta"><br>
-                    
-                </div>
-
-                <div class="col-lg-12">
-                    <label for="">Estado</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_estatus" style="width:100%;">
-                        <option value="ACTIVO<">ACTIVO</option>
-                        <option value="INACTIVO">INACTIVO</option>
-                    </select><br><br>
+                    <label for="">herramienta serial</label>
+                    <input type="text" minlength="" maxlength="" class="form-control" id="txt_serial" placeholder="Numero Serial"><br>
                 </div>
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Registrar_Usuario()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
+                <button class="btn btn-primary" onclick="Registro_Herramienta()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>
         </div>
-    </div>
+</div>
+
+
 <script>
 $(document).ready(function() {
     listar_herramienta();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
-        $("#txt_usu").focus();  
+        $("#txt_tipo").focus();  
     })
 } );
 

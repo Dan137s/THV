@@ -72,6 +72,34 @@ function AbrirModalRegistro() {
 }
 
 function Registro_Herramienta() {
-    var procedimiento = $("#")
+    var herramienta = $("#txt_tipo").val();
+    var serial = $("#txt_serial").val();
 
+
+    if (herramienta.length == 0 || serial.length == 0) {
+        Swal.fire("Mensaje De Advertencia", "Los campos de herramientas no deben estar incompletos", "warning");
+    }
+
+    $.ajax({
+        "url": "../controlador/herramienta/controlador_herramienta_registro.php",
+        type: 'POST',
+        data: {
+            h: herramienta,
+            s: serial
+
+
+        }
+
+    }).done(function(resp) {
+        if (resp > 0) {
+            if (resp == 1) {
+                $("#modal_registro").modal('hide'); //Cierro el modal del registro
+                listar_herramienta();
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, herramienta registrada", "success");
+            } else {
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+            }
+        }
+
+    })
 }

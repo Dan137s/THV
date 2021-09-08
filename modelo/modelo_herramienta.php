@@ -21,6 +21,16 @@
 			}
         }
 
+        function Registrar_Herramienta($herramienta, $serial ){
+            $sql = "call SP_REGISTRAR_HERRAMIENTA('$herramienta', '$serial')";
+			if ($consulta = $this->conexion->conexion->query($sql)) {
+				if ($row = mysqli_fetch_array($consulta)) {
+                        return $id= trim($row[0]); //Retorna valores 
+				}
+				$this->conexion->cerrar();
+			}
+        }
+
 
     }
 ?>
