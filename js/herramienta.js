@@ -63,3 +63,10 @@ function listar_herramienta() {
     });
 
 }
+
+//Este codigo me permite mantener el formulario del registro abierto mantener el foco al hacer click en otro lugar fuera del mismo form
+function AbrirModalRegistro() {
+    $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
+    $("#modal_registro").modal('show');
+
+}
