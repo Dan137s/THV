@@ -161,5 +161,8 @@ function Modificar_Procedimiento() {
 
         }
 
+    }).done(function(resp) {
+        alert(resp);
+
     })
 }
