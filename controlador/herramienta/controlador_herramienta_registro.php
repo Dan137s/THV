@@ -6,8 +6,9 @@
     $marca = htmlspecialchars($_POST['m'],ENT_QUOTES,'UTF-8');
     $modelo = htmlspecialchars($_POST['mo'],ENT_QUOTES,'UTF-8');
     $descripcion = htmlspecialchars($_POST['d'],ENT_QUOTES,'UTF-8');
+    $estatus = htmlspecialchars($_POST['e'],ENT_QUOTES,'UTF-8');
   
-    $consulta = $MHR->Registrar_Herramienta($herramienta, $serial, $marca, $modelo, $descripcion);
+    $consulta = $MHR->Registrar_Herramienta($herramienta, $serial, $marca, $modelo, $descripcion, $estatus);
     echo $consulta;
   
 ?>

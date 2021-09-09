@@ -21,7 +21,7 @@ function listar_herramienta() {
         "columns": [
 
             { "defaultContent": "" },
-            { "data": "herramienta_id" },
+
             { "data": "herramienta_tipo" },
             { "data": "herramienta_serial" },
             { "data": "herramienta_fecregistro" },
@@ -77,7 +77,8 @@ function Registro_Herramienta() {
     var marca = $("#txt_marca").val();
     var modelo = $("#txt_modelo").val();
     var descripcion = $("#txt_descripcion").val();
-    if (herramienta.length == 0 || serial.length == 0 || marca.length == 0 || modelo.length == 0 || descripcion.length == 0) {
+    var estatus = $("#txt_estatus").val();
+    if (herramienta.length == 0 || serial.length == 0 || marca.length == 0 || modelo.length == 0 || descripcion.length == 0 || estatus.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
@@ -89,7 +90,8 @@ function Registro_Herramienta() {
             s: serial,
             m: marca,
             mo: modelo,
-            d: descripcion
+            d: descripcion,
+            e: estatus
 
 
         }

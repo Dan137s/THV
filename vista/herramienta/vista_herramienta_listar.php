@@ -27,7 +27,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>N°</th>
+                        
                         <th>Tipo</th>
                         <th>Serial</th>
                         <th>Fecha Registro</th>
@@ -42,7 +42,7 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>N°</th>
+                      
                         <th>Tipo</th>
                         <th>Serial</th>
                         <th>Fecha Registro</th>
@@ -74,9 +74,16 @@
                     <input type="text" class="form-control" id="txt_serial" placeholder="Numero Serial"><br>
                 </div>
 
-            <div class="col-lg-12">
-                    <label for="">Tipo herramienta</label>
-                    <input type="text" class="form-control" id="txt_tipo" placeholder="Tipo Herramienta"><br>
+        
+
+                <div class="col-lg-12">
+                    <label for="">Tipo de herramienta</label>
+                    <select class="js-example-basic-single" name="state" id="txt_tipo" style="width:100%;">
+                    <option value="">--</option>    
+                    <option value="Eléctric@">Eléctric@</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Otros">Otros</option>
+                    </select><br><br>
                 </div>
 
                 <div class="col-lg-12">
@@ -94,6 +101,13 @@
                     <input type="text" class="form-control" id="txt_descripcion" placeholder="Descripción Herramienta"><br>
                 </div>
 
+                <div class="col-lg-12">
+                    <label for="">Estatus</label>
+                    <select class="js-example-basic-single" name="state" id="txt_estatus" style="width:100%;">
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="INACTIVO">INACTIVO</option>
+                    </select><br><br>
+                </div>
 
                 
 
