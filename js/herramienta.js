@@ -150,6 +150,15 @@ function Modificar_Procedimiento() {
         type: 'POST',
         data: {
 
+            serialactual: serialactual,
+            serialnuevo: serialnuevo,
+            tipo: tipo,
+            marca: marca,
+            modelo: modelo,
+            descripcion: descripcion,
+            estatus: estatus
+
+
         }
 
     })
