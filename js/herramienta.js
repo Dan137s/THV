@@ -1,5 +1,7 @@
+var tableherramienta;
+
 function listar_herramienta() {
-    var tableherramienta = $("#tabla_herramienta").DataTable({
+    tableherramienta = $("#tabla_herramienta").DataTable({
         "ordering": false,
         "bLengthChange": false,
         "searching": { "regex": false },
@@ -22,11 +24,11 @@ function listar_herramienta() {
 
             { "defaultContent": "" },
 
-            { "data": "herramienta_tipo" },
             { "data": "herramienta_serial" },
-            { "data": "herramienta_fecregistro" },
+            { "data": "herramienta_tipo" },
             { "data": "herramienta_marca" },
             { "data": "herramienta_modelo" },
+            { "data": "herramienta_fecregistro" },
             { "data": "herramienta_descripcion" },
             {
                 "data": "herramienta_estatus",
@@ -105,6 +107,49 @@ function Registro_Herramienta() {
             } else {
                 Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
             }
+        }
+
+    })
+}
+
+
+$('#tabla_herramienta').on('click', '.editar', function() {
+    var data = tableherramienta.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tableherramienta.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tableherramienta.row(this).data();
+    }
+    $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
+    $("#modal_editar").modal('show'); //Muestro el modal o formulario
+    $("#txt_id_herramienta").val(data.herramienta_serial)
+    $("#txt_serial_actual_editar").val(data.herramienta_serial)
+    $("#txt_serial_nuevo_editar").val(data.herramienta_serial)
+    $("#txt_tipo_editar").val(data.herramienta_tipo).trigger("change");
+    $("#txt_marca_editar").val(data.herramienta_marca)
+    $("#txt_modelo_editar").val(data.herramienta_modelo)
+    $("#txt_descripcion_editar").val(data.herramienta_descripcion)
+    $("#txt_estatus_editar").val(data.herramienta_estatus).trigger("change");
+})
+
+function Modificar_Procedimiento() {
+    //Vamos a llevar el actual y el nuevo para crear una condicional en el procedure si el dato actual es igual al nuevo y solo guarde el valor modificado
+    //var id = $("#txt_id_herramienta").val();
+    var serialactual = $("#txt_serial_actual_editar").val();
+    var serialnuevo = $("#txt_serial_nuevo_editar").val();
+    var tipo = $("#txt_tipo_editar").val();
+    var marca = $("#txt_marca_editar").val();
+    var modelo = $("#txt_modelo_editar").val();
+    var descripcion = $("#txt_descripcion_editar").val();
+    var estatus = $("#txt_estatus_editar").val();
+
+    if (serialnuevo.length == 0) {
+        Swal.fire("Mensaje de Advertencia", "Debe reingresar el serial", "warning");
+    }
+
+    $.ajax({
+        url: '../controlador/herramienta/controlador_herramienta_modificar.php',
+        type: 'POST',
+        data: {
+
         }
 
     })
