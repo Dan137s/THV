@@ -116,7 +116,8 @@
                 <div class="col-lg-12">
                     <input type="text" id="txt_id_material" hidden>
                     <label for="">Nombre</label>
-                    <input type="text" class="form-control" id="txt_material_editar" placeholder="Ingrese Material" onkeypress="return soloLetras(event)"><br>
+                    <input type="text"   id="txt_material_actual_editar" placeholder="Ingrese Material" onkeypress="return soloLetras(event)" hidden>
+                    <input type="text" class="form-control" id="txt_material_nuevo_editar" placeholder="Ingrese Material" onkeypress="return soloLetras(event)" ><br>
                 </div>
 
 

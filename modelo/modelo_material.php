@@ -33,16 +33,14 @@
         }
 
         //Funcion Modificar
-        function Modificar_Herramienta( $estatus){
-            $sql = "call SP_MODIFICAR_HERRAMIENTA('$estatus')";
+        function Modificar_Material($id, $materialactual, $materialnuevo,  $descripcion, $stock, $estatus){
+            $sql = "call SP_MODIFICAR_MATERIAL('$id', '$materialactual', '$materialnuevo',  '$descripcion', '$stock', '$estatus')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
-				return 1;
-				
-			}else{
-				return 0;
+				if ($row = mysqli_fetch_array($consulta)) {
+                        return $id= trim($row[0]);//Retorna valores
+				}
+				$this->conexion->cerrar();
 			}
         }
-
-
     }
 ?>

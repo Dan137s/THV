@@ -77,7 +77,8 @@ $('#tabla_material').on('click', '.editar', function() {
     $("#modal_editar").modal('show'); //Muestro el modal o formulario
 
     $("#txt_id_material").val(data.material_id)
-    $("#txt_material_editar").val(data.material_nombre)
+    $("#txt_material_actual_editar").val(data.material_nombre)
+    $("#txt_material_nuevo_editar").val(data.material_nombre)
     $("#txt_descripcion_editar").val(data.material_descripcion)
     $("#txt_stock_editar").val(data.material_stock)
     $("#txt_estatus_editar").val(data.material_estatus).trigger("change");
@@ -144,22 +145,25 @@ function LimpiarCampos() {
 //Modificar insumo
 function Modificar_Material() {
     var id = $("#txt_id_material").val();
-    var material = $("#txt_material_editar").val();
+    var materialactual = $("#txt_material_actual_editar").val();
+    var materialnuevo = $("#txt_material_nuevo_editar").val();
     var descripcion = $("#txt_descripcion_editar").val();
     var stock = $("#txt_stock_editar").val();
     var estatus = $("#txt_estatus_editar").val();
     if (stock < 0) {
         Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
     }
-    if (material.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+    if (materialactual.length == 0 || materialnuevo.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
         Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({
-        "url": "../controlador/material/controlador_material_registro.php",
+        "url": "../controlador/material/controlador_material_modificar.php",
         type: 'POST',
         data: {
-            ma: material,
+            id: id,
+            acma: materialactual,
+            numa: materialnuevo,
             ds: descripcion,
             st: stock,
             es: estatus
@@ -167,20 +171,20 @@ function Modificar_Material() {
         }
     }).done(function(resp) {
         if (resp > 0) {
-            if (resp == 1) {
-                $("#modal_registro").modal('hide'); //Cierro el modal del registro
+            if (resp == 1) { //Cuando el valor retorne 1 lista de nuevo la tabla
+                $("#modal_editar").modal('hide'); //Cierro el modal del editar
                 listar_material();
-                LimpiarCampos();
 
-                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
+
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material actualizado", "success");
             } else {
-                LimpiarCampos();
+
                 Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
 
             }
         } else {
 
-            Swal.fire("Mensaje de Error", "Lo sentimos su registro no se pudo completar", "error");
+            Swal.fire("Mensaje de Error", "Lo sentimos su actualizacion no se pudo completar", "error");
 
         }
     })
