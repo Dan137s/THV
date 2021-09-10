@@ -946,6 +946,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
   }
   $.widget.bridge('uibutton', $.ui.button);
 
+  //Validación para los campos
   function soloNumeros(e){
       tecla = (document.all) ? e.keyCode : e.which;
       if (tecla==8){

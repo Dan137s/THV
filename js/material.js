@@ -26,6 +26,7 @@ function listar_material() {
 
             { "data": "material_nombre" },
             { "data": "material_descripcion" },
+            { "data": "material_stock" },
             { "data": "material_fregistro" },
             {
                 "data": "material_estatus",
@@ -71,4 +72,26 @@ function filterGlobal() {
     $('#tabla_material').DataTable().search(
         $('#global_filter').val(),
     ).draw();
+}
+
+
+function Registrar_Material() {
+    var material = $("#txt_material").val();
+    var descripcion = $("#txt_descripcion").val();
+    var stock = $("#txt_stock").val();
+    var estatus = $("#txt_estatus").val();
+    if (stock < 0) {
+        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
+    }
+    if (material.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+        Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    $.ajax({
+        "url": "../controlador/material/controlador_material_registro.php",
+        type: 'POST'
+
+    }).done(function(resp) {
+        alert(resp);
+    })
 }
