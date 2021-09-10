@@ -1,8 +1,8 @@
-<script type="text/javascript" src="../js/materiales.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/material.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
-              <h3 class="box-title">[MATERIAL-REGISTRADO] EN SISTEMA</h3>
+              <h3 class="box-title">[MATERIALES-REGISTRADOS] EN SISTEMA</h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -23,13 +23,14 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_hospederia" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_material" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
+                        
                         <th>Nombre</th>
-                        <th>Dirección</th>
-                        <th>Fecha</th>
+                        <th>Descripcion</th>
+                        <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
                        
@@ -38,9 +39,10 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
+                        
                         <th>Nombre</th>
-                        <th>Dirección</th>
-                        <th>Fecha</th>
+                        <th>Descripcion</th>
+                        <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
                     </tr>
@@ -51,92 +53,121 @@
     </div>
           <!-- /.box -->
 </div>
-<form autocomplete="false" onsubmit="return false">
-    <div class="modal fade" id="modal_registro" role="dialog">
-        <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registre Hospederia</b></h4>
-            </div>
-            <div class="modal-body">
-                <div class="col-lg-12">
-                    <label for="">Nombre Hospederia</label>
-                    <input type="text" class="form-control" id="txt_nomh" placeholder="Nombre de la hospederia"><br>
-                </div>
-                <div class="col-lg-12">
-                    <label for="">Dirección</label>
-                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese la Dirección"><br>
-                </div>
-                <div class="col-lg-12">
-                    <label for="">Comuna</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_comuna" style="width:100%;">
-                    </select><br><br>
-                </div>
 
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Registrar_Usuario()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
-            </div>
-        </div>
-        </div>
-    </div>
-</form>
-<form autocomplete="false" onsubmit="return false">
-    <div class="modal fade" id="modal_editar" role="dialog">
+<!--Modal registro-->
+<div class="modal fade" id="modal_registro" role="dialog">
         <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Editar Usuario</b></h4>
+            <h4 class="modal-title"><b>Registro De Herramienta</b></h4>
             </div>
             <div class="modal-body">
-                <div class="col-lg-12">
-                    <input type="text" id="txtidusuario" hidden>
-                    <label for="">Usuario</label>
-                    <input type="text" class="form-control" id="txtusu_editar" placeholder="Ingrese usuario" disabled><br>
-                </div>
+
                 <div class="col-lg-12">
                     <label for="">Nombre</label>
-                    <input type="text" class="form-control" id="txt_alias_editar" placeholder="Nombre Usuario"><br>
-                </div>
-           
-                <div class="col-lg-12">
-                    <label for="">Email</label>
-                    <input type="text" class="form-control" id="txt_email_editar" placeholder="Ingrese Correo">
-                    <label for="" id="emailOK_editar" style="color:red;"></label>
-                    <input type="text" id="validar_email_editar" hidden>
+                    <input type="text" class="form-control" id="txt_material" placeholder="Ingrese Material"><br>
                 </div>
 
                 <div class="col-lg-12">
-                    <label for="">Sexo</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_sexo_editar" style="width:100%;">
-                        <option value="M">MASCULINO</option>
-                        <option value="F">FEMENINO</option>
-                    </select><br><br>
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" id="txt_material" placeholder="Ingrese Material"><br>
                 </div>
+
                 <div class="col-lg-12">
-                    <label for="">Rol</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_rol_editar" style="width:100%;">
+                    <label for="">Descripcion</label>
+                    <input type="text" class="form-control" id="txt_descripcion" placeholder="Descripcion"><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Estatus</label>
+                    <select class="js-example-basic-single" name="state" id="txt_estatus" style="width:100%;">
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="INACTIVO">INACTIVO</option>
                     </select><br><br>
                 </div>
+
+                
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Modificar_Usuario()"><i class="fa fa-check"><b>&nbsp;Modificar</b></i></button>
+                <button class="btn btn-primary" onclick="Registro_Herramienta()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>
         </div>
-    </div>
-</form>
+</div>
+
+<!--Modal Editar registro-->
+<div class="modal fade" id="modal_editar_herramienta" role="dialog">
+        <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header" style="text-align:center;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><b>Editar Herramienta</b></h4>
+            </div>
+            <div class="modal-body">
+
+            
+                <div class="col-lg-12">
+                <input type="text" id="txt_id_herramienta" hidden>
+                    <label for="">herramienta serial</label>
+                    <input type="text" class="form-control" id="txt_serial_editar" placeholder="Numero Serial" ><br>
+                </div>
+
+        <!--
+
+                <div class="col-lg-12">
+                    <label for="">Tipo de herramienta</label>
+                    <select class="js-example-basic-single" name="state" id="txt_tipo_editar" style="width:100%;">
+                    <option value="">--</option>    
+                    <option value="Eléctric@">Eléctric@</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Otros">Otros</option>
+                    </select><br><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Marca herramienta</label>
+                    <input type="text" class="form-control" id="txt_marca_editar" placeholder="Marca Herramienta"><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Modelo herramienta</label>
+                    <input type="text" class="form-control" id="txt_modelo_editar" placeholder="Modelo Herramienta"><br>
+                </div>
+
+                <div class="col-lg-12">
+                    <label for="">Descripción herramienta</label>
+                    <input type="text" class="form-control" id="txt_descripcion_editar" placeholder="Descripción Herramienta"><br>
+                </div>
+-->
+                <div class="col-lg-12">
+                    <label for="">Estatus</label>
+                    <select class="js-example-basic-single" name="state" id="txt_estatus_editar" style="width:100%;">
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="INACTIVO">INACTIVO</option>
+                    </select><br><br>
+                </div>
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="Modificar_Herramienta()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
+            </div>
+        </div>
+        </div>
+</div>
+
+
 <script>
 $(document).ready(function() {
-    listar_hospederia();
+    listar_material();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
-        $("#txt_usu").focus();  
+        $("#txt_serial").focus();  
     })
 } );
 

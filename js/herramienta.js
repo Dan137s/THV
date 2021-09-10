@@ -118,51 +118,51 @@ $('#tabla_herramienta').on('click', '.editar', function() {
     if (tableherramienta.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
         var data = tableherramienta.row(this).data();
     }
-    $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
-    $("#modal_editar").modal('show'); //Muestro el modal o formulario
+    $("#modal_editar_herramienta").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
+    $("#modal_editar_herramienta").modal('show'); //Muestro el modal o formulario
+
     $("#txt_id_herramienta").val(data.herramienta_serial)
-    $("#txt_serial_actual_editar").val(data.herramienta_serial)
-    $("#txt_serial_nuevo_editar").val(data.herramienta_serial)
-    $("#txt_tipo_editar").val(data.herramienta_tipo).trigger("change");
-    $("#txt_marca_editar").val(data.herramienta_marca)
-    $("#txt_modelo_editar").val(data.herramienta_modelo)
-    $("#txt_descripcion_editar").val(data.herramienta_descripcion)
+    $("#txt_serial_editar").val(data.herramienta_serial)
+        //$("#txt_tipo_editar").val(data.herramienta_tipo).trigger("change");
+        //$("#txt_marca_editar").val(data.herramienta_marca)
+        //$("#txt_modelo_editar").val(data.herramienta_modelo)
+        //$("#txt_descripcion_editar").val(data.herramienta_descripcion)
     $("#txt_estatus_editar").val(data.herramienta_estatus).trigger("change");
 })
 
-function Modificar_Procedimiento() {
-    //Vamos a llevar el actual y el nuevo para crear una condicional en el procedure si el dato actual es igual al nuevo y solo guarde el valor modificado
-    //var id = $("#txt_id_herramienta").val();
-    var serialactual = $("#txt_serial_actual_editar").val();
-    var serialnuevo = $("#txt_serial_nuevo_editar").val();
-    var tipo = $("#txt_tipo_editar").val();
-    var marca = $("#txt_marca_editar").val();
-    var modelo = $("#txt_modelo_editar").val();
-    var descripcion = $("#txt_descripcion_editar").val();
+//Vamos a llevar el actual y el nuevo para crear una condicional en el procedure si el dato actual es igual al nuevo y solo guarde el valor modificado
+//var id = $("#txt_id_herramienta").val();
+
+
+function Modificar_Herramienta() {
+    //var serial = $("txt_serial_editar").val();
+    //var tipo = $("#txt_tipo_editar").val();
+    //var marca = $("#txt_marca_editar").val();
+    //var modelo = $("#txt_modelo_editar").val();
+    //var descripcion = $("#txt_descripcion_editar").val();
     var estatus = $("#txt_estatus_editar").val();
 
-    if (serialnuevo.length == 0) {
-        Swal.fire("Mensaje de Advertencia", "Debe reingresar el serial", "warning");
-    }
+    /** if (marca.length == 0 || modelo.length == 0 || descripcion.length == 0) {
+         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+     }*/
 
     $.ajax({
         url: '../controlador/herramienta/controlador_herramienta_modificar.php',
         type: 'POST',
         data: {
 
-            serialactual: serialactual,
-            serialnuevo: serialnuevo,
-            tipo: tipo,
-            marca: marca,
-            modelo: modelo,
-            descripcion: descripcion,
+            // serial: serial,
+            //tipo: tipo,
+            //marca: marca,
+            //modelo: modelo,
+            //descripcion: descripcion,
             estatus: estatus
-
-
         }
 
     }).done(function(resp) {
         alert(resp);
 
     })
+
+
 }
