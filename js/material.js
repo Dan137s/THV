@@ -89,9 +89,38 @@ function Registrar_Material() {
 
     $.ajax({
         "url": "../controlador/material/controlador_material_registro.php",
-        type: 'POST'
+        type: 'POST',
+        data: {
+            ma: material,
+            ds: descripcion,
+            st: stock,
+            es: estatus
 
+        }
     }).done(function(resp) {
-        alert(resp);
+        if (resp > 0) {
+            if (resp == 1) {
+                $("#modal_registro").modal('hide'); //Cierro el modal del registro
+                listar_material();
+                LimpiarCampos();
+
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
+            } else {
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
+            }
+        } else {
+            LimpiarCampos();
+            Swal.fire("Mensaje de Error", "Lo sentimos su registro no se pudo completar", "error");
+
+        }
     })
+}
+
+//Cree esta funcion afuera para limpiar los campos y llamar cuando la invoque xD
+function LimpiarCampos() {
+    $("#txt_material").val("");
+    $("#txt_descripcion").val("");
+    $("#txt_stock").val("");
+
 }

@@ -86,6 +86,7 @@
                 <div class="col-lg-12">
                     <label for="">Estatus</label>
                     <select class="js-example-basic-single" name="state" id="txt_estatus" style="width:100%;">
+                        <option value="">--</option>
                         <option value="ACTIVO">ACTIVO</option>
                         <option value="INACTIVO">INACTIVO</option>
                     </select><br><br>
@@ -95,7 +96,7 @@
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Registro_Herramienta()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
+                <button class="btn btn-primary" onclick="Registrar_Material()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>

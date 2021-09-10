@@ -22,8 +22,8 @@
         }
 
         //Funcion Registrar
-        function Registrar_Herramienta($herramienta, $serial, $marca, $modelo, $descripcion, $estatus ){
-            $sql = "call SP_REGISTRAR_HERRAMIENTA('$herramienta', '$serial', '$marca' , '$modelo', '$descripcion', '$estatus')";
+        function Registrar_Material($material, $descripcion, $stock, $estatus){
+            $sql = "call SP_REGISTRAR_MATERIAL('$material', '$descripcion', '$stock', '$estatus')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]); //Retorna valores 
