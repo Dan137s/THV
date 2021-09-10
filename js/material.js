@@ -68,6 +68,21 @@ function listar_material() {
 
 }
 
+$('#tabla_material').on('click', '.editar', function() {
+    var data = tablematerial.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tablematerial.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tablematerial.row(this).data();
+    }
+    $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
+    $("#modal_editar").modal('show'); //Muestro el modal o formulario
+
+    $("#txt_id_material").val(data.material_id)
+    $("#txt_material_editar").val(data.material_nombre)
+    $("#txt_descripcion_editar").val(data.material_descripcion)
+    $("#txt_stock_editar").val(data.material_stock)
+    $("#txt_estatus_editar").val(data.material_estatus).trigger("change");
+})
+
 function filterGlobal() {
     $('#tabla_material').DataTable().search(
         $('#global_filter').val(),
@@ -106,11 +121,12 @@ function Registrar_Material() {
 
                 Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
             } else {
+                LimpiarCampos();
                 Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
 
             }
         } else {
-            LimpiarCampos();
+
             Swal.fire("Mensaje de Error", "Lo sentimos su registro no se pudo completar", "error");
 
         }
@@ -122,5 +138,51 @@ function LimpiarCampos() {
     $("#txt_material").val("");
     $("#txt_descripcion").val("");
     $("#txt_stock").val("");
+
+}
+
+//Modificar insumo
+function Modificar_Material() {
+    var id = $("#txt_id_material").val();
+    var material = $("#txt_material_editar").val();
+    var descripcion = $("#txt_descripcion_editar").val();
+    var stock = $("#txt_stock_editar").val();
+    var estatus = $("#txt_estatus_editar").val();
+    if (stock < 0) {
+        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
+    }
+    if (material.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+        Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    $.ajax({
+        "url": "../controlador/material/controlador_material_registro.php",
+        type: 'POST',
+        data: {
+            ma: material,
+            ds: descripcion,
+            st: stock,
+            es: estatus
+
+        }
+    }).done(function(resp) {
+        if (resp > 0) {
+            if (resp == 1) {
+                $("#modal_registro").modal('hide'); //Cierro el modal del registro
+                listar_material();
+                LimpiarCampos();
+
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
+            } else {
+                LimpiarCampos();
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
+            }
+        } else {
+
+            Swal.fire("Mensaje de Error", "Lo sentimos su registro no se pudo completar", "error");
+
+        }
+    })
 
 }
