@@ -1,7 +1,7 @@
-var tableherramienta;
+var tablematerial;
 
-function listar_herramienta() {
-    tableherramienta = $("#tabla_herramienta").DataTable({
+function listar_material() {
+    tablematerial = $("#tabla_material").DataTable({
         "ordering": false,
         "bLengthChange": false,
         "searching": { "regex": false },
@@ -14,7 +14,7 @@ function listar_herramienta() {
         "async": false,
         "processing": true,
         "ajax": {
-            "url": "../controlador/herramienta/controlador_herramienta_listar.php",
+            "url": "../controlador/material/controlador_material_listar.php",
             type: 'POST'
         },
         "order": [
@@ -24,19 +24,21 @@ function listar_herramienta() {
 
             { "defaultContent": "" },
 
-            { "data": "herramienta_serial" },
-            { "data": "herramienta_tipo" },
-            { "data": "herramienta_marca" },
-            { "data": "herramienta_modelo" },
-            { "data": "herramienta_fecregistro" },
-            { "data": "herramienta_descripcion" },
+            { "data": "material_nombre" },
+            { "data": "material_descripcion" },
+            { "data": "material_stock" },
+            { "data": "material_fregistro" },
             {
-                "data": "herramienta_estatus",
+                "data": "material_estatus",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
                         return "<span class='label label-success'>" + data + "</span>";
-                    } else {
+                    }
+                    if (data == 'INACTIVO') {
                         return "<span class='label label-danger'>" + data + "</span>";
+                    }
+                    if (data == 'AGOTADO') {
+                        return "<span class='label label-black' style='background:black'>" + data + "</span>";
                     }
                 }
             },
@@ -48,7 +50,7 @@ function listar_herramienta() {
         "language": idioma_espanol,
         select: true
     });
-    document.getElementById("tabla_herramienta_filter").style.display = "none";
+    document.getElementById("tabla_material_filter").style.display = "none";
     $('input.global_filter').on('keyup click', function() {
         filterGlobal();
     });
@@ -57,112 +59,134 @@ function listar_herramienta() {
     });
 
 
-    tableherramienta.on('draw.dt', function() {
-        var PageInfo = $('#tabla_herramienta').DataTable().page.info();
-        tableherramienta.column(0, { page: 'current' }).nodes().each(function(cell, i) {
+    tablematerial.on('draw.dt', function() {
+        var PageInfo = $('#tabla_material').DataTable().page.info();
+        tablematerial.column(0, { page: 'current' }).nodes().each(function(cell, i) {
             cell.innerHTML = i + 1 + PageInfo.start;
         });
     });
 
 }
 
-//Este codigo me permite mantener el formulario del registro abierto mantener el foco al hacer click en otro lugar fuera del mismo form
-function AbrirModalRegistro() {
-    $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
-    $("#modal_registro").modal('show');
+$('#tabla_material').on('click', '.editar', function() {
+    var data = tablematerial.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tablematerial.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tablematerial.row(this).data();
+    }
+    $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
+    $("#modal_editar").modal('show'); //Muestro el modal o formulario
 
+    $("#txt_id_material").val(data.material_id)
+    $("#txt_material_actual_editar").val(data.material_nombre)
+    $("#txt_material_nuevo_editar").val(data.material_nombre)
+    $("#txt_descripcion_editar").val(data.material_descripcion)
+    $("#txt_stock_editar").val(data.material_stock)
+    $("#txt_estatus_editar").val(data.material_estatus).trigger("change");
+})
+
+function filterGlobal() {
+    $('#tabla_material').DataTable().search(
+        $('#global_filter').val(),
+    ).draw();
 }
 
-function Registro_Herramienta() {
-    var herramienta = $("#txt_tipo").val();
-    var serial = $("#txt_serial").val();
-    var marca = $("#txt_marca").val();
-    var modelo = $("#txt_modelo").val();
+
+function Registrar_Material() {
+    var material = $("#txt_material").val();
     var descripcion = $("#txt_descripcion").val();
+    var stock = $("#txt_stock").val();
     var estatus = $("#txt_estatus").val();
-    if (herramienta.length == 0 || serial.length == 0 || marca.length == 0 || modelo.length == 0 || descripcion.length == 0 || estatus.length == 0) {
-        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    if (stock < 0) {
+        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
+    }
+    if (material.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+        Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({
-        "url": "../controlador/herramienta/controlador_herramienta_registro.php",
+        "url": "../controlador/material/controlador_material_registro.php",
         type: 'POST',
         data: {
-            h: herramienta,
-            s: serial,
-            m: marca,
-            mo: modelo,
-            d: descripcion,
-            e: estatus
-
+            ma: material,
+            ds: descripcion,
+            st: stock,
+            es: estatus
 
         }
-
     }).done(function(resp) {
         if (resp > 0) {
             if (resp == 1) {
                 $("#modal_registro").modal('hide'); //Cierro el modal del registro
-                listar_herramienta();
-                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, herramienta registrada", "success");
-            } else {
-                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
-            }
-        }
+                listar_material();
+                LimpiarCampos();
 
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
+            } else {
+                LimpiarCampos();
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
+            }
+        } else {
+
+            Swal.fire("Mensaje de Error", "Lo sentimos su registro no se pudo completar", "error");
+
+        }
     })
 }
 
+//Cree esta funcion afuera para limpiar los campos y llamar cuando la invoque xD
+function LimpiarCampos() {
+    $("#txt_material").val("");
+    $("#txt_descripcion").val("");
+    $("#txt_stock").val("");
 
-$('#tabla_herramienta').on('click', '.editar', function() {
-    var data = tableherramienta.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
-    if (tableherramienta.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
-        var data = tableherramienta.row(this).data();
-    }
-    $("#modal_editar_herramienta").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
-    $("#modal_editar_herramienta").modal('show'); //Muestro el modal o formulario
+}
 
-    $("#txt_id_herramienta").val(data.herramienta_serial)
-    $("#txt_serial_editar").val(data.herramienta_serial)
-        //$("#txt_tipo_editar").val(data.herramienta_tipo).trigger("change");
-        //$("#txt_marca_editar").val(data.herramienta_marca)
-        //$("#txt_modelo_editar").val(data.herramienta_modelo)
-        //$("#txt_descripcion_editar").val(data.herramienta_descripcion)
-    $("#txt_estatus_editar").val(data.herramienta_estatus).trigger("change");
-})
-
-//Vamos a llevar el actual y el nuevo para crear una condicional en el procedure si el dato actual es igual al nuevo y solo guarde el valor modificado
-//var id = $("#txt_id_herramienta").val();
-
-
-function Modificar_Herramienta() {
-    //var serial = $("txt_serial_editar").val();
-    //var tipo = $("#txt_tipo_editar").val();
-    //var marca = $("#txt_marca_editar").val();
-    //var modelo = $("#txt_modelo_editar").val();
-    //var descripcion = $("#txt_descripcion_editar").val();
+//Modificar insumo
+function Modificar_Material() {
+    var id = $("#txt_id_material").val();
+    var materialactual = $("#txt_material_actual_editar").val();
+    var materialnuevo = $("#txt_material_nuevo_editar").val();
+    var descripcion = $("#txt_descripcion_editar").val();
+    var stock = $("#txt_stock_editar").val();
     var estatus = $("#txt_estatus_editar").val();
-
-    /** if (marca.length == 0 || modelo.length == 0 || descripcion.length == 0) {
-         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
-     }*/
+    if (stock < 0) {
+        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
+    }
+    if (materialactual.length == 0 || materialnuevo.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+        Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
+    }
 
     $.ajax({
-        url: '../controlador/herramienta/controlador_herramienta_modificar.php',
+        "url": "../controlador/material/controlador_material_modificar.php",
         type: 'POST',
         data: {
+            id: id,
+            acma: materialactual,
+            numa: materialnuevo,
+            ds: descripcion,
+            st: stock,
+            es: estatus
 
-            // serial: serial,
-            //tipo: tipo,
-            //marca: marca,
-            //modelo: modelo,
-            //descripcion: descripcion,
-            estatus: estatus
         }
-
     }).done(function(resp) {
-        alert(resp);
+        if (resp > 0) {
+            if (resp == 1) { //Cuando el valor retorne 1 lista de nuevo la tabla
+                $("#modal_editar").modal('hide'); //Cierro el modal del editar
+                listar_material();
 
+
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material actualizado", "success");
+            } else {
+
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
+            }
+        } else {
+
+            Swal.fire("Mensaje de Error", "Lo sentimos su actualizacion no se pudo completar", "error");
+
+        }
     })
-
 
 }
