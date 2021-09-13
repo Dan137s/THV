@@ -1,6 +1,6 @@
 <?php
     require '../../modelo/modelo_herramienta.php';
-    $MT = new Modelo_Herramienta();//Instancio todas las funciones del modelo
+    $MH = new Modelo_Herramienta();//Instancio todas las funciones del modelo
 
     $serial = htmlspecialchars($_POST['se'],ENT_QUOTES,'UTF-8');
     $tipo = htmlspecialchars($_POST['ti'],ENT_QUOTES,'UTF-8');
@@ -9,7 +9,7 @@
     $descripcion = htmlspecialchars($_POST['ds'],ENT_QUOTES,'UTF-8');
     $estatus = htmlspecialchars($_POST['es'],ENT_QUOTES,'UTF-8');
   
-    $consulta = $MT->Registrar_Herramienta($serial, $tipo, $marca, $modelo, $descripcion, $estatus );
+    $consulta = $MH->Registrar_Herramienta($serial, $tipo, $marca, $modelo, $descripcion, $estatus );
     echo $consulta;
   
 ?>

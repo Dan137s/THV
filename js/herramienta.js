@@ -125,8 +125,8 @@ function Registrar_Herramienta() {
         if (resp > 0) {
             if (resp == 1) {
                 $("#modal_registro").modal('hide'); //Cierro el modal del registro
-                listar_material();
-                LimpiarCampos();
+                listar_herramienta();
+
 
                 Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
             } else {
