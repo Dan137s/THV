@@ -1,7 +1,7 @@
-var tablematerial;
+var tableherramienta;
 
-function listar_material() {
-    tablematerial = $("#tabla_material").DataTable({
+function listar_herramienta() {
+    tableherramienta = $("#tabla_herramienta").DataTable({
         "ordering": false,
         "bLengthChange": false,
         "searching": { "regex": false },
@@ -14,7 +14,7 @@ function listar_material() {
         "async": false,
         "processing": true,
         "ajax": {
-            "url": "../controlador/material/controlador_material_listar.php",
+            "url": "../controlador/herramienta/controlador_herramienta_listar.php",
             type: 'POST'
         },
         "order": [
@@ -24,12 +24,15 @@ function listar_material() {
 
             { "defaultContent": "" },
 
-            { "data": "material_nombre" },
-            { "data": "material_descripcion" },
-            { "data": "material_stock" },
-            { "data": "material_fregistro" },
+            { "data": "herramienta_serial" },
+            { "data": "herramienta_tipo" },
+            { "data": "herramienta_modelo" },
+
+            { "data": "herramienta_marca" },
+            { "data": "herramienta_fecregistro" },
+            { "data": "herramienta_descripcion" },
             {
-                "data": "material_estatus",
+                "data": "herramienta_estatus",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
                         return "<span class='label label-success'>" + data + "</span>";
@@ -50,7 +53,7 @@ function listar_material() {
         "language": idioma_espanol,
         select: true
     });
-    document.getElementById("tabla_material_filter").style.display = "none";
+    document.getElementById("tabla_herramienta_filter").style.display = "none";
     $('input.global_filter').on('keyup click', function() {
         filterGlobal();
     });
@@ -59,19 +62,19 @@ function listar_material() {
     });
 
 
-    tablematerial.on('draw.dt', function() {
-        var PageInfo = $('#tabla_material').DataTable().page.info();
-        tablematerial.column(0, { page: 'current' }).nodes().each(function(cell, i) {
+    tableherramienta.on('draw.dt', function() {
+        var PageInfo = $('#tabla_herramienta').DataTable().page.info();
+        tableherramienta.column(0, { page: 'current' }).nodes().each(function(cell, i) {
             cell.innerHTML = i + 1 + PageInfo.start;
         });
     });
 
 }
 
-$('#tabla_material').on('click', '.editar', function() {
-    var data = tablematerial.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
-    if (tablematerial.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
-        var data = tablematerial.row(this).data();
+$('#tabla_herramienta').on('click', '.editar', function() {
+    var data = tableherramienta.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tableherramienta.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tableherramienta.row(this).data();
     }
     $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
     $("#modal_editar").modal('show'); //Muestro el modal o formulario
@@ -85,7 +88,7 @@ $('#tabla_material').on('click', '.editar', function() {
 })
 
 function filterGlobal() {
-    $('#tabla_material').DataTable().search(
+    $('#tabla_herramienta').DataTable().search(
         $('#global_filter').val(),
     ).draw();
 }

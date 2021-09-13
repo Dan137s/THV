@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../js/material.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/herramienta.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
@@ -23,16 +23,16 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_material" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_herramienta" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
-                        
                         <th>N° Serial</th>
                         <th>Tipo</th>  
                         <th>Marca</th>  
                         <th>Modelo</th> 
-                        <th>N° Registro</th>              
+                        <th>Fecha Registro</th> 
+                        <th>Descripcion</th>             
                         <th>Estatus</th>
                         <th>Acción</th>
                        
@@ -41,12 +41,12 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        
                         <th>N° Serial</th>
                         <th>Tipo</th>  
                         <th>Marca</th>  
                         <th>Modelo</th> 
-                        <th>N° Registro</th>              
+                        <th>Fecha Registro</th> 
+                        <th>Descripcion</th>             
                         <th>Estatus</th>
                         <th>Acción</th>
                     </tr>
