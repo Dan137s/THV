@@ -28,10 +28,11 @@
                     <tr>
                         <th>#</th>
                         
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Stock</th>
-                        <th>Fecha Registro</th>
+                        <th>N° Serial</th>
+                        <th>Tipo</th>  
+                        <th>Marca</th>  
+                        <th>Modelo</th> 
+                        <th>N° Registro</th>              
                         <th>Estatus</th>
                         <th>Acción</th>
                        
@@ -41,10 +42,11 @@
                     <tr>
                         <th>#</th>
                         
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Stock</th>
-                        <th>Fecha Registro</th>
+                        <th>N° Serial</th>
+                        <th>Tipo</th>  
+                        <th>Marca</th>  
+                        <th>Modelo</th> 
+                        <th>N° Registro</th>              
                         <th>Estatus</th>
                         <th>Acción</th>
                     </tr>
@@ -156,7 +158,7 @@
 
 <script>
 $(document).ready(function() {
-    listar_material();
+    listar_herramienta();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_material").focus();  
