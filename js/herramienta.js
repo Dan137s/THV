@@ -79,12 +79,14 @@ $('#tabla_herramienta').on('click', '.editar', function() {
     $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
     $("#modal_editar").modal('show'); //Muestro el modal o formulario
 
-    $("#txt_id_material").val(data.material_id)
-    $("#txt_material_actual_editar").val(data.material_nombre)
-    $("#txt_material_nuevo_editar").val(data.material_nombre)
-    $("#txt_descripcion_editar").val(data.material_descripcion)
-    $("#txt_stock_editar").val(data.material_stock)
-    $("#txt_estatus_editar").val(data.material_estatus).trigger("change");
+    $("#herramienta_id").val(data.herramienta_id)
+    $("#txt_serial_actual_editar").val(data.herramienta_serial)
+    $("#txt_serial_nuevo_editar").val(data.herramienta_serial)
+    $("#txt_tipo_editar").val(data.herramienta_tipo)
+    $("#txt_marca_editar").val(data.herramienta_marca)
+    $("#txt_modelo_editar").val(data.herramienta_modelo)
+    $("#txt_descripcion_editar").val(data.herramienta_descripcion)
+    $("#txt_estatus_editar").val(data.herramienta_estatus).trigger("change");
 })
 
 function filterGlobal() {
@@ -168,29 +170,31 @@ function LimpiarCampos() {
 }
 
 //Modificar insumo
-function Modificar_Material() {
-    var id = $("#txt_id_material").val();
-    var materialactual = $("#txt_material_actual_editar").val();
-    var materialnuevo = $("#txt_material_nuevo_editar").val();
+function Modificar_Herramienta() {
+    var id = $("#herramienta_id").val();
+    var serialactual = $("#txt_serial_actual_editar").val();
+    var serialnuevo = $("#txt_serial_nuevo_editar").val();
+    var tipo = $("#txt_tipo_editar").val();
+    var marca = $("#txt_marca_editar").val();
+    var modelo = $("#txt_modelo_editar").val();
     var descripcion = $("#txt_descripcion_editar").val();
-    var stock = $("#txt_stock_editar").val();
     var estatus = $("#txt_estatus_editar").val();
-    if (stock < 0) {
-        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
-    }
-    if (materialactual.length == 0 || materialnuevo.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+
+    if (serialactual.length == 0 || serialnuevo.length == 0 || tipo.length == 0 || marca.length == 0 || modelo.length == 0 || descripcion.length == 0 || estatus.length == 0) {
         Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({
-        "url": "../controlador/material/controlador_material_modificar.php",
+        "url": "../controlador/herramienta/controlador_herramienta_modificar.php",
         type: 'POST',
         data: {
             id: id,
-            acma: materialactual,
-            numa: materialnuevo,
+            acse: serialactual,
+            nuse: serialnuevo,
+            tp: tipo,
+            mc: marca,
+            ml: modelo,
             ds: descripcion,
-            st: stock,
             es: estatus
 
         }
@@ -198,7 +202,7 @@ function Modificar_Material() {
         if (resp > 0) {
             if (resp == 1) { //Cuando el valor retorne 1 lista de nuevo la tabla
                 $("#modal_editar").modal('hide'); //Cierro el modal del editar
-                listar_material();
+                listar_herramienta();
 
 
                 Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material actualizado", "success");
