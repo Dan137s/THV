@@ -70,30 +70,30 @@
 
                 <div class="col-lg-12">
                     <label for="">Serial</label>
-                    <input type="text" class="form-control" id="txt_serial" placeholder="Ingrese Material" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_serial" placeholder="Ingrese Serial Herramienta" ><br>
                 </div>
 
                 
                 <div class="col-lg-12">
                     <label for="">Tipo</label>
-                    <input type="text" class="form-control" id="txt_tipo" placeholder="Ingrese Material" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_tipo" placeholder="Seleccione Tipo Herramienta"  ><br>
                 </div>
                 
                 <div class="col-lg-12">
                     <label for="">Marca</label>
-                    <input type="text" class="form-control" id="txt_marca" placeholder="Ingrese Material" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_marca" placeholder="Ingrese Marca Herramienta"  ><br>
                 </div>
 
                 
                 <div class="col-lg-12">
                     <label for="">Modelo</label>
-                    <input type="text" class="form-control" id="txt_modelo" placeholder="Ingrese Material" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_modelo" placeholder="Ingrese Modelo Herramienta" ><br>
                 </div>
 
 
                 <div class="col-lg-12">
                     <label for="">Descripcion</label>
-                    <input type="text" class="form-control" id="txt_descripcion" placeholder="Ingrese Descripcion"><br>
+                    <input type="text" class="form-control" id="txt_descripcion" placeholder="Ingrese Descripcion Herramienta"><br>
                 </div>
 
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
     listar_herramienta();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
-        $("#txt_material").focus();  
+        $("#txt_serial").focus();  
     })
 } );
 

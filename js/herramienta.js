@@ -94,25 +94,30 @@ function filterGlobal() {
 }
 
 
-function Registrar_Material() {
-    var material = $("#txt_material").val();
+function Registrar_Herramienta() {
+    var serial = $("#txt_serial").val();
+    var tipo = $("#txt_tipo").val();
+    var marca = $("#txt_marca").val();
+    var modelo = $("#txt_modelo").val();
     var descripcion = $("#txt_descripcion").val();
-    var stock = $("#txt_stock").val();
     var estatus = $("#txt_estatus").val();
-    if (stock < 0) {
-        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
-    }
-    if (material.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+
+
+    //Aqui pueden ir las condicionales
+    if (serial.length == 0 || tipo.length == 0 || marca.length == 0 || modelo.length == 0 || descripcion.length == 0 || estatus.length == 0) {
         Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({
-        "url": "../controlador/material/controlador_material_registro.php",
+        "url": "../controlador/herramienta/controlador_herramienta_registro.php", //URL CON LA DIRECCION DEL CONTROLADOR
         type: 'POST',
         data: {
-            ma: material,
+
+            se: serial,
+            ti: tipo,
+            ma: marca,
+            mo: modelo,
             ds: descripcion,
-            st: stock,
             es: estatus
 
         }
@@ -139,9 +144,13 @@ function Registrar_Material() {
 
 //Cree esta funcion afuera para limpiar los campos y llamar cuando la invoque xD
 function LimpiarCampos() {
-    $("#txt_material").val("");
+
+    $("#txt_serial").val("");
+    $("#txt_tipo").val("");
+    $("#txt_marca").val("");
+    $("#txt_modelo").val("");
     $("#txt_descripcion").val("");
-    $("#txt_stock").val("");
+    $("#txt_estatus").val("");
 
 }
 
