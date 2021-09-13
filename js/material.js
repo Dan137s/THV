@@ -96,11 +96,13 @@ function Registrar_Material() {
     var descripcion = $("#txt_descripcion").val();
     var stock = $("#txt_stock").val();
     var estatus = $("#txt_estatus").val();
+
+    //Aqui pueden ir las condicionales en este caso campos vacios
     if (stock < 0) {
         Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
     }
-    if (material.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
-        Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
+    if (material.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({

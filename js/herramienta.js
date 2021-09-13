@@ -103,10 +103,23 @@ function Registrar_Herramienta() {
     var estatus = $("#txt_estatus").val();
 
 
-    //Aqui pueden ir las condicionales
-    if (serial.length == 0 || tipo.length == 0 || marca.length == 0 || modelo.length == 0 || descripcion.length == 0 || estatus.length == 0) {
-        Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
+    //Aqui pueden ir las condicionales en este caso campos vacios
+    if (serial.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
+    if (tipo.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+    if (marca.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+    if (modelo.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+    if (descripcion.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
 
     $.ajax({
         "url": "../controlador/herramienta/controlador_herramienta_registro.php", //URL CON LA DIRECCION DEL CONTROLADOR
@@ -126,12 +139,12 @@ function Registrar_Herramienta() {
             if (resp == 1) {
                 $("#modal_registro").modal('hide'); //Cierro el modal del registro
                 listar_herramienta();
-
+                LimpiarCampos();
 
                 Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
             } else {
                 LimpiarCampos();
-                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar esta herramienta ya existe", "warning");
 
             }
         } else {
