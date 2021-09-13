@@ -1,7 +1,7 @@
 <?php
-    require '../../modelo/modelo_material.php';
-    $MT = new Modelo_Material();//Instancio todas las funciones del modelo
-    $consulta = $MT->listar_material();
+    require '../../modelo/modelo_herramienta.php';
+    $MT = new Modelo_Herramienta();//Instancio todas las funciones del modelo
+    $consulta = $MT->listar_herramienta();
     if($consulta){
         echo json_encode($consulta);
     }else{

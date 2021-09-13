@@ -1,5 +1,5 @@
 <?php
-    require '../../modelo/modelo_material.php';
+    require '../../modelo/modelo_herramienta.php';
     $MT = new Modelo_Material();//Instancio todas las funciones del modelo
     $id = htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8');
     $materialactual = htmlspecialchars($_POST['acma'],ENT_QUOTES,'UTF-8');
