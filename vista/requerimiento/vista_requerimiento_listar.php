@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="col-lg-2">
-                        <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
+                        <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistros()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                     </div>
                 
             </div>
@@ -66,7 +66,7 @@
     </div>
           <!-- /.box -->
 </div>
-<form autocomplete="false" onsubmit="return false">
+<form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
     <div class="modal fade" id="modal_registro" role="dialog" >
         <div class="modal-dialog modal-sm">
         <div class="modal-content" style="width: 200%;">
@@ -76,31 +76,27 @@
             </div>
             <div class="modal-body" >
                 <div class="col-lg-12">
-                    <label for="">N° Reporte</label>
-                    <input type="text" class="form-control" id="txt_nomh" placeholder="Ingrese numero de Reporte"><br>
-                </div>
-                <div class="col-lg-12">
                     <label for="">Imagen adjunta</label>
-                    <input type="file" name='files[]' accept="image/gif, image/jpeg, image/png" class="form-control" onchange="previewMultiple(event)" id="adicionafoto" placeholder="Ingrese numero de Reporte" multiple><br>
+                    <input type="file" name='imagen[]' accept="image/gif, image/jpeg, image/png" class="form-control" onchange="previewMultiple(event)" id="txt_file" placeholder="Ingrese numero de Reporte" multiple><br>
                     <div id="galeria" >
     
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <label for="">Monto de Presupuesto</label>
-                    <input type="" class="form-control" id="txt_alias" placeholder="Ingrese monto del presupuesto"><br>
+                    <input type="" class="form-control" id="txt_monto" placeholder="Ingrese monto del presupuesto"><br>
                 </div>
                 <div class="col-lg-12">
-                    <label for="">Nombre vecino</label>
-                    <input type="text" class="form-control" id="txt_alias" placeholder="Ingrese nombre del vecino"><br>
+                    <label for="">RUT vecino</label>
+                    <input type="text" class="form-control" id="txt_vesino" placeholder="Ingrese nombre del vecino"><br>
                 </div>
                 <div class="col-lg-12">
                     <label for="">Dirección</label>
-                    <input type="text" class="form-control" id="txt_nomh" placeholder="Ingrese la dirección"><br>
+                    <input type="text" class="form-control" id="txt_direccion" placeholder="Ingrese la dirección"><br>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Registrar_Usuario()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
+                <button class="btn btn-primary" onclick="registrarRequerimiento()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>
@@ -175,7 +171,7 @@ $('.box').boxWidget({
 })
 
 function previewMultiple(event){
-        var saida = document.getElementById("adicionafoto");
+        var saida = document.getElementById("txt_file");
         var quantos = saida.files.length;
         for(i = 0; i < quantos; i++){
             var urls = URL.createObjectURL(event.target.files[i]);

@@ -52,4 +52,45 @@ function filterGlobal() {
         $('#global_filter').val(),
     ).draw();
 }
+function AbrirModalRegistros() {
+    $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
+    $("#modal_registro").modal('show');
+}
+function registrarRequerimiento() {
+
+    var precio = $("#txt_monto").val();
+    var vesino = $("#txt_vesino").val();
+    var direc = $("#txt_direccion").val();
+    var img = $("#txt_file").val();
+
+    if(precio.length==0 ||vesino.length==0 ||direc.length==0 ||img.length==0 )
+    {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    var formData = new FormData();
+    formData.append('foto',$("#txt_file"));
+    formData.append('monto',precio);
+    formData.append('rut',vesino);
+    formData.append('direccion',direc);
+
+    $.ajax({
+        url: "../controlador/requerimiento/controlador_requerimiento_registrar.php",
+        type: 'POST',
+        data: formData,
+        contentType:false,
+        cache:false,
+        processData:false
+
+    }).done(function(resp) {
+        if (resp > 0) {
+            Swal.fire(resp, "final, Intentos fallidos : " + (parseInt(resp) + 1) + " Para acceder a su cuenta restablesca su contra", "warning");
+
+        } else {
+            Swal.fire(resp, "Credenciales incorrectas, Intentos fallidos : " + (parseInt(resp) + 1) + " ", "warning");
+
+        }
+    })
+    
+}
 
