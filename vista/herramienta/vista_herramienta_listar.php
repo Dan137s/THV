@@ -128,7 +128,7 @@
             <div class="modal-body">
 
                 <div class="col-lg-12">
-                <input type="text"   id="herramienta_id" placeholder="Ingrese Serial"  >
+                <input type="text"   id="herramienta_id" placeholder="Ingrese Serial"  hidden >
                     <label for="">Serial</label>
 
                     <input type="text"   id="txt_serial_actual_editar" placeholder="Ingrese Serial" hidden >

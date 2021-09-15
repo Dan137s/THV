@@ -671,8 +671,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
     <div class="pull-right hidden-xs">
       <b>Version</b> 1
     </div>
-    <strong>Desarrollo Tecnológico Experiencia &copy; </strong> THV Coquimbo 2021  <strong> <a href="#">IP SANTO TOMÁS </a></strong>Colabora <strong>Hospederia C. Goudie</strong> Hogar de Cristo <strong> #Team Dark Flames</strong>
-    Area Informatica IPST.
+    <strong>Experiencia Desarrollo Tecnológico &copy; </strong> <strong> <a href="https://www.ipsantotomas.cl/areas-y-carreras/area-de-informatica/">IP SANTO TOMÁS </a></strong>-<strong><a href="#"> #HOSPEDERIA C. GOUDIE</a></strong> -<strong><a href="https://www.hogardecristo.cl"> #HOGAR DE CRISTO </a></strong><strong><a href="https://www.tratohechovecino.cl">"THV COQUIMBO"</a></strong> 
+   - A.Informatica IPST. <strong> DARK FLAMES 2021</strong>
   </footer>
 
   <!-- Control Sidebar -->
