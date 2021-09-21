@@ -1,5 +1,5 @@
 <?php
-    class Modelo_Material{
+    class Modelo_Herramienta{
         private $conexion;
         function __construct(){
             require_once 'modelo_conexion.php';
@@ -8,8 +8,8 @@
         }
 
         //Funcion listar
-        function listar_material(){
-            $sql = "call SP_LISTAR_MATERIAL()";
+        function listar_herramienta(){
+            $sql = "call SP_LISTAR_HERRAMIENTA()";
 			$arreglo = array();
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				while ($consulta_VU = mysqli_fetch_assoc($consulta)) {
@@ -22,8 +22,8 @@
         }
 
         //Funcion Registrar
-        function Registrar_Material($material, $descripcion, $stock, $estatus){
-            $sql = "call SP_REGISTRAR_MATERIAL('$material', '$descripcion', '$stock', '$estatus')";
+        function Registrar_Herramienta($serial, $tipo, $marca, $modelo, $descripcion, $estatus ){
+            $sql = "call SP_REGISTRAR_HERRAMIENTA('$serial', '$tipo', '$marca', '$modelo', '$descripcion', '$estatus')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]); //Retorna valores 
@@ -33,8 +33,8 @@
         }
 
         //Funcion Modificar
-        function Modificar_Material($id, $materialactual, $materialnuevo,  $descripcion, $stock, $estatus){
-            $sql = "call SP_MODIFICAR_MATERIAL('$id', '$materialactual', '$materialnuevo',  '$descripcion', '$stock', '$estatus')";
+        function Modificar_Herramienta($id, $serialactual, $serialnuevo, $tipo, $marca, $modelo, $descripcion, $estatus){
+            $sql = "call SP_MODIFICAR_HERRAMIENTA('$id', '$serialactual', '$serialnuevo', '$tipo', '$marca', '$modelo', '$descripcion', '$estatus')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]);//Retorna valores
