@@ -1,5 +1,5 @@
 <?php
-    require '../../modelo/modelo_herramienta.php';
+    require '../../modelo/modelo_herramienta_tr.php';
     $MH= new Modelo_Herramienta();//Instancio todas las funciones del modelo
     $consulta = $MH->listar_herramienta();
     if($consulta){

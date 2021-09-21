@@ -1,5 +1,5 @@
 <?php
-    require '../../modelo/modelo_herramienta.php';
+    require '../../modelo/modelo_herramienta_tr.php';
     $MH = new Modelo_Herramienta();//Instancio todas las funciones del modelo
     $id = htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8');
     $serialactual = htmlspecialchars($_POST['acse'],ENT_QUOTES,'UTF-8');
