@@ -356,7 +356,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
         <li class="active treeview">
         <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Observaciones</span>
+            <i class="fa fa-file-text-o"></i> <span>Observaciones </span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
