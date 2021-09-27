@@ -73,15 +73,14 @@ $('#tabla_hospederia').on('click', '.editar', function() {
     if (tablehospederia.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
         var data = tablehospederia.row(this).data();
     }
-    $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
-    $("#modal_editar").modal('show'); //Muestro el modal o formulario
+    $("#modal_editar_h").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
+    $("#modal_editar_h").modal('show'); //Muestro el modal o formulario
 
-    $("#txt_id_material").val(data.material_id)
-    $("#txt_material_actual_editar").val(data.material_nombre)
-    $("#txt_material_nuevo_editar").val(data.material_nombre)
-    $("#txt_descripcion_editar").val(data.material_descripcion)
-    $("#txt_stock_editar").val(data.material_stock)
-    $("#txt_estatus_editar").val(data.material_estatus).trigger("change");
+    $("#txt_id_hospederia").val(data.hospederia_id)
+    $("#txt_nombre_actual_editar").val(data.hospederia_nombre)
+    $("#txt_nombre_nuevo_editar").val(data.hospederia_nombre)
+    $("#txt_direccion_editar").val(data.hospederia_direccion)
+    $("#txt_estatus_editar").val(data.hospederia_estatus).trigger("change");
 })
 
 function filterGlobal() {
@@ -138,44 +137,39 @@ function Registrar_Hospederia() {
 
 //Cree esta funcion afuera para limpiar los campos y llamar cuando la invoque xD
 function LimpiarCampos() {
-    $("#txt_material").val("");
-    $("#txt_descripcion").val("");
-    $("#txt_stock").val("");
+    $("#txt_nombre_hospederia").val("");
+    $("#txt_direccion_hospederia").val("");
+
 
 }
 
 //Modificar insumo
-function Modificar_Material() {
-    var id = $("#txt_id_material").val();
-    var materialactual = $("#txt_material_actual_editar").val();
-    var materialnuevo = $("#txt_material_nuevo_editar").val();
-    var descripcion = $("#txt_descripcion_editar").val();
-    var stock = $("#txt_stock_editar").val();
+function Modificar_Hospederia() {
+    var id = $("#txt_id_hospederia").val();
+    var nombreactual = $("#txt_nombre_actual_editar").val();
+    var nombrenuevo = $("#txt_nombre_nuevo_editar").val();
     var estatus = $("#txt_estatus_editar").val();
-    if (stock < 0) {
-        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
-    }
-    if (materialactual.length == 0 || materialnuevo.length == 0 || descripcion.length == 0 || stock.length == 0 || estatus.length == 0) {
+
+    if (nombreactual.length == 0 || nombrenuevo.length == 0 || direccion.length == 0 || estatus.length == 0) {
         Swal.fire("Mensaje de Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({
-        "url": "../controlador/material/controlador_material_modificar.php",
+        "url": "../controlador/hospederia/controlador_hospederia_modificar.php",
         type: 'POST',
         data: {
             id: id,
-            acma: materialactual,
-            numa: materialnuevo,
-            ds: descripcion,
-            st: stock,
+            acno: nombreactual,
+            nuno: nombrenuevo,
+            dr: direccion,
             es: estatus
 
         }
     }).done(function(resp) {
         if (resp > 0) {
             if (resp == 1) { //Cuando el valor retorne 1 lista de nuevo la tabla
-                $("#modal_editar").modal('hide'); //Cierro el modal del editar
-                listar_material();
+                $("#modal_editar_h").modal('hide'); //Cierro el modal del editar
+                listar_hospederia();
 
 
                 Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material actualizado", "success");
