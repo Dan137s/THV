@@ -285,7 +285,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       <!-- sidebar menu: : style can be found in sidebar.less -->
       
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header"><i class="fa fa-bars" aria-hidden="true"></i> MENÚ PANEL <?php  echo $_SESSION['S_ROL']; ?> </li>
+        <li class="header"><i class="fa fa-bars" aria-hidden="true"></i> PANEL MENÚ  <?php  echo $_SESSION['S_ROL']; ?> </li>
        
        <!-- #############################################################################################[Menú para el Administrador] -->
         <li class="treeview">

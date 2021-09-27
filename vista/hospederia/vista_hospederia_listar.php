@@ -58,7 +58,7 @@
         <div class="modal-content">
             <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registro De Material</b></h4>
+            <h4 class="modal-title"><b>Registro De Hospederia</b></h4>
             </div>
             <div class="modal-body">
 
@@ -69,15 +69,11 @@
 
 
                 <div class="col-lg-12">
-                    <label for="">Descripcion</label>
+                    <label for="">Direccion</label>
                     <input type="text" class="form-control" id="txt_descripcion" placeholder="Ingrese Descripcion"><br>
                 </div>
 
                 
-                <div class="col-lg-12">
-                    <label for="">Stock</label>
-                    <input type="number" class="form-control" id="txt_stock" placeholder="Ingrese stock"  onkeypress="return soloNumeros(event)"><br>
-                </div>
 
                 <div class="col-lg-12">
                     <label for="">Estatus</label>
