@@ -1,7 +1,7 @@
 <?php
-    require '../../modelo/modelo_material.php';
-    $MT = new Modelo_Material();//Instancio todas las funciones del modelo
-    $consulta = $MT->listar_material();
+    require '../../modelo/modelo_hospederia.php';
+    $MT = new Modelo_Hospederia();//Instancio todas las funciones del modelo
+    $consulta = $MT->listar_hospederia();
     if($consulta){
         echo json_encode($consulta);
     }else{

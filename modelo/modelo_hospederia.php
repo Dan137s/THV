@@ -1,5 +1,5 @@
 <?php
-    class Modelo_Material{
+    class Modelo_Hospederia{
         private $conexion;
         function __construct(){
             require_once 'modelo_conexion.php';
@@ -8,8 +8,8 @@
         }
 
         //Funcion listar
-        function listar_material(){
-            $sql = "call SP_LISTAR_MATERIAL()";
+        function listar_hospederia(){
+            $sql = "call SP_LISTAR_HOSPEDERIA()";
 			$arreglo = array();
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				while ($consulta_VU = mysqli_fetch_assoc($consulta)) {

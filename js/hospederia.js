@@ -1,8 +1,8 @@
-var tablematerial;
+var tablehospederia;
 //Variable global para ser llamada cuando se requiera
 
-function listar_material() {
-    tablematerial = $("#tabla_material").DataTable({
+function listar_hospederia() {
+    tablematerial = $("#tabla_hospederia").DataTable({
         "ordering": false,
         "bLengthChange": false,
         "searching": { "regex": false },
@@ -15,7 +15,7 @@ function listar_material() {
         "async": false,
         "processing": true,
         "ajax": {
-            "url": "../controlador/material/controlador_material_listar.php",
+            "url": "../controlador/hospederia/controlador_hospederia_listar.php",
             type: 'POST'
         },
         "order": [
@@ -25,12 +25,11 @@ function listar_material() {
 
             { "defaultContent": "" },
 
-            { "data": "material_nombre" },
-            { "data": "material_descripcion" },
-            { "data": "material_stock" },
-            { "data": "material_fregistro" },
+            { "data": "hospederia_nombre" },
+            { "data": "hospederia_direccion" },
+            { "data": "hospederia_fregistro" },
             {
-                "data": "material_estatus",
+                "data": "hospederia_estatus",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
                         return "<span class='label label-success'>" + data + "</span>";
@@ -51,7 +50,7 @@ function listar_material() {
         "language": idioma_espanol,
         select: true
     });
-    document.getElementById("tabla_material_filter").style.display = "none";
+    document.getElementById("tabla_hospederia_filter").style.display = "none";
     $('input.global_filter').on('keyup click', function() {
         filterGlobal();
     });
@@ -60,19 +59,19 @@ function listar_material() {
     });
 
 
-    tablematerial.on('draw.dt', function() {
-        var PageInfo = $('#tabla_material').DataTable().page.info();
-        tablematerial.column(0, { page: 'current' }).nodes().each(function(cell, i) {
+    tablehospederia.on('draw.dt', function() {
+        var PageInfo = $('#tabla_hospederia').DataTable().page.info();
+        tablehospederia.column(0, { page: 'current' }).nodes().each(function(cell, i) {
             cell.innerHTML = i + 1 + PageInfo.start;
         });
     });
 
 }
 
-$('#tabla_material').on('click', '.editar', function() {
-    var data = tablematerial.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
-    if (tablematerial.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
-        var data = tablematerial.row(this).data();
+$('#tabla_hospederia').on('click', '.editar', function() {
+    var data = tablehospederia.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tablehospederia.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tablehospederia.row(this).data();
     }
     $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
     $("#modal_editar").modal('show'); //Muestro el modal o formulario
@@ -86,7 +85,7 @@ $('#tabla_material').on('click', '.editar', function() {
 })
 
 function filterGlobal() {
-    $('#tabla_material').DataTable().search(
+    $('#tabla_hospederia').DataTable().search(
         $('#global_filter').val(),
     ).draw();
 }

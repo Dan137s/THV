@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../js/material.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/hospederia.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
@@ -23,13 +23,14 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_material" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_hospederia" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
                         
                         <th>Nombre</th>
                         <th>Direccion</th>
+                        <th>Fecha de registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
                        
@@ -41,6 +42,7 @@
                         
                         <th>Nombre</th>
                         <th>Direccion</th>
+                        <th>Fecha de registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
                     </tr>
@@ -130,7 +132,7 @@
                         <option value="">--</option>
                         <option value="ACTIVO">ACTIVO</option>
                         <option value="INACTIVO">INACTIVO</option>
-                        <option value="AGOTADO">AGOTADO</option>
+                        
                     </select><br><br>
                 </div>
 
