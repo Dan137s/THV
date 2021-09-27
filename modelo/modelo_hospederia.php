@@ -22,8 +22,8 @@
         }
 
         //Funcion Registrar
-        function Registrar_Material($material, $descripcion, $stock, $estatus){
-            $sql = "call SP_REGISTRAR_MATERIAL('$material', '$descripcion', '$stock', '$estatus')";
+        function Registrar_Hospederia($nombre, $direccion, $estatus){
+            $sql = "call SP_REGISTRAR_HOSPEDERIA('$nombre', '$direccion', '$estatus')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]); //Retorna valores 

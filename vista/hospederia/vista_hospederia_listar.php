@@ -66,20 +66,19 @@
 
                 <div class="col-lg-12">
                     <label for="">Nombre</label>
-                    <input type="text" class="form-control" id="txt_material" placeholder="Ingrese Material" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_nombre_hospederia" placeholder="Ingrese Nombre" onkeypress="return soloLetras(event)"><br>
                 </div>
 
 
                 <div class="col-lg-12">
                     <label for="">Direccion</label>
-                    <input type="text" class="form-control" id="txt_descripcion" placeholder="Ingrese Descripcion"><br>
+                    <input type="text" class="form-control" id="txt_direccion_hospederia" placeholder="Ingrese Direccion"><br>
                 </div>
 
                 
-
                 <div class="col-lg-12">
                     <label for="">Estatus</label>
-                    <select class="js-example-basic-single" name="state" id="txt_estatus" style="width:100%;">
+                    <select class="js-example-basic-single" name="state" id="txt_estatus_hospederia" style="width:100%;">
                         <option value="">--</option>
                         <option value="ACTIVO">ACTIVO</option>
                         <option value="INACTIVO">INACTIVO</option>
@@ -90,7 +89,7 @@
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Registrar_Material()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
+                <button class="btn btn-primary" onclick="Registrar_Hospederia()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>

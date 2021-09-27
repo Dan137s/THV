@@ -91,27 +91,27 @@ function filterGlobal() {
 }
 
 
-function Registrar_Material() {
-    var material = $("#txt_material").val();
-    var descripcion = $("#txt_descripcion").val();
-    var stock = $("#txt_stock").val();
-    var estatus = $("#txt_estatus").val();
+function Registrar_Hospederia() {
+    var nombre = $("#txt_nombre_hospederia").val();
+    var direccion = $("#txt_direccion_hospederia").val();
+    var estatus = $("#txt_estatus_hospederia").val();
 
     //Aqui pueden ir las condicionales en este caso campos vacios
-    if (stock < 0) {
-        Swal.fire("Mensaje De Advertencia", "El stock no debe ser negativo", "warning");
+
+    if (nombre.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
-    if (material.length == 0) {
+
+    if (direccion.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
     $.ajax({
-        "url": "../controlador/material/controlador_material_registro.php",
+        "url": "../controlador/hospederia/controlador_hospederia_registro.php",
         type: 'POST',
         data: {
-            ma: material,
-            ds: descripcion,
-            st: stock,
+            no: nombre,
+            dr: direccion,
             es: estatus
 
         }
@@ -119,7 +119,7 @@ function Registrar_Material() {
         if (resp > 0) {
             if (resp == 1) {
                 $("#modal_registro").modal('hide'); //Cierro el modal del registro
-                listar_material();
+                listar_hospederia();
                 LimpiarCampos();
 
                 Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
