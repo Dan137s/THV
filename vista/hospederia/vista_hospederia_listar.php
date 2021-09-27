@@ -66,7 +66,7 @@
 
                 <div class="col-lg-12">
                     <label for="">Nombre</label>
-                    <input type="text" class="form-control" id="txt_nombre_hospederia" placeholder="Ingrese Nombre" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_nombre_hospederia" placeholder="Ingrese Nombre"><br>
                 </div>
 
 
