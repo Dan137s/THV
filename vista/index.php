@@ -348,9 +348,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas A</a></li>
+          <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta.php')"><i class="fa fa-file-text-o"></i> Encuesta</a></li>
             
-            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas B</a></li>
           </ul>
         </li>
 
