@@ -1,3 +1,15 @@
+
+<head>
+<!--datatables CSS básico -->
+<link rel="stylesheet" type="text/css" href="../../thv/datatables/datatables.min.css"/>
+<!--datatables estilo boostrap 4 css-->
+<link rel="stylesheet" type="text/css" href="../../thv/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+
+<!--font awesome con CDN -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK10YPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"> 
+</head>
+
+
 <script type="text/javascript" src="../js/herramienta.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
