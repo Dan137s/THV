@@ -39,14 +39,21 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
+              <h3>
+<?php
+require '../../modelo/modelo_count.php';
+$con=Conectar();
+$count = current($con->query("SELECT count(*) FROM `usuario`")->fetch());
+echo"User ".$count;
+?></h3>
 
-              <p>User Registrations</p>
+              <p>Registrados en sistema</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+           
+            <a href="#"  onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')" class="small-box-footer">Ver usuarios <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -64,10 +71,3 @@
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-
-        <?php
-require '../../modelo/modelo_count.php';
-$con=Conectar();
-$count = current($con->query("SELECT count(*) FROM `usuario`")->fetch());
-echo "Valor ".$count;
-?>
