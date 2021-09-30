@@ -286,9 +286,12 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
       
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"><i class="fa fa-bars" aria-hidden="true"></i> PANEL MENÚ  <?php  echo $_SESSION['S_ROL']; ?> </li>
-       
-       <!-- #############################################################################################[Menú para el Administrador] -->
-        <li class="treeview">
+
+       <!-- #################################################################################################################################-->
+       <!-- ###############################################-DIVICION-DE-PERFILES- INICIO-->
+       <!-- #############################################################################################[Menú para el Perfil Administrador] -->
+        
+       <li class="treeview">
           <?php
           if($_SESSION['S_ROL']=='ADMINISTRADOR'){
 
@@ -372,8 +375,13 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           ?>
         </li>
         <li>
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-##############################[][][][][][][][][]-->
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-##############################[][][][][][][][][]-->
 
- <!-- #############################################################################################[Menú para el Trabajador] -->
+
+       <!-- #################################################################################################################################-->
+       <!-- ###############################################-DIVICION-DE-PERFILES- INICIO-->
+       <!-- #############################################################################################[Menú para el Perfil Trabajador] -->
  <li class="treeview">
         <?php
           if($_SESSION['S_ROL']=='TRABAJADOR'){
@@ -455,8 +463,12 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           ?>
         </li>
         <li>
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-##############################[][][][][][][][][]-->
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-##############################[][][][][][][][][]-->
           
-<!-- #############################################################################################[Menú para el Vecino] -->
+          <!-- #################################################################################################################################-->
+          <!-- ###############################################-DIVICION-DE-PERFILES- INICIO-->
+          <!-- #############################################################################################[Menú para el Perfil Junta Vecino] -->
 <li class="treeview">
         <?php
           if($_SESSION['S_ROL']=='VECINO'){
@@ -530,89 +542,11 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         </li>
         <li>
 
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-##############################[][][][][][][][][]-->
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-##############################[][][][][][][][][]-->
           
-<!-- #############################################################################################[Menú para junta vecinal] -->
-<li class="treeview">
-        <?php
-          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
 
-          ?>
-          <a>
-            <i class="fa fa-pencil-square-o"></i> <span>A</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-             <!--Las pestañas que se cargaran en el menú izquierdo-->
-            <li><a href = #><i class="fa fa-file-text-o"></i> A-1</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> A-2</a></li>
-          </ul>
-        </li>
 
-        <li class="treeview">
-          <a>
-            <i class="fa fa-usd"></i> <span>B</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            
-            <li><a href = #><i class="fa fa-file-text-o"></i>B-1</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i>B-2</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i>B-3</a></li>
-          </ul>
-        </li>
-
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>C</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li>
-
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>D</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li>
-
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>E</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>F</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-
-          <?php 
-          }
-          ?>
-            <?php
-          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
-
-          ?>
-           <?php 
-          }
-          ?>
-        </li>
-        <li>  
 
       </ul>
     </section>
