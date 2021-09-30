@@ -12,7 +12,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="icon" href="../plantilla/dist/img/hc.png">
-  <title> Fundación|Trato Hecho Vecino|</title>
+  <title> Fundación | Trato Hecho Vecino |</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -633,9 +633,9 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <!--Contenedor -->
           <div class="col-md-12">
         
-          <div class="box box-warning box-solid">
+          <div class="box box-warning box-solid" >
              <div class="box-header with-border">
-              <h3 class="box-title">BIENVENIDO AL SISTEMA TRATO HECHO VECINO</h3>
+              <h3 class="box-title" >BIENVENIDO AL SISTEMA TRATO HECHO VECINO</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -644,7 +644,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
               <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body" style="text-align:center;">
                <?php  echo $_SESSION['S_ROL']; ?>
             </div> 
           </div>
@@ -957,9 +957,9 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
 <div class="modal fade" id="modal_editar_contra" role="dialog">
         <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Modificar Contraseña</b></h4>
+            <h4 class="modal-title"><b>Modifique su Contraseña</b></h4>
             </div>
             <div class="modal-body">
                 <div class="col-lg-12">
