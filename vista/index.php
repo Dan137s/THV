@@ -305,7 +305,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','material/vista_material_listar.php')"><i class="fa fa-file-text-o"></i> Materiales</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','herramienta/vista_herramienta_listar.php')"><i class="fa fa-file-text-o"></i> Herramientas</a></li>
-            <li><a href = # onclick="cargar_contenido('contenido_principal','hospederia/vista_hospederia.php')"><i class="fa fa-file-text-o"></i> Hospederia</a></li>
+            <!--li><a href = # onclick="cargar_contenido('contenido_principal','hospederia/vista_hospederia.php')"><i class="fa fa-file-text-o"></i> Hospederia</a></!--li-->
             
            
           </ul>
@@ -635,7 +635,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
         
           <div class="box box-warning box-solid">
              <div class="box-header with-border">
-              <h3 class="box-title">BIENVENIDO AL CONTENIDO PRINCIPAL</h3>
+              <h3 class="box-title">BIENVENIDO AL SISTEMA TRATO HECHO VECINO</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -645,17 +645,102 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              Proximamente en construcción
-            </div>
-            
-            
-            <!--Añadir Para admin -->
-        
-            <!-- -->
-          
-          
+               <?php  echo $_SESSION['S_ROL']; ?>
+            </div> 
           </div>
-            
+
+            <!--Añadir Para admin -->
+<?php
+if($_SESSION['S_ROL']=='ADMINISTRADOR'){
+?>
+
+<!-- Contenido del panel admin -->
+  <section class="content">
+      
+<!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+
+<!-- small box -->
+ <div class="small-box bg-yellow">
+            <div class="inner">
+  
+  <h3>
+    <!-- Consulta para seleccionar todos los usuarios en la bd y mostrar el total -->
+  <?php
+              require '../modelo/modelo_count.php';
+              $con=Conectar();
+              $count = current($con->query("SELECT count(*) FROM `usuario`")->fetch());
+              echo"User ".$count;
+  ?>
+  
+</h3>
+            <p>Registrados en sistema</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+           
+            <a href="#"  onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')" class="small-box-footer">Ver usuarios <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>150</h3>
+
+              <p>New Orders</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+              <p>Bounce Rate</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+         
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>65</h3>
+
+              <p>Unique Visitors</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+          <?php 
+          }
+          ?>
+            <?php
+          if($_SESSION['S_ROL']=='ADMINISTRADOR'){
+
+          ?>
+           <?php 
+          }
+          ?>
           </div>
       
           

@@ -4,7 +4,28 @@
       <div class="row">
         <div class="col-lg-3 col-xs-6">
 
+ <!-- small box -->
+ <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>
+<?php
+require '../../modelo/modelo_count.php';
+$con=Conectar();
+$count = current($con->query("SELECT count(*) FROM `usuario`")->fetch());
+echo"User ".$count;
+?></h3>
 
+              <p>Registrados en sistema</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+           
+            <a href="#"  onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')" class="small-box-footer">Ver usuarios <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
 
           <!-- small box -->
           <div class="small-box bg-aqua">
@@ -36,28 +57,7 @@
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>
-<?php
-require '../../modelo/modelo_count.php';
-$con=Conectar();
-$count = current($con->query("SELECT count(*) FROM `usuario`")->fetch());
-echo"User ".$count;
-?></h3>
-
-              <p>Registrados en sistema</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-           
-            <a href="#"  onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')" class="small-box-footer">Ver usuarios <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
+         
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
