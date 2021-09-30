@@ -63,10 +63,10 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
     
       <!-- mini logo for sfidebar mini 50x50 pixels -->
       
-      <span class="logo-mini"><b>F</b>THV</span>
+      <span class="logo-mini"><b>F </b>THV</span>
       <!-- logo for regular state and mobile devices -->
      
-      <span class="logo-lg"><b>FUNDACIÓN</b>THV  </span>
+      <span class="logo-lg"><b>FUNDACIÓN </b>THV  </span>
       
     </a>
     
