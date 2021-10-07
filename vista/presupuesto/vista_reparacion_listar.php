@@ -23,7 +23,7 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_material" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_reparacion" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
