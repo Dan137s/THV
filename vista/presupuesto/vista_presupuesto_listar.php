@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../js/material.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/presupuesto.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
@@ -23,14 +23,12 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_material" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_presupuesto" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
                         
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Stock</th>
+                        <th>Presupuesto</th>
                         <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
@@ -41,9 +39,7 @@
                     <tr>
                         <th>#</th>
                         
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Stock</th>
+                        <th>Presupuesto</th>
                         <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
@@ -156,7 +152,7 @@
 
 <script>
 $(document).ready(function() {
-    listar_material();
+    listar_presupuesto();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_material").focus();  
