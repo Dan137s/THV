@@ -419,10 +419,12 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
+          <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar.php')"><i class="fa fa-file-text-o"></i> Reparación</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_presupuesto.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
+            
           </ul>
         </li>
+
         <li class="treeview">
           <a>
           <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
@@ -451,13 +453,18 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
 
-        <li class="active treeview">
-        <a href = #>
-            <i class="fa fa-file-text-o"></i> <span>Observaciones</span>
+        <li class="treeview">
+          <a>
+          <i class="fa fa-picture-o"></i> <span>Galeria</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+          <li><a href = # onclick="cargar_contenido('contenido_principal','galeria/index_galeria.php')"><i class="fa fa-file-text-o"></i> Reparaciones</a></li>
+            
+          </ul>
+        </li>
 
           <?php 
           }
