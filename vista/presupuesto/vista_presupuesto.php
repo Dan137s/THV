@@ -63,11 +63,15 @@
               <!-- /btn-group -->
               <div class="input-group">
                 <input id="new-event" type="text" class="form-control" placeholder="Event Title">
+               
+
+        
 
                 <div class="input-group-btn">
-                  <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Cotizar</button>
+                  <button onclick="window.location.href='/thv/vista/presupuesto/vista_registro_presupuesto.php'" type="button" class="btn btn-primary btn-flat">Cotizar</onclick=>
                 </div>
                 <!-- /btn-group -->
+
               </div>
               <!-- /input-group -->
             </div>
