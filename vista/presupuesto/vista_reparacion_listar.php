@@ -1,8 +1,8 @@
-<script type="text/javascript" src="../js/presupuesto.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="../js/reparacion.js?rev=<?php echo time();?>"></script>
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
-              <h3 class="box-title">[presupuestos] EN SISTEMA</h3>
+              <h3 class="box-title">[REPARACIONES-REGISTRADOS] EN SISTEMA</h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -23,12 +23,12 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
-            <table id="tabla_presupuesto" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_material" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
                         
-                        <th>Presupuesto</th>
+                        <th>Reparacion</th>
                         <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
@@ -39,7 +39,7 @@
                     <tr>
                         <th>#</th>
                         
-                        <th>Presupuesto</th>
+                        <th>Reparacion</th>
                         <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
@@ -152,7 +152,7 @@
 
 <script>
 $(document).ready(function() {
-    listar_presupuesto();
+    listar_reparacion();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
         $("#txt_material").focus();  

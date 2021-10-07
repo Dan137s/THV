@@ -1,8 +1,8 @@
-var tablepresupuesto;
+var tablereparacion;
 //Variable global para ser llamada cuando se requiera
 
-function listar_material() {
-    tablepresupuesto = $("#tabla_presupuesto").DataTable({
+function listar_reparacion() {
+    tablereparacion = $("#tabla_reparacion").DataTable({
         "ordering": false,
         "bLengthChange": false,
         "searching": { "regex": false },
@@ -15,7 +15,7 @@ function listar_material() {
         "async": false,
         "processing": true,
         "ajax": {
-            "url": "../controlador/material/controlador_material_listar.php",
+            "url": "../controlador/presupuesto/controlador_reparacion_listar.php",
             type: 'POST'
         },
         "order": [
@@ -25,22 +25,17 @@ function listar_material() {
 
             { "defaultContent": "" },
 
-            { "data": "material_nombre" },
-            { "data": "material_descripcion" },
-            { "data": "material_stock" },
-            { "data": "material_fregistro" },
+            { "data": "reparacion_nombre" },
+            { "data": "reparacion_fregistro" },
             {
-                "data": "material_estatus",
+                "data": "reparacion_estatus",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
                         return "<span class='label label-success'>" + data + "</span>";
-                    }
-                    if (data == 'INACTIVO') {
+                    } else {
                         return "<span class='label label-danger'>" + data + "</span>";
                     }
-                    if (data == 'AGOTADO') {
-                        return "<span class='label label-black' style='background:black'>" + data + "</span>";
-                    }
+
                 }
             },
 
@@ -51,7 +46,7 @@ function listar_material() {
         "language": idioma_espanol,
         select: true
     });
-    document.getElementById("tabla_presupuesto_filter").style.display = "none";
+    document.getElementById("tabla_reparacion_filter").style.display = "none";
     $('input.global_filter').on('keyup click', function() {
         filterGlobal();
     });
@@ -60,9 +55,9 @@ function listar_material() {
     });
 
 
-    tablepresupuesto.on('draw.dt', function() {
-        var PageInfo = $('#tabla_presupuesto').DataTable().page.info();
-        tablepresupuesto.column(0, { page: 'current' }).nodes().each(function(cell, i) {
+    tablereparacion.on('draw.dt', function() {
+        var PageInfo = $('#tabla_reparacion').DataTable().page.info();
+        tablereparacion.column(0, { page: 'current' }).nodes().each(function(cell, i) {
             cell.innerHTML = i + 1 + PageInfo.start;
         });
     });
@@ -70,7 +65,7 @@ function listar_material() {
 }
 
 function filterGlobal() {
-    $('#tabla_presupuesto').DataTable().search(
+    $('#tabla_reparacion').DataTable().search(
         $('#global_filter').val(),
     ).draw();
 }
