@@ -68,7 +68,7 @@
         
 
                 <div class="input-group-btn">
-                  <button onclick="window.location.href='/thv/vista/presupuesto/vista_registro_presupuesto.php'" type="button" class="btn btn-primary btn-flat">Cotizar</onclick=>
+                  <button href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_presupuesto_listar.php')" type="button" class="btn btn-primary btn-flat">Cotizar</onclick=>
                 </div>
                 <!-- /btn-group -->
 
