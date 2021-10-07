@@ -366,7 +366,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = # onclick="cargar_contenido('contenido_principal','galeria/vista_presupuesto.php')"><i class="fa fa-file-text-o"></i> Reparaciones</a></li>
+          <li><a href = # onclick="cargar_contenido('contenido_principal','galeria/index_galeria.php')"><i class="fa fa-file-text-o"></i> Reparaciones</a></li>
             
           </ul>
         </li>

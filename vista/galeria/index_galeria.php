@@ -39,7 +39,7 @@
           <!-- /. box -->
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">Proximamente Area En Construcción Mano De Obras</h3>
+              <h3 class="box-title">No disponible... PROXIMAMENTE GALERIA DISPONIBLE por el momento en construcción</h3>
             </div>
             <div class="box-body">
               <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
@@ -68,7 +68,7 @@
         
 
                 <div class="input-group-btn">
-                  <button href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar.php')" type="button" class="btn btn-primary btn-flat">Cotizar</onclick=>
+                  <button onclick="location.href='../subir_imagenes/index.php'" type="button" class="btn btn-primary btn-flat">Subir Fotos</onclick=>
                 </div>
                 <!-- /btn-group -->
 
@@ -77,7 +77,7 @@
             </div>
           </div>
         </div>
-        <div align="center"><img src="../../thv/plantilla/dist/img/hac.png" width="400"
+        <div align="center"><img onclick="location.href='../subir_imagenes/index.php'" src="../../thv/plantilla/dist/img/camara01.png" width="400"
               height="341">
       </div>
 
