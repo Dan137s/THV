@@ -585,7 +585,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
   ?>
   
 </h3>
-            <p>Usuarios registrados</p>
+            <p>Usuarios</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -609,7 +609,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
             <div class="icon">
               <i class="ion ion-wrench"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Ver herramientas <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -624,7 +624,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
             <div class="icon">
               <i class="ion-ios-paper-outline  "></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Ver materiales <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -644,7 +644,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
             <div class="icon">
               <i class="ion ion-clipboard"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Ver reportes <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
