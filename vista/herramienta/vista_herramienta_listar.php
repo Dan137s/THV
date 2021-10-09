@@ -72,7 +72,7 @@
 
 <!--Modal registro-->
 <div class="modal fade" id="modal_registro" role="dialog">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>

@@ -69,3 +69,8 @@ function filterGlobal() {
         $('#global_filter').val(),
     ).draw();
 }
+
+function AbrirModalRegistro() {
+    $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
+    $("#modal_registro").modal('show');
+}
