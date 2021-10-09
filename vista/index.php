@@ -486,7 +486,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <!-- #############################################################################################[Menú para el Perfil Junta Vecino] -->
 <li class="treeview">
         <?php
-          if($_SESSION['S_ROL']=='VECINO'){
+          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
 
           ?>
           <a>
@@ -502,53 +502,14 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
 
-        <li class="treeview">
-          <a>
-            <i class="fa fa-usd"></i> <span>Presupuesto</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_presupuesto.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
-            <li><a href = #><i class="fa fa-file-text-o"></i> Resumen de presupuesto</a></li>
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a>
-          <i class="fa fa-file-text-o"></i> <span>Encuestas de opinión</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas A</a></li>
-            
-            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas B</a></li>
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a>
-          <i class="fa fa-list-alt"></i> <span>Bitacoras</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href = # onclick="cargar_contenido('contenido_principal','bitacora/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>
-            
-            <li><a href = #><i class="fa fa-file-text-o"></i>Bitacora B</a></li>
-          </ul>
-        </li>
+       
 
 
           <?php 
           }
           ?>
             <?php
-          if($_SESSION['S_ROL']=='VECINO'){
+          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
 
           ?>
            <?php 
