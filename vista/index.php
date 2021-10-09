@@ -502,7 +502,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
 
-       
+       <!--Este perfil sera solo de visual no tiene permisos de escritura solo lectura de documento-->
 
 
           <?php 
