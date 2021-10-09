@@ -74,3 +74,44 @@ function AbrirModalRegistro() {
     $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
     $("#modal_registro").modal('show');
 }
+
+function Registrar_Reparacion() {
+    var reparacion = $("#txt_reparacion").val();
+    var estatus = $("#txt_estatus").val();
+
+    //Aqui pueden ir las condicionales en este caso campos vacios
+    if (reparacion.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (estatus.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    $.ajax({
+        "url": "../controlador/reparacion/controlador_reparacion_registro.php",
+        type: 'POST',
+        data: {
+            reparacion: reparacion,
+            estatus: estatus
+        }
+    }).done(function(resp) {
+        if (resp > 0) {
+            if (resp == 1) {
+                $("#modal_registro").modal('hide'); //Cierro el modal del registro
+                listar_material();
+                LimpiarCampos();
+
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
+            } else {
+                LimpiarCampos();
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
+            }
+        } else {
+
+            Swal.fire("Mensaje de Error", "Lo sentimos su registro no se pudo completar", "error");
+
+        }
+    })
+}
