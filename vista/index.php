@@ -605,7 +605,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
               <p>New Orders</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-wrench"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -620,7 +620,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
               <p>Bounce Rate</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="ion ion-clipboard "></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -636,7 +636,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
               <p>Unique Visitors</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="ion ion-stats-bars"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
