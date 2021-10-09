@@ -581,11 +581,11 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
               require '../modelo/modelo_count.php';
               $con=Conectar();
               $count = current($con->query("SELECT count(*) FROM `usuario`")->fetch());
-              echo"User ".$count;
+              echo"Total ".$count;
   ?>
   
 </h3>
-            <p>Registrados en sistema</p>
+            <p>Usuarios registrados</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -594,15 +594,17 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
             <a href="#"  onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')" class="small-box-footer">Ver usuarios <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+
+        
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
 
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>150</h3>
+              <h3>Total 3</h3>
 
-              <p>New Orders</p>
+              <p>Herramientas</p>
             </div>
             <div class="icon">
               <i class="ion ion-wrench"></i>
@@ -631,7 +633,11 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>65</h3>
+              <h3>  
+
+            44
+
+              </h3>
 
               <p>Unique Visitors</p>
             </div>
@@ -641,8 +647,11 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+
+        
           <?php 
           }
+          
           ?>
             <?php
           if($_SESSION['S_ROL']=='ADMINISTRADOR'){
