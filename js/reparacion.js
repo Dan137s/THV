@@ -99,10 +99,10 @@ function Registrar_Reparacion() {
         if (resp > 0) {
             if (resp == 1) {
                 $("#modal_registro").modal('hide'); //Cierro el modal del registro
-                listar_material();
+                listar_reparacion();
                 LimpiarCampos();
 
-                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, material registrado", "success");
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, reparacion registrada", "success");
             } else {
                 LimpiarCampos();
                 Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
@@ -114,4 +114,8 @@ function Registrar_Reparacion() {
 
         }
     })
+}
+
+function LimpiarCampos() {
+    $("#txt_reparacion").val("");
 }

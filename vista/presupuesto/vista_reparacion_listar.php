@@ -143,7 +143,7 @@ $(document).ready(function() {
     listar_reparacion();
     $('.js-example-basic-single').select2();
     $("#modal_registro").on('shown.bs.modal',function(){
-        $("#txt_material").focus();  
+        $("#txt_reparacion").focus();  
     })
 } );
 
