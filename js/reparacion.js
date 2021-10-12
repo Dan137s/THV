@@ -160,15 +160,14 @@ function Editar_Reparacion() {
             estatus: estatus
         }
     }).done(function(resp) {
+        //alert(resp); Para verificar errores 
         if (resp > 0) {
             if (resp == 1) {
-                $("#modal_registro").modal('hide'); //Cierro el modal del registro
+                $("#modal_editar").modal('hide'); //Cierro el modal del registro
                 listar_reparacion();
-                LimpiarCampos();
-
-                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, reparacion registrada", "success");
+                Swal.fire("Mensaje de Confirmacion", "Datos actualizados correctamante, reparacion registrada", "success");
             } else {
-                LimpiarCampos();
+
                 Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
 
             }
