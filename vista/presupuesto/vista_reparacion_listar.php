@@ -64,7 +64,7 @@
 
                 <div class="col-lg-12">
                     <label for="">Nombre</label>
-                    <input type="text" class="form-control" id="txt_reparacion" placeholder="Ingrese Material" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_reparacion" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)"><br>
                 </div>
  
                 <div class="col-lg-12">
