@@ -89,40 +89,27 @@
 
 <!--Modal Editar registro-->
 <div class="modal fade" id="modal_editar" role="dialog">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Editar Material</b></h4>
+            <h4 class="modal-title"><b>Editar Reparación</b></h4>
             </div>
             <div class="modal-body">
 
                 <div class="col-lg-12">
-                    <input type="text" id="txt_id_material" hidden>
+                    <input type="text" id="id_reparacion" hidden>
                     <label for="">Nombre</label>
-                    <input type="text"   id="txt_material_actual_editar" placeholder="Ingrese Material" onkeypress="return soloLetras(event)" hidden>
-                    <input type="text" class="form-control" id="txt_material_nuevo_editar" placeholder="Ingrese Material" onkeypress="return soloLetras(event)" ><br>
+                    <input type="text"  id="txt_reparacion_actual_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)" hidden><br>
+                    <input type="text" class="form-control" id="txt_reparacion_nueva_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)"><br>
                 </div>
-
-
-                <div class="col-lg-12">
-                    <label for="">Descripcion</label>
-                    <input type="text" class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion"><br>
-                </div>
-
-                
-                <div class="col-lg-12">
-                    <label for="">Stock</label>
-                    <input type="number" class="form-control" id="txt_stock_editar" placeholder="Ingrese stock"  onkeypress="return soloNumeros(event)"><br>
-                </div>
-
+ 
                 <div class="col-lg-12">
                     <label for="">Estatus</label>
                     <select class="js-example-basic-single" name="state" id="txt_estatus_editar" style="width:100%;">
                         <option value="">--</option>
                         <option value="ACTIVO">ACTIVO</option>
                         <option value="INACTIVO">INACTIVO</option>
-                        <option value="AGOTADO">AGOTADO</option>
                     </select><br><br>
                 </div>
 
@@ -130,7 +117,7 @@
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Modificar_Material()"><i class="fa fa-check"><b>&nbsp;Modificar</b></i></button>
+                <button class="btn btn-primary" onclick="Editar_Reparacion()"><i class="fa fa-check"><b>&nbsp;Editar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>

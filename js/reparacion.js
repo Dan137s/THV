@@ -64,6 +64,21 @@ function listar_reparacion() {
 
 }
 
+
+$('#tabla_reparacion').on('click', '.editar', function() {
+    var data = tablereparacion.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tablereparacion.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tablereparacion.row(this).data();
+    }
+    $("#modal_editar").modal({ backdrop: 'static', keyboard: false }) //Aqui se abro el modal editar
+    $("#modal_editar").modal('show'); //Muestro el modal o formulario
+
+    $("#id_reparacion").val(data.reparacion_id);
+    $("#txt_reparacion_actual_editar").val(data.reparacion_nombre);
+    $("#txt_reparacion_nueva_editar").val(data.reparacion_nombre);
+    $("#txt_estatus_editar").val(data.reparacion_estatus).trigger("change");
+})
+
 function filterGlobal() {
     $('#tabla_reparacion').DataTable().search(
         $('#global_filter').val(),
@@ -115,6 +130,56 @@ function Registrar_Reparacion() {
         }
     })
 }
+
+function Editar_Reparacion() {
+    var id = $("#id_reparacion").val();
+    var reparacionactual = $("#txt_reparacion_actual_editar").val();
+    var reparacionnueva = $("#txt_reparacion_nueva_editar").val();
+    var estatus = $("#txt_estatus_editar").val();
+
+    //Aqui pueden ir las condicionales en este caso campos vacios
+    if (reparacionactual.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (reparacionnueva.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (estatus.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    $.ajax({
+        "url": "../controlador/reparacion/controlador_reparacion_modificar.php",
+        type: 'POST',
+        data: {
+            id: id,
+            repaac: reparacionactual,
+            repanu: reparacionnueva,
+            estatus: estatus
+        }
+    }).done(function(resp) {
+        if (resp > 0) {
+            if (resp == 1) {
+                $("#modal_registro").modal('hide'); //Cierro el modal del registro
+                listar_reparacion();
+                LimpiarCampos();
+
+                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, reparacion registrada", "success");
+            } else {
+                LimpiarCampos();
+                Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
+            }
+        } else {
+
+            Swal.fire("Mensaje de Error", "Lo sentimos su registro no se pudo completar", "error");
+
+        }
+    })
+}
+
 
 function LimpiarCampos() {
     $("#txt_reparacion").val("");
