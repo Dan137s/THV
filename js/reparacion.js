@@ -77,6 +77,7 @@ $('#tabla_reparacion').on('click', '.editar', function() {
     $("#id_reparacion").val(data.reparacion_id);
     $("#txt_reparacion_actual_editar").val(data.reparacion_nombre);
     $("#txt_reparacion_nueva_editar").val(data.reparacion_nombre);
+    $("#txt_descripcion_editar").val(data.reparacion_descripcion);
     $("#txt_estatus_editar").val(data.reparacion_estatus).trigger("change");
 })
 
@@ -142,7 +143,8 @@ function Editar_Reparacion() {
     var id = $("#id_reparacion").val();
     var reparacionactual = $("#txt_reparacion_actual_editar").val();
     var reparacionnueva = $("#txt_reparacion_nueva_editar").val();
-    var descripcion = $("#txt_descripcion_reparacion_editar").val();
+    var descripcion = $("#txt_descripcion_editar").val();
+
     var estatus = $("#txt_estatus_editar").val();
 
     //Aqui pueden ir las condicionales en este caso campos vacios
@@ -158,6 +160,7 @@ function Editar_Reparacion() {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
+
     if (estatus.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
@@ -170,6 +173,7 @@ function Editar_Reparacion() {
             repaac: reparacionactual,
             repanu: reparacionnueva,
             descri: descripcion,
+
             estatus: estatus
         }
     }).done(function(resp) {
