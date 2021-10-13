@@ -108,8 +108,14 @@
             </div>
             <div class="modal-body">
 
+           
+            <div class="col-lg-12">
+            <label for="">Ticket</label>
+            <input type="text" id="id_reparacion" disabled >
+
+            </div>
                 <div class="col-lg-12">
-                    <input type="text" id="id_reparacion" >
+                    
                     <label for="">Nombre</label>
                     <input type="text"  id="txt_reparacion_actual_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)" hidden><br>
                     <input type="text" class="form-control" id="txt_reparacion_nueva_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)"><br>

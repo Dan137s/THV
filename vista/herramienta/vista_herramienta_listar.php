@@ -14,7 +14,7 @@
 <div class="col-md-12">
     <div class="box box-warning box-solid">
         <div class="box-header with-border">
-              <h3 class="box-title">[HERRAMIENTAS-REGISTRADAS] EN SISTEMA</h3>
+              <h3 class="box-title">[HERRAMIENTAS-REGISTRADAS] EN SISTEMA  </h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -35,6 +35,7 @@
                     <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
                 </div>
             </div>
+            
             <table id="tabla_herramienta" class="display responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
@@ -131,7 +132,7 @@
 
 <!--Modal Editar registro-->
 <div class="modal fade" id="modal_editar" role="dialog">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
