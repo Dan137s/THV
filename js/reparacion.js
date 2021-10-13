@@ -26,6 +26,7 @@ function listar_reparacion() {
             { "defaultContent": "" },
 
             { "data": "reparacion_nombre" },
+            { "data": "reparacion_descripcion" },
             { "data": "reparacion_fregistro" },
             {
                 "data": "reparacion_estatus",
@@ -141,6 +142,7 @@ function Editar_Reparacion() {
     var id = $("#id_reparacion").val();
     var reparacionactual = $("#txt_reparacion_actual_editar").val();
     var reparacionnueva = $("#txt_reparacion_nueva_editar").val();
+    var descripcion = $("#txt_descripcion_reparacion_editar").val();
     var estatus = $("#txt_estatus_editar").val();
 
     //Aqui pueden ir las condicionales en este caso campos vacios
@@ -149,6 +151,10 @@ function Editar_Reparacion() {
     }
 
     if (reparacionnueva.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (descripcion.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
@@ -163,6 +169,7 @@ function Editar_Reparacion() {
             id: id,
             repaac: reparacionactual,
             repanu: reparacionnueva,
+            descri: descripcion,
             estatus: estatus
         }
     }).done(function(resp) {
@@ -189,4 +196,5 @@ function Editar_Reparacion() {
 function LimpiarCampos() {
     $("#txt_reparacion").val("");
     $("#txt_descripcion_reparacion").val("");
+
 }

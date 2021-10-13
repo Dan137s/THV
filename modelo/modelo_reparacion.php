@@ -33,8 +33,8 @@
         }
 
         //Funcion Modificar
-        function Modificar_Reparacion($id, $reparacionactual, $reparacionnueva, $estatus){
-            $sql = "call SP_MODIFICAR_REPARACION('$id', '$reparacionactual', '$reparacionnueva', '$estatus')";
+        function Modificar_Reparacion($id, $reparacionactual, $reparacionnueva, $descripcion, $estatus){
+            $sql = "call SP_MODIFICAR_REPARACION('$id', '$reparacionactual', '$reparacionnueva', '$descripcion', '$estatus')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]);//Retorna valores
