@@ -92,10 +92,15 @@ function AbrirModalRegistro() {
 
 function Registrar_Reparacion() {
     var reparacion = $("#txt_reparacion").val();
+    var descripcion = $("#txt_descripcion_reparacion").val();
     var estatus = $("#txt_estatus").val();
 
     //Aqui pueden ir las condicionales en este caso campos vacios
     if (reparacion.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (descripcion.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
@@ -108,6 +113,7 @@ function Registrar_Reparacion() {
         type: 'POST',
         data: {
             reparacion: reparacion,
+            descripcion: descripcion,
             estatus: estatus
         }
     }).done(function(resp) {
@@ -182,4 +188,5 @@ function Editar_Reparacion() {
 
 function LimpiarCampos() {
     $("#txt_reparacion").val("");
+    $("#txt_descripcion_reparacion").val("");
 }
