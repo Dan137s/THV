@@ -32,7 +32,8 @@ function listar_requerimiento() {
                     }
                 }
             },
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" },
+            { "defaultContent": "<button style='font-size:13px;background-color: #69B00B;' type='button' class='editar btn btn-primary'><i class='fa fa-eye'></i></button>" }
         
            ],
 

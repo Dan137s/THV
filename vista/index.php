@@ -305,7 +305,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <ul class="treeview-menu">
             <!--Las pestañas que se cargaran en el menú izquierdo-->
             <li><a href = # onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')"><i class="fa fa-address-book-o"></i> Usuarios</a></li>
-            <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
+            <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimientos_admin.php')"><i class="fa fa-file-text-o"></i> Requerimiento</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','material/vista_material_listar.php')"><i class="fa fa-file-text-o"></i> Materiales</a></li>
             <li><a href = # onclick="cargar_contenido('contenido_principal','herramienta/vista_herramienta_listar.php')"><i class="fa fa-file-text-o"></i> Herramientas</a></li>
             <!--li><a href = # onclick="cargar_contenido('contenido_principal','hospederia/vista_hospederia.php')"><i class="fa fa-file-text-o"></i> Hospederia</a></!--li-->
@@ -447,9 +447,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas A</a></li>
+          <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta_trabajador.php')"><i class="fa fa-file-text-o"></i> Encuesta</a></li>
             
-            <li><a href = #><i class="fa fa-file-text-o"></i>Encuestas B</a></li>
           </ul>
         </li>
 

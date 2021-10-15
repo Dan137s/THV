@@ -46,7 +46,58 @@ function listar_encuesta() {
         filterColumn($(this).parents('tr').attr('data-column'));
     });
 }
+////////////////////////////////////////////////////////////////////////////////////////////////
+function listar_encuesta_trabajador($rut) {
+    table = $("#tabla_encuesta").DataTable({
+        
+        "ordering": false,
+        "bLengthChange": false,
+        "searching": { "regex": false },
+        "lengthMenu": [
+            [10, 25, 50, 100, -1],
+            [10, 25, 50, 100, "All"]
+        ],
+        "pageLength": 10,
+        "destroy": true,
+        "async": false,
+        "processing": true,
+        "ajax": {       
+            "url": "../controlador/encuesta/controlador_encuesta_trabajador_listar.php",
+            type: 'POST',
+            data: {
+                rut: $rut
+            }
+        },
+        "columns": [
+            { "data": "posicion" },
+            { "data": "rut" },
+            { "data": "nombre" },
+            { "data": "fecha_inicio" },
+            { "data": "fecha_fin",
+            render: function(data, type, row) {
+                if (data == null) {
+                    return "Sin responder";
+                }else{
+                    return data
+                }
+            }
+        },
+            { "defaultContent": "<button style='font-size:13px;background-color: #69B00B;' type='button' class='editar btn btn-primary'><i class='fa fa-eye'></i></button>" }
+        
+           ],
 
+        "language": idioma_espanol,
+        select: true
+    });
+    document.getElementById("tabla_encuesta_filter").style.display = "none";
+    $('input.global_filter').on('keyup click', function() {
+        filterGlobal();
+    });
+    $('input.column_filter').on('keyup click', function() {
+        filterColumn($(this).parents('tr').attr('data-column'));
+    });
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
 function filterGlobal() {
     $('#tabla_encuesta').DataTable().search(
         $('#global_filter').val(),
