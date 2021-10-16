@@ -9,6 +9,16 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- // estilo para el boton de la contraseña ojo /////////////////////// -->
+  <style>
+    #boton{
+      cursor: pointer;
+      width: 30px;
+    }
+  </style>
+  <!-- //////////////////////////////////////////////////////////////////// -->
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="icon" href="../plantilla/dist/img/hc.png">
@@ -885,7 +895,9 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
                   <input type="text" id="txtcontra_bd" hidden>
                     <label for="">Contraseña Actual</label>
                     <input type="password" class="form-control" id="txtcontraactual_editar" 
-                    placeholder="Contraseña Actual"><br>
+                    placeholder="Contraseña Actual"  > <br>
+
+
                 </div>
 
                 <div class="col-lg-12">
