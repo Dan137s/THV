@@ -10,15 +10,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 <html>
 <head>
 
-  <!-- // estilo para el boton de la contraseña ojo /////////////////////// -->
-  <style>
-    #boton{
-      cursor: pointer;
-      width: 30px;
-    }
-  </style>
-  <!-- //////////////////////////////////////////////////////////////////// -->
-
+ 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="icon" href="../plantilla/dist/img/hc.png">
@@ -894,8 +886,9 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
 
                   <input type="text" id="txtcontra_bd" hidden>
                     <label for="">Contraseña Actual</label>
-                    <input type="password" class="form-control" id="txtcontraactual_editar" 
+                    <input type="text" class="form-control" id="txtcontraactual_editar" 
                     placeholder="Contraseña Actual"  > <br>
+             
 
 
                 </div>
@@ -1013,6 +1006,9 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
 <!-- AdminLTE App -->
 <script src="../Plantilla/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+
+
 <!-- AdminLTE for demo purposes -->
 <script src="../Plantilla/dist/js/demo.js"></script>
 <script src="../Plantilla/plugins/DataTables/datatables.min.js"></script>

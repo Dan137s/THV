@@ -46,7 +46,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Restablecer Password';
-    $mail->Body    = 'Su contrase&ntilde;a fue restablecida<br> Por ahora su nueva contrase&ntilde;a es: <b>'.$contraactual.'</b>';
+    $mail->Body    = 'Su acceso fue restablecida<br> Por ahora su nueva contrase&ntilde;a es: <b>'.$contraactual.'</b>';
    
 
     $mail->send();

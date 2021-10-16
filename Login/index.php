@@ -8,6 +8,9 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+ 
+
 	<title>Desarrollo Tecnológico Experiencia|THV</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,8 +57,9 @@ if(isset($_SESSION['S_IDUSUARIO'])){
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<span class="label-input100">Contrase&ntilde;a</span>
-						<input class="input100" type="password" name="pass" placeholder="Escriba la contrase&ntilde;a" id="txt_con">
+						<span for="contrasena" class="label-input100">Contrase&ntilde;a</span>  
+						<input class="input100" type="password" name="pass" placeholder="Escriba la contrase&ntilde;a" id="txt_con" >
+					
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 					
