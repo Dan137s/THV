@@ -22,8 +22,8 @@
         }
 
         //Funcion Registrar
-        function Registrar_Reparacion($reparacion, $descripcion, $nivel, $estatus){
-            $sql = "call SP_REGISTRAR_REPARACION('$reparacion', '$descripcion', '$nivel', '$estatus')";
+        function Registrar_Reparacion($reparacion, $descripcion, $nivel, $cpersonas, $estatus){
+            $sql = "call SP_REGISTRAR_REPARACION('$reparacion', '$descripcion', '$nivel', '$cpersonas', '$estatus')";
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
                         return $id= trim($row[0]); //Retorna valores 

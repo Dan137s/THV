@@ -97,6 +97,7 @@ function Registrar_Reparacion() {
     var reparacion = $("#txt_reparacion").val();
     var descripcion = $("#txt_descripcion_reparacion").val();
     var nivel = $("#txt_nivel").val();
+    var cpersonas = $("#txt_c_personas").val();
     var estatus = $("#txt_estatus").val();
 
     //Aqui pueden ir las condicionales en este caso campos vacios
@@ -112,6 +113,10 @@ function Registrar_Reparacion() {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
+    if (cpersonas.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
     if (estatus.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
@@ -123,6 +128,7 @@ function Registrar_Reparacion() {
             reparacion: reparacion,
             descripcion: descripcion,
             nivel: nivel,
+            cpersonas: cpersonas,
             estatus: estatus
         }
     }).done(function(resp) {

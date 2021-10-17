@@ -88,6 +88,11 @@
                 </div>
  
                 <div class="col-lg-12">
+                    <label for="">Cantidad de personas</label>
+                    <input type="number" class="form-control" id="txt_c_personas" placeholder="Ingrese Cantidad de personas" onkeypress="return soloNumeros(event)"><br>
+                </div>
+                
+                <div class="col-lg-12">
                     <label for="">Estatus</label>
                     <select class="js-example-basic-single" name="state" id="txt_estatus" style="width:100%;">
                         <option value="">--</option>
@@ -136,6 +141,7 @@
                     <input type="text" class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion Reparacion" onkeypress="return soloLetras(event)"><br>
                 </div>
 
+               
 
                 <div class="col-lg-12">
                     <label for="">Estatus</label>
