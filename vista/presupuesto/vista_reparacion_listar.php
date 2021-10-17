@@ -60,22 +60,23 @@
         <div class="modal-content">
             <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registro De Reparaciones & Cotizacion</b></h4>
+            <h4 class="modal-title"><b>Diagnóstico Reparaciones & Cotizacion</b></h4>
             </div>
             <div class="modal-body">
 
                 <div class="col-lg-12">
                     <label for="">Elemento</label>
-                    <input type="text" class="form-control" id="txt_reparacion" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_reparacion" placeholder="Ingrese Reparacion" ><br>
                 </div>
 
                 <div class="col-lg-12">
-                <label for="">Descripcion del elemento</label></br>
-                <input type="text" class="form-control" id="txt_descripcion_reparacion" placeholder="Ingrese Descripcion de Reparacion" onkeypress="return soloLetras(event)"><br>
-                <label>
-                    <input type="checkbox" id="cbox1" value="first_checkbox"> Pintar</label>&nbsp;
-                    <input type="checkbox" id=" cbox2" value="second_checkbox"> <label for="cbox2"> Lijar</label>
+                    <label for="">Descripcion del elemento</label>
+                    <input type="text" class="form-control" id="txt_descripcion_reparacion" placeholder="Ingrese Descripcion de Reparacion"><br>
+                </div>
 
+                <div class="col-lg-12">
+                    <label for="">Descripcion del elemento</label>
+                    <input type="text" class="form-control" id="txt_descripcion_reparacion" placeholder="Ingrese Descripcion de Reparacion"><br>
                 </div>
  
                 <div class="col-lg-12">
