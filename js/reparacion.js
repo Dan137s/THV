@@ -27,6 +27,7 @@ function listar_reparacion() {
 
             { "data": "reparacion_nombre" },
             { "data": "reparacion_descripcion" },
+            { "data": "reparacion_nivel" },
             { "data": "reparacion_fregistro" },
             {
                 "data": "reparacion_estatus",
@@ -95,6 +96,7 @@ function AbrirModalRegistro() {
 function Registrar_Reparacion() {
     var reparacion = $("#txt_reparacion").val();
     var descripcion = $("#txt_descripcion_reparacion").val();
+    var nivel = $("#txt_nivel").val();
     var estatus = $("#txt_estatus").val();
 
     //Aqui pueden ir las condicionales en este caso campos vacios
@@ -103,6 +105,10 @@ function Registrar_Reparacion() {
     }
 
     if (descripcion.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (nivel.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
@@ -116,6 +122,7 @@ function Registrar_Reparacion() {
         data: {
             reparacion: reparacion,
             descripcion: descripcion,
+            nivel: nivel,
             estatus: estatus
         }
     }).done(function(resp) {

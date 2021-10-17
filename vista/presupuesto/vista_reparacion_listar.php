@@ -30,6 +30,7 @@
                         
                         <th>Reparacion</th>
                         <th>Descripcion</th>
+                        <th>Nivel</th>
                         <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
@@ -42,6 +43,7 @@
                         
                         <th>Reparacion</th>
                         <th>Descripcion</th>
+                        <th>Nivel</th>
                         <th>Fecha Registro</th>
                         <th>Estatus</th>
                         <th>Acción</th>
@@ -75,8 +77,14 @@
                 </div>
 
                 <div class="col-lg-12">
-                    <label for="">Descripcion del elemento</label>
-                    <input type="text" class="form-control" id="txt_descripcion_reparacion" placeholder="Ingrese Descripcion de Reparacion"><br>
+                    <label for="">Nivel</label>
+                    <select class="js-example-basic-single" name="state" id="txt_nivel" style="width:100%;">
+                        <option value="">--</option>
+                        <option value="Trabajos 1 Día">1</option>
+                        <option value="Trabajos 1/2 Día">2</option>
+                        <option value="Trabajos Inmediatos o minimos">3</option>
+                      
+                    </select><br><br>
                 </div>
  
                 <div class="col-lg-12">
@@ -87,10 +95,10 @@
                         <option value="INACTIVO">INACTIVO</option>
                     </select><br><br>
                 </div>
-
-                
+             
 
             </div>
+           
             <div class="modal-footer">
                 <button class="btn btn-primary" onclick="Registrar_Reparacion()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
