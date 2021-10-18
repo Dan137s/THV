@@ -60,14 +60,10 @@
                   <li><a class="text-navy" href="#"><i class="fa fa-square"></i></a></li>
                 </ul>
               </div>
-              <!-- /btn-group -->
-              <div class="input-group">
-                <input id="new-event" type="text" class="form-control" placeholder="Event Title">
                
-
         
 
-                <div class="input-group-btn">
+                <div  style="text-align: center;">
                   <button onclick="location.href='../subir_imagenes/index.php'" type="button" class="btn btn-primary btn-flat">Subir Fotos</onclick=>
                 </div>
                 <!-- /btn-group -->
