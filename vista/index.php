@@ -409,8 +409,9 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <li><a href = # onclick="cargar_contenido('contenido_principal','requerimiento/vista_requerimiento_listar.php')"><i class="fa fa-file-text-o"></i> Requerimientos</a></li>
           <li><a href = # onclick="cargar_contenido('contenido_principal','material/vista_material_listar_tr.php')"><i class="fa fa-file-text-o"></i> Materiales</a></li>
           <li><a href = # onclick="cargar_contenido('contenido_principal','herramienta/vista_herramienta_listar_tr.php')"><i class="fa fa-file-text-o"></i> Herramientas</a></li>  
-          <li><a href = # onclick="cargar_contenido('contenido_principal','hospederia/vista_hospederia_listar_t.php')"><i class="fa fa-file-text-o"></i> Hospederias</a></li> 
-          </ul>
+          <!--<li><a href = # onclick="cargar_contenido('contenido_principal','hospederia/vista_hospederia_listar_t.php')"><i class="fa fa-file-text-o"></i> Hospederias</a></li>--> 
+          <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar.php')"><i class="fa fa-file-text-o"></i> Reparación</a></li>
+        </ul>
         </li>
 
 
@@ -422,7 +423,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar.php')"><i class="fa fa-file-text-o"></i> Reparación</a></li>
+         
             <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_presupuesto.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
             
           </ul>
