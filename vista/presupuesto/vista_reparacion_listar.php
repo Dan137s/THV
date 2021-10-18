@@ -183,7 +183,7 @@
 
             
             <div class="col-lg-12">
-                    <label for="">Insumos y herramientas</label>
+                    <label for="">Insumos y herramientas </label>
                     <p> <textarea class="form-control" id="txt_insu_herra_editar" placeholder="Ingrese insumos y herramienta de parte de trato hecho vecino"></textarea></p>   
             </div>
             
