@@ -174,7 +174,13 @@
                     </select><br><br>
                 </div>
 
-                
+            <p>
+                <hr width=800>
+            <p>
+                      
+            <div class="modal-header" style="text-align:center;"> 
+                <h4 class="modal-title"><b>Propuesta Trato Hecho Vecino</b></h4>
+            </div>
 
             </div>
             <div class="modal-footer">
