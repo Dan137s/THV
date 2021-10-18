@@ -82,6 +82,8 @@ $('#tabla_reparacion').on('click', '.editar', function() {
     $("#txt_nivel_editar").val(data.reparacion_nivel).trigger("change");
     $("#txt_c_personas_editar").val(data.reparacion_cantidad_personas);
     $("#txt_estatus_editar").val(data.reparacion_estatus).trigger("change");
+    $("#txt_insu_herra_editar").val(data.reparacion_insu_herra);
+    $("#txt_req_veci_editar").val(data.reparacion_req_vecino);
 })
 
 function filterGlobal() {
@@ -164,6 +166,8 @@ function Editar_Reparacion() {
     var nivel = $("#txt_nivel_editar").val();
 
     var cpersonas = $("#txt_c_personas_editar").val();
+    var insumo = $("#txt_insu_herra_editar").val();
+    var reqvecino = $("#txt_req_veci_editar").val();
 
     var estatus = $("#txt_estatus_editar").val();
 
@@ -189,6 +193,14 @@ function Editar_Reparacion() {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
+    if (insumo.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+    if (reqvecino.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
     if (estatus.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
@@ -203,6 +215,8 @@ function Editar_Reparacion() {
             descri: descripcion,
             niv: nivel,
             cpe: cpersonas,
+            insu: insumo,
+            reqv: reqvecino,
             estatus: estatus
         }
     }).done(function(resp) {

@@ -123,6 +123,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title"><b>Editar Reparación</b></h4>
             </div>
+            
             <div class="modal-body">
 
            
@@ -143,10 +144,7 @@
 
                 <div class="col-lg-12">
                     <label for="">Descripcion del elemento</label>
-                    
-                    <p> <textarea class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion de Reparacion"></textarea></p> 
-
-                    
+                    <p> <textarea class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion de Reparacion"></textarea></p>   
                 </div>
 
                 <div class="col-lg-12">
@@ -173,14 +171,27 @@
                         <option value="INACTIVO">INACTIVO</option>
                     </select><br><br>
                 </div>
-
-            <p>
-                <hr width=800>
+                <br><br>
+            <p> 
+                <hr width=800  >
+                
             <p>
                       
             <div class="modal-header" style="text-align:center;"> 
                 <h4 class="modal-title"><b>Propuesta Trato Hecho Vecino</b></h4>
             </div>
+
+            
+            <div class="col-lg-12">
+                    <label for="">Insumos y herramientas</label>
+                    <p> <textarea class="form-control" id="txt_insu_herra_editar" placeholder="Ingrese insumos y herramienta de parte de trato hecho vecino"></textarea></p>   
+            </div>
+            
+            <div class="col-lg-12">
+                    <label for="">R. materiales a vecino</label>
+                    <p> <textarea class="form-control" id="txt_req_veci_editar" placeholder="Ingrese insumos y herramienta de parte de trato hecho vecino"></textarea></p>   
+            </div>
+           
 
             </div>
             <div class="modal-footer">
