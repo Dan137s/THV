@@ -89,8 +89,10 @@ function filterGlobal() {
 }
 
 function AbrirModalRegistro() {
+
     $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
     $("#modal_registro").modal('show');
+
 }
 
 function Registrar_Reparacion() {
@@ -213,5 +215,7 @@ function Editar_Reparacion() {
 function LimpiarCampos() {
     $("#txt_reparacion").val("");
     $("#txt_descripcion_reparacion").val("");
+    $("#txt_c_personas").val("");
+    $("#txt_estatus").val("");
 
 }
