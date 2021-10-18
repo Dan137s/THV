@@ -127,11 +127,11 @@
 
            
             <div class="col-lg-12">
-            <label for="">Ticket</label>
-            <input type="text" id="id_reparacion" disabled >
+            <label for="">N° Ticket</label>
+            <input type="text" id="id_reparacion" disabled > <br><br>
 
             </div>
-                <div class="col-lg-12">
+             <div class="col-lg-12">
                     
                     <label for="">Nombre</label>
                     <input type="text"  id="txt_reparacion_actual_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)" hidden><br>
@@ -139,12 +139,31 @@
                 </div>
 
                 
+              
+
                 <div class="col-lg-12">
-                    <label for="">Descripcion</label>
-                    <input type="text" class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion Reparacion" onkeypress="return soloLetras(event)"><br>
+                    <label for="">Descripcion del elemento</label>
+                    
+                    <p> <textarea class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion de Reparacion"></textarea></p> 
+
+                    
                 </div>
 
-               
+                <div class="col-lg-12">
+                    <label for="">Nivel</label>
+                    <select class="js-example-basic-single" name="state" id="txt_nivel_editar" style="width:100%;">
+                        <option value="">--</option>
+                        <option value="Trabajos 1 Día">1</option>
+                        <option value="Trabajos 1/2 Día">2</option>
+                        <option value="Trabajos Inmediatos o minimos">3</option>
+                      
+                    </select><br><br>
+                </div>
+ 
+                <div class="col-lg-12">
+                    <label for="">Cantidad de personas</label>
+                    <input type="number" class="form-control" min="1" max="5"  id="txt_c_personas_editar" placeholder="Ingrese cantidad de personas" onkeypress="return soloNumeros(event)"><br>
+                </div>
 
                 <div class="col-lg-12">
                     <label for="">Estatus</label>

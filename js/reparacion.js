@@ -79,6 +79,8 @@ $('#tabla_reparacion').on('click', '.editar', function() {
     $("#txt_reparacion_actual_editar").val(data.reparacion_nombre);
     $("#txt_reparacion_nueva_editar").val(data.reparacion_nombre);
     $("#txt_descripcion_editar").val(data.reparacion_descripcion);
+    $("#txt_nivel_editar").val(data.reparacion_nivel).trigger("change");
+    $("#txt_c_personas_editar").val(data.reparacion_cantidad_personas);
     $("#txt_estatus_editar").val(data.reparacion_estatus).trigger("change");
 })
 
@@ -159,6 +161,9 @@ function Editar_Reparacion() {
     var reparacionactual = $("#txt_reparacion_actual_editar").val();
     var reparacionnueva = $("#txt_reparacion_nueva_editar").val();
     var descripcion = $("#txt_descripcion_editar").val();
+    var nivel = $("#txt_nivel_editar").val();
+
+    var cpersonas = $("#txt_c_personas_editar").val();
 
     var estatus = $("#txt_estatus_editar").val();
 
@@ -175,6 +180,14 @@ function Editar_Reparacion() {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
+    if (nivel.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
+
+
+    if (cpersonas.length == 0) {
+        return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
+    }
 
     if (estatus.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
@@ -188,7 +201,8 @@ function Editar_Reparacion() {
             repaac: reparacionactual,
             repanu: reparacionnueva,
             descri: descripcion,
-
+            niv: nivel,
+            cpe: cpersonas,
             estatus: estatus
         }
     }).done(function(resp) {
