@@ -173,28 +173,28 @@
                 </div>
                 <br><br>
             <p> 
-                <hr width=800  >
+                <hr width=800  hidden>
                 
             <p>
                       
-            <div class="modal-header" style="text-align:center;"> 
+            <div class="modal-header" style="text-align:center;" hidden> 
                 <h4 class="modal-title"><b>Propuesta Trato Hecho Vecino</b></h4>
             </div>
 
             
-            <div class="col-lg-12">
+            <div class="col-lg-12" hidden>
                     <label for="">Insumos y herramientas </label>
                     <p> <textarea class="form-control" id="txt_insu_herra_editar" placeholder="Ingrese insumos y herramienta de parte de trato hecho vecino"></textarea></p>   
             </div>
             
-            <div class="col-lg-12">
+            <div class="col-lg-12" hidden>
                     <label for="">R. materiales a vecino</label>
                     <p> <textarea class="form-control" id="txt_req_veci_editar" placeholder="Ingrese insumos y herramienta de parte de trato hecho vecino"></textarea></p>   
             </div>
            
 
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" >
                 <button class="btn btn-primary" onclick="Editar_Reparacion()"><i class="fa fa-check"><b>&nbsp;Editar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
