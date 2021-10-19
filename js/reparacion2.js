@@ -32,7 +32,7 @@ function listar_reparacion() {
             {
                 "data": "reparacion_estatus",
                 render: function(data, type, row) {
-                    if (data == 'ACTIVO') {
+                    if (data == 'ACEPTADO') {
                         return "<span class='label label-success'>" + data + "</span>";
                     } else {
                         return "<span class='label label-danger'>" + data + "</span>";
