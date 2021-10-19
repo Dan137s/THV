@@ -95,11 +95,10 @@
                     <input type="number" class="form-control" min="1" max="5"  id="txt_c_personas" placeholder="Ingrese cantidad de personas" onkeypress="return soloNumeros(event)"><br>
                 </div>
                 
-                <div class="col-lg-12">
+                <div class="col-lg-12" hidden>
                     <label for="">Estatus</label>
                     <select class="js-example-basic-single" name="state" id="txt_estatus" style="width:100%;">
-                        <option value="">--</option>
-                        <option value="ACTIVO">ACTIVO</option>
+                       
                         <option value="INACTIVO">INACTIVO</option>
                     </select><br><br>
                 </div>
@@ -163,7 +162,7 @@
                     <input type="number" class="form-control" min="1" max="5"  id="txt_c_personas_editar" placeholder="Ingrese cantidad de personas" onkeypress="return soloNumeros(event)"><br>
                 </div>
 
-                <div class="col-lg-12">
+                <div class="col-lg-12" hidden>
                     <label for="">Estatus</label>
                     <select class="js-example-basic-single" name="state" id="txt_estatus_editar" style="width:100%;" >
                         <option value="">--</option>

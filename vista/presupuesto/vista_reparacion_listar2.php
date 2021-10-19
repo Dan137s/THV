@@ -32,7 +32,7 @@
                         <th>Herramienta</th>
                         <th>Material Vecino</th>
                         <th>Fecha Registro</th>
-                        <th>Estatus</th>
+                        <th>Estado</th>
                         <th>Acción</th>
                        
                     </tr>
@@ -45,7 +45,7 @@
                         <th>Herramienta</th>
                         <th>Material Vecino</th>
                         <th>Fecha Registro</th>
-                        <th>Estatus</th>
+                        <th>Estado</th>
                         <th>Acción</th>
                     </tr>
                 </tfoot>
@@ -140,6 +140,15 @@
 
             
             <div class="col-lg-12">
+                    <label for="">Estado</label>
+                    <select class="js-example-basic-single" name="state" id="txt_estatus_editar" style="width:100%;"  >
+                        <option value="">--</option>
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="INACTIVO">INACTIVO</option>
+                    </select><br><br>
+                </div>
+            
+            <div class="col-lg-12">
                     <label for="">Insumos y herramientas </label>
                     <p> <textarea class="form-control" id="txt_insu_herra_editar" placeholder="Ingrese insumos y herramienta de parte de trato hecho vecino"></textarea></p>   
             </div>
@@ -156,14 +165,6 @@
 
             </div>
 
-            <div class="col-lg-12">
-                    <label for="">Estatus</label>
-                    <select class="js-example-basic-single" name="state" id="txt_estatus_editar" style="width:100%;"  >
-                        <option value="">--</option>
-                        <option value="ACTIVO">ACTIVO</option>
-                        <option value="INACTIVO">INACTIVO</option>
-                    </select><br><br>
-                </div>
 
              <div class="col-lg-12">
                     
