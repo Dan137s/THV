@@ -95,7 +95,7 @@
                 
               </div>
               <div  style="text-align: center;">
-                  <button href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar.php')" type="button" class="btn btn-primary btn-flat">Diagonóstico</onclick=>
+                  <button href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar2.php')" type="button" class="btn btn-primary btn-flat">Diagonóstico</onclick=>
                 </div> 
               
               <!-- /btn-group -->
@@ -113,7 +113,7 @@
             </div>
           </div>
         </div>
-        <div align="center"><img onclick = "cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar.php')" src="../../thv/plantilla/dist/img/hac.png" width="400"
+        <div align="center"><img onclick = "cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar2.php')" src="../../thv/plantilla/dist/img/hac.png" width="400"
               height="341">
       </div>
      
