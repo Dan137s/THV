@@ -605,14 +605,14 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>Total 3</h3>
+              <h3>Ir Stock</h3>
 
               <p>Herramientas</p>
             </div>
             <div class="icon">
               <i class="ion ion-wrench"></i>
             </div>
-            <a href="#" class="small-box-footer">Ver herramientas <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" onclick="cargar_contenido('contenido_principal','herramienta/vista_herramienta_listar.php')" class="small-box-footer">Ver herramientas <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -620,14 +620,14 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>Total 53</h3>
+              <h3>Ir Stock</h3>
 
               <p>Materiales </p>
             </div>
             <div class="icon">
               <i class="ion-ios-paper-outline  "></i>
             </div>
-            <a href="#" class="small-box-footer">Ver materiales <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" onclick="cargar_contenido('contenido_principal','material/vista_material_listar.php')" class="small-box-footer">Ver materiales <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -638,16 +638,16 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
             <div class="inner">
               <h3>  
 
-             Total 44
+              Revisión
 
               </h3>
 
-              <p>Reportes</p>
+              <p>Presupuestos</p>
             </div>
             <div class="icon">
               <i class="ion ion-clipboard"></i>
             </div>
-            <a href="#" class="small-box-footer">Ver reportes <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar2.php')"  class="small-box-footer">Ver reportes <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
