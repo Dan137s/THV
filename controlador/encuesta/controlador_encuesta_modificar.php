@@ -14,7 +14,7 @@
     $p8 = htmlspecialchars($_POST['p8'],ENT_QUOTES,'UTF-8');
     $p9 = htmlspecialchars($_POST['p9'],ENT_QUOTES,'UTF-8');
     
-    $consulta = $MR->Registrar_Encuesta($rut,$p1,$p2,$p3,$p4,$p5,$p6,$p7,$p8,$p9);
+    $consulta = $MR->modificar_Encuestas($rut,$p1,$p2,$p3,$p4,$p5,$p6,$p7,$p8,$p9);
     echo $consulta;
 
 ?>

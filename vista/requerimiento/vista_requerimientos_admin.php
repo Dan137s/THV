@@ -45,7 +45,6 @@
                         <th>Dirección</th>
                         <th>Estado</th>
                         <th>Acción</th>
-                        <th>Acci&oacute;n</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -57,7 +56,6 @@
                         <th>Dirección</th>
                         <th>Estado</th>
                         <th>Acción</th>
-                        <th>Acci&oacute;n</th>
                     </tr>
                 </tfoot>
             </table>
@@ -66,8 +64,8 @@
     </div>
           <!-- /.box -->
 </div>
-<form autocomplete="false" onsubmit="return false"  id="form-requerimiento-detalle" enctype="multipart/form-data">
-    <div class="modal fade" id="modal_registro" role="dialog" >
+<form autocomplete="false" onsubmit="return false"  id="form_requerimiento_registro" enctype="multipart/form-data">
+    <div class="modal fade" id="modal_requerimiento_registro" role="dialog" >
         <div class="modal-dialog modal-sm" style="width: 75%;">
         <div class="modal-content" style="width: 100%;align-items: center;">
             <div class="modal-header" >
@@ -83,26 +81,26 @@
       <td>
       	<div class="col-lg-12">
                     <label for="">Plano ubicación</label>
-                    <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="files_planos" name="files_planos" placeholder="Ingrese numero de Reporte" >
+                    <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos" name="datoplano" placeholder="Ingrese numero de Reporte" >
         </div>
       </td>
       <td><div class="col-lg-12">
                     <label for="">RUT vecino</label>
-                    <input type="text" class="form-control" id="txt_vesino" placeholder="Ingresar RUT del vecino"><br>
+                    <input name="vesino" type="text" class="form-control" id="txt_rut_vesino" placeholder="Ingresar RUT del vecino"><br>
                 </div></td>
       <td><div class="col-lg-12">
                     <label for="">observación</label>
-                    <input type="text" class="form-control" id="txt_vesino" placeholder="observación del trabajo"><br>
+                    <input name="observar" type="text" class="form-control" id="txt_observacion_vesino" placeholder="observación del trabajo"><br>
                 </div></td>
       
       <td><div class="col-lg-12">
                     <label for="">Fono</label>
-                    <input type="text" class="form-control" id="txt_direccion" placeholder="Telefono del vesino"><br>
+                    <input name="observar" type="text" class="form-control" id="txt_fono_vesino" placeholder="Telefono del vesino"><br>
                 </div></td>
       
       <td><div class="col-lg-12">
                     <label for="">Fecha de ejecución</label>
-                    <input type="date" class="form-control" id="txt_direccion" placeholder="Ingrese la dirección"><br>
+                    <input name="fechaejecucion" type="date" class="form-control" id="txt_fecha_ejecucion" placeholder="Ingrese la dirección"><br>
                 </div></td>
     </tr>
     <tr>
@@ -110,35 +108,35 @@
           <img id="imgSalida" class="galeria" />
     </td>
       <td><div class="col-lg-12">
-                    <label for="">Vista orientatica</label>
-                    <input type="file" onchange="loadFile2(event)" name='imagen[]' accept=" image/jpeg, image/png" class="form-control"  id="txt_file" placeholder="Ingrese numero de Reporte" >
+                    <label for="">Vista orientativa</label>
+                    <input type="file" onchange="loadFile2(event)" id="file_orientativa" name='file_orientativa' accept=" image/jpeg, image/png" class="form-control" placeholder="Ingrese numero de Reporte" >
         </div></td>
       <td><img id="galeria_orientatica" class="galeria" /></td>
       <td></td>
       
       <td><div class="col-lg-12">
                     <label for="">Trabajador</label>
-                    <input type="text" class="form-control" id="txt_direccion" placeholder="Ingrese nombre trabajador"><br>
+                    <input name="trabajador" type="text" class="form-control" id="txt_travajador" placeholder="Ingrese nombre trabajador"><br>
                 </div></td>
     </tr>
     <tr>
       <td><div class="col-lg-12">
                     <label for="">Vista general</label>
-                    <input type="file"onchange="loadFile3(event)" name='imagen[]' accept=" image/jpeg, image/png" class="form-control"  id="txt_file" placeholder="Ingrese numero de Reporte" >
+                    <input type="file"onchange="loadFile3(event)" name='datogeneral'id="file_general" accept=" image/jpeg, image/png" class="form-control"  placeholder="Ingrese numero de Reporte" >
         </div></td>
       <td><div class="col-lg-12">
                     <label for="">Vista daño</label>
-                    <input type="file"onchange="loadFile4(event)" name='imagen[]' accept=" image/jpeg, image/png" class="form-control"  id="txt_file" placeholder="Ingrese numero de Reporte" >
+                    <input type="file" onchange="loadFile4(event)" name='datodaño' accept=" image/jpeg, image/png" class="form-control"  id="file_daño">
         </div></td>
       <td><img id="galeria_daño" class="galeria" /></td>
       <td><div class="col-lg-12">
                     <label for="">Dirección</label>
-                    <input type="text" class="form-control" id="txt_direccion" placeholder="Ingrese la dirección"><br>
+                    <input name="direccion" type="text" class="form-control" id="txt_direccion_vecino" placeholder="Ingrese la dirección"><br>
                 </div></td>
       
       <td><div class="col-lg-12">
                     <label for="">voluntario</label>
-                    <input type="text" class="form-control" id="txt_direccion" placeholder="Ingrese nombre voluntario"><br>
+                    <input name="voluntario" type="text" class="form-control" id="txt_voluntario" placeholder="Ingrese nombre voluntario"><br>
                 </div></td>
     </tr>
     <tr>
@@ -146,14 +144,14 @@
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
                     <label for="">Diagnóstico</label><br>
-                    <textarea name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="diagnóstico" style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <textarea  id="txt_diagnostico" name="diagnostico" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="diagnóstico" style="margin: 0px; width: 331px; height: 76px;"></textarea>
                 </div></td>
       <td></td>
       <td></td>
       
       <td><div class="col-lg-12">
                     <label for="">Monto</label>
-                    <input type="text" class="form-control" id="txt_direccion" placeholder="Ingrese Monto"><br>
+                    <input name="monto" type="text" class="form-control" id="txt_monto" placeholder="Ingrese Monto"><br>
                 </div></td>
     </tr>
     <tr>
@@ -161,12 +159,131 @@
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
                     <label for="">Propuesta THV</label><br>
-                    <textarea name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="Propuesta thv"style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <textarea name="propuesta" id="txt_propuesta" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="Propuesta thv"style="margin: 0px; width: 331px; height: 76px;"></textarea>
                 </div></td>
       <td></td>
       <td><div class="col-lg-12">
                     <label for="">Recepción de trabajo</label>
-                    <input type="file"onchange="loadFile5(event)" name='imagen[]' accept=" image/jpeg, image/png" class="form-control"  id="txt_file" placeholder="Ingrese numero de Reporte" >
+                    <input type="file"onchange="loadFile5(event)" name='datofirma' accept=" image/jpeg, image/png" class="form-control"  id="file_firma" placeholder="Ingrese numero de Reporte" >
+        </div></td>
+      
+      <td><img id="galeria_recepcion" class="galeria" /></td>
+    </tr>
+    
+  </tbody>
+</table>
+                
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="registrarRequerimiento()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
+</form>
+
+<form autocomplete="false" onsubmit="return false"  id="form-requerimiento-detalle" enctype="multipart/form-data">
+    <div class="modal fade" id="modal_edit" role="dialog" >
+        <div class="modal-dialog modal-sm" style="width: 75%;">
+        <div class="modal-content" style="width: 100%;align-items: center;">
+            <div class="modal-header" >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><b>Registre Requerimiento</b></h4>
+            </div>
+            <div class="modal-body" >
+            
+            <table border="1">
+  <caption></caption>
+  <tbody >
+    <tr>
+      <td>
+      	<div class="col-lg-12">
+                    <label for="">Plano ubicación</label>
+                    <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos_edit" name="files_planos" placeholder="Ingrese numero de Reporte" >
+        </div>
+      </td>
+      <td><div class="col-lg-12">
+                    <label for="">RUT vecino</label>
+                    <input type="text" class="form-control" id="txt_rut_vesino_edit" placeholder="Ingresar RUT del vecino"><br>
+                </div></td>
+      <td><div class="col-lg-12">
+                    <label for="">observación</label>
+                    <input type="text" class="form-control" id="txt_observacion_vesino_edit" placeholder="observación del trabajo"><br>
+                </div></td>
+      
+      <td><div class="col-lg-12">
+                    <label for="">Fono</label>
+                    <input type="text" class="form-control" id="txt_fono_vesino_edit" placeholder="Telefono del vesino"><br>
+                </div></td>
+      
+      <td><div class="col-lg-12">
+                    <label for="">Fecha de ejecución</label>
+                    <input type="date" class="form-control" id="txt_fecha_ejecucion_edit" placeholder="Ingrese la dirección"><br>
+                </div></td>
+    </tr>
+    <tr>
+      <td>
+          <img id="imgSalida" class="galeria" />
+    </td>
+      <td><div class="col-lg-12">
+                    <label for="">Vista orientativa</label>
+                    <input type="file" onchange="loadFile2(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_orientativa_edit" placeholder="Ingrese numero de Reporte" >
+        </div></td>
+      <td><img id="galeria_orientatica" class="galeria" /></td>
+      <td></td>
+      
+      <td><div class="col-lg-12">
+                    <label for="">Trabajador</label>
+                    <input type="text" class="form-control" id="txt_travajador_edit" placeholder="Ingrese nombre trabajador"><br>
+                </div></td>
+    </tr>
+    <tr>
+      <td><div class="col-lg-12">
+                    <label for="">Vista general</label>
+                    <input type="file"onchange="loadFile3(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_general_edit" placeholder="Ingrese numero de Reporte" >
+        </div></td>
+      <td><div class="col-lg-12">
+                    <label for="">Vista daño</label>
+                    <input type="file"onchange="loadFile4(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_daño_edit">
+        </div></td>
+      <td><img id="galeria_daño" class="galeria" /></td>
+      <td><div class="col-lg-12">
+                    <label for="">Dirección</label>
+                    <input type="text" class="form-control" id="txt_direccion_vecino_edit" placeholder="Ingrese la dirección"><br>
+                </div></td>
+      
+      <td><div class="col-lg-12">
+                    <label for="">voluntario</label>
+                    <input type="text" class="form-control" id="txt_voluntario_edit" placeholder="Ingrese nombre voluntario"><br>
+                </div></td>
+    </tr>
+    <tr>
+      <td><img id="galeris_general" class="galeria" /></td>
+      <td><div class="encuesta_detalle">
+                    <input type="text" id="txt_p7" hidden>
+                    <label for="">Diagnóstico</label><br>
+                    <textarea id="txt_diagnostico_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="diagnóstico" style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                </div></td>
+      <td></td>
+      <td></td>
+      
+      <td><div class="col-lg-12">
+                    <label for="">Monto</label>
+                    <input type="text" class="form-control" id="txt_monto_edit" placeholder="Ingrese Monto"><br>
+                </div></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><div class="encuesta_detalle">
+                    <input type="text" id="txt_p7" hidden>
+                    <label for="">Propuesta THV</label><br>
+                    <textarea id="txt_propuesta_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="Propuesta thv"style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                </div></td>
+      <td></td>
+      <td><div class="col-lg-12">
+                    <label for="">Recepción de trabajo</label>
+                    <input type="file"onchange="loadFile5(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_firma_edit" placeholder="Ingrese numero de Reporte" >
         </div></td>
       
       <td><img id="galeria_recepcion" class="galeria" /></td>
@@ -186,54 +303,6 @@
 </form>
 
 
-<form autocomplete="false" onsubmit="return false">
-    <div class="modal fade" id="modal_editar" role="dialog">
-        <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Editar Usuario</b></h4>
-            </div>
-            <div class="modal-body">
-                <div class="col-lg-12">
-                    <input type="text" id="txtidusuario" hidden>
-                    <label for="">Usuario</label>
-                    <input type="text" class="form-control" id="txtusu_editar" placeholder="Ingrese usuario" disabled><br>
-                </div>
-                <div class="col-lg-12">
-                    <label for="">Nombre</label>
-                    <input type="text" class="form-control" id="txt_alias_editar" placeholder="Nombre Usuario"><br>
-                </div>
-           
-                <div class="col-lg-12">
-                    <label for="">Email</label>
-                    <input type="text" class="form-control" id="txt_email_editar" placeholder="Ingrese Correo">
-                    <label for="" id="emailOK_editar" style="color:red;"></label>
-                    <input type="text" id="validar_email_editar" hidden>
-                </div>
-
-                <div class="col-lg-12">
-                    <label for="">Sexo</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_sexo_editar" style="width:100%;">
-                        <option value="M">MASCULINO</option>
-                        <option value="F">FEMENINO</option>
-                    </select><br><br>
-                </div>
-                <div class="col-lg-12">
-                    <label for="">Rol</label>
-                    <select class="js-example-basic-single" name="state" id="cbm_rol_editar" style="width:100%;">
-                    </select><br><br>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" onclick="Modificar_Usuario()"><i class="fa fa-check"><b>&nbsp;Modificar</b></i></button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
-            </div>
-        </div>
-        </div>
-    </div>
-</form>
 <script>
 $(document).ready(function() {
     listar_requerimiento();

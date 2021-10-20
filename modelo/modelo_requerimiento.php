@@ -20,9 +20,17 @@
 				$this->conexion->cerrar();
 			}
         }
-        function Registrar_requerimiento($monto,$rut,$direc,$imagen){
+
+        
+        function Registrar_requerimiento($datoplano,$vesino,$observar,$fono,$fechaejecucion
+        ,$datoorientativa,$trabajador
+        ,$datogeneral,$datodaño,$direccion,$voluntario
+        ,$diagnostico,$monto
+        ,$propuesta,$datofirma)
+        {
             $id = 0;
-            $sql = "call SP_REGISTRAR_REQUERIMIENTO('$monto','$rut','$direc')";
+            $sql = "call SP_REGISTRAR_REQUERIMIENTOS_TXT('$vesino','$observar','$fono','$fechaejecucion',
+            '$trabajador','$direccion','$voluntario','$diagnostico','$monto','$propuesta')";
             
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
@@ -30,31 +38,39 @@
 				}
 			}
             if ($id < 0){
-                //print_r($imagen);
                 return $id;
             }
             else{
 
-                $i = 1;/*
-                foreach ($_FILES['foto']['tmp_name'] as $e)
-                {
-                    $id = $id+1;
-                    $i++;
-                }
-                for($i=0;$i<count($imagen);$i++)
-                {
-                    $photo = $imagen[$i];
-                    $sql = "call SP_GUARDAR_IMAGEN('$id','$photo')";
-                    if ($consulta = $this->conexion->conexion->query($sql)) {
-                        if ($row = mysqli_fetch_array($consulta)) {
-                            $id= trim($row[0]);//si -1 no existe el usuario 
-                        }
-                    }
-                
-                }*/
+                $i = 1;
                 return $id;
             }
             $this->conexion->cerrar();
         }
+        function Registrar_requerimiento_txt($vesino,$observar,$fono,$fechaejecucion,$trabajador,
+        $direccion,$voluntario,$diagnostico,$monto,$propuesta)
+        {
+            $id = 0;
+            $sql = "call SP_REGISTRAR_REQUERIMIENTOS_TXT('$vesino','$observar','$fono','$fechaejecucion',
+            '$trabajador','$direccion','$voluntario','$diagnostico','$monto','$propuesta')";
+            
+			if ($consulta = $this->conexion->conexion->query($sql)) {
+				if ($row = mysqli_fetch_array($consulta)) {
+                    $id= trim($row[0]);//si -1 no existe el usuario 
+				}
+			}
+            if ($id < 0){
+                return $id;
+            }
+            else{
+
+                $i = 1;
+                return $id;
+            }
+            $this->conexion->cerrar();
+        }
+
+
+
     }
 ?>
