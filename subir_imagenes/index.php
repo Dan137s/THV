@@ -42,7 +42,7 @@
          </form>
        </div>
        <div class="col-lg-8">
-           <h1 class="text-primary text-center">Galeria de Imagenes</h1>
+           <h1 class="text-primary text-center">Galeria de trabajos realizados</h1>
            <hr>
            <div class="card-columns">
                <?php foreach($resultado as $row){ ?>
