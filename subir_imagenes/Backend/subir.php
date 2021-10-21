@@ -14,7 +14,7 @@ if(isset($_POST['Guardar'])){
           $_SESSION['tipo'] = 'danger';
           header('location:../index.php');
        }else{
-         $query = "INSERT INTO imagenes(imagen,nombre) values('$imagen','$nombre')";
+         $query = "INSERT INTO galeria(imagen,nombre) values('$imagen','$nombre')";
          $resultado = mysqli_query($conn,$query);
          if($resultado){
               move_uploaded_file($temp,'imagenes/'.$imagen);   

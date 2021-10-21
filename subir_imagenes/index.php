@@ -1,6 +1,6 @@
 <?php 
   include('Backend/conexion.php');
-  $query = "select * from imagenes";
+  $query = "select * from galeria";
   $resultado = mysqli_query($conn,$query);
 ?>
 <!DOCTYPE html>
