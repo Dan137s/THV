@@ -9,7 +9,7 @@ if(isset($_POST['Guardar'])){
         $tipo = $_FILES['imagen']['type'];
         $temp  = $_FILES['imagen']['tmp_name'];
 
-       if( !((strpos($tipo,'gif') || strpos($tipo,'jpeg') || strpos($tipo,'webp')))){
+       if( !((strpos($tipo,'gif') || strpos($tipo,'jpeg') || strpos($tipo,'png') ||strpos($tipo,'webp')))){
           $_SESSION['mensaje'] = 'solo se permite archivos jpeg, gif, webp';
           $_SESSION['tipo'] = 'danger';
           header('location:../index.php');
