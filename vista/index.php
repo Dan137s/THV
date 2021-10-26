@@ -327,7 +327,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </a>
           <ul class="treeview-menu">
           
-            <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_presupuesto.php')"><i class="fa fa-file-text-o"></i> Mano de obra</a></li>
+            <li><a href = # onclick="cargar_contenido('contenido_principal','presupuesto/vista_presupuesto.php')"><i class="fa fa-file-text-o"></i>Estado presupuesto</a></li>
             
           </ul>
         </li>
@@ -349,7 +349,7 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
 
         <li class="treeview">
           <a>
-          <i class="fa fa-file-text-o"></i> <span>Encuestas de opinión</span>
+          <i class="fa fa-file-text-o"></i> <span>Encuestas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
