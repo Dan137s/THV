@@ -356,8 +356,12 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </a>
           <ul class="treeview-menu">
           <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta.php')"><i class="fa fa-file-text-o"></i> Encuesta al vecino</a></li>
+         
+          <li><a href = # onclick="cargar_contenido('contenido_principal','encuestas/vista_encuesta1.php')"><i class="fa fa-file-text-o"></i> Encuesta vecino</a></li>
             
           </ul>
+
+          
         </li>
 
         
@@ -610,7 +614,7 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
               <p>Herramientas</p>
             </div>
             <div class="icon">
-              <i class="ion ion-wrench"></i>
+              <i class="ion ion-settings"></i>
             </div>
             <a href="#" onclick="cargar_contenido('contenido_principal','herramienta/vista_herramienta_listar.php')" class="small-box-footer">Ver herramientas <i class="fa fa-arrow-circle-right"></i></a>
           </div>
