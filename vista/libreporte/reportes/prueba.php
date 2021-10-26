@@ -3,7 +3,7 @@ require_once __DIR__ .'/../vendor/autoload.php';
 require_once '../../../conexion_reportes/r_conexion.php';
 
 $consulta = "select * from reparacion";
-$html="Datos de la reparacion";
+$html="<h2 style='font-size:20px;'>Datos de la reparacion</h2>";
 $resultado = $mysqli->query($consulta);
 
 while($row = $resultado->fetch_assoc()){
