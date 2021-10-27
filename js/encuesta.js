@@ -13,7 +13,7 @@ function listar_encuesta() {
         "destroy": true,
         "async": false,
         "processing": true,
-        "ajax": {       
+        "ajax": {
             "url": "../controlador/encuesta/controlador_encuesta_listar.php",
             type: 'POST'
         },
@@ -23,8 +23,8 @@ function listar_encuesta() {
             { "data": "nombre" },
             { "data": "fecha_inicio" },
             { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i>" }
-        
-           ],
+
+        ],
 
         "language": idioma_espanol,
         select: true
@@ -37,6 +37,7 @@ function listar_encuesta() {
         filterColumn($(this).parents('tr').attr('data-column'));
     });
 }
+
 function listar_encuesta_trabajador() {
     table = $("#tabla_encuesta").DataTable({
         "ordering": false,
@@ -50,7 +51,7 @@ function listar_encuesta_trabajador() {
         "destroy": true,
         "async": false,
         "processing": true,
-        "ajax": {       
+        "ajax": {
             "url": "../controlador/encuesta/controlador_encuesta_listar.php",
             type: 'POST'
         },
@@ -60,8 +61,8 @@ function listar_encuesta_trabajador() {
             { "data": "nombre" },
             { "data": "fecha_inicio" },
             { "defaultContent": "<button style='font-size:13px;background-color: #69B00B;' type='button' class='editar btn btn-primary'><i class='fa fa-eye'></i></button>" }
-        
-           ],
+
+        ],
 
         "language": idioma_espanol,
         select: true
@@ -82,6 +83,7 @@ function filterGlobal() {
         $('#global_filter').val(),
     ).draw();
 }
+
 function AbrirModalRegistros() {
     $("#modal_registro").modal({ backdrop: 'static', keyboard: false })
     $("#modal_registro").modal('show');
@@ -102,10 +104,9 @@ function registrarEncuesta() {
     var pregunta8 = $("#txt_8").val();
     var pregunta9 = $("#txt_9").val();
 
-    if(vesino.length==0 || pregunta1.length==0 || pregunta2.length==0 || pregunta3.length==0 
-        || pregunta4.length==0 || pregunta5.length==0 || pregunta6.length==0
-         || pregunta7.length==0 || pregunta8.length==0 || pregunta9.length==0 )
-    {
+    if (vesino.length == 0 || pregunta1.length == 0 || pregunta2.length == 0 || pregunta3.length == 0 ||
+        pregunta4.length == 0 || pregunta5.length == 0 || pregunta6.length == 0 ||
+        pregunta7.length == 0 || pregunta8.length == 0 || pregunta9.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
@@ -125,15 +126,13 @@ function registrarEncuesta() {
             p8: pregunta8,
             p9: pregunta9
         }
-        
+
 
     }).done(function(resp) {
         if (resp < 0) {
             Swal.fire("ERROR!!!", "El usuario no existe", "warning");
 
-        }
-        else
-        {
+        } else {
             $("#modal_registro").modal('hide');
             Swal.fire("Mensaje De Confirmacion", " Nuevo encuesta Registrada", "success")
                 .then((value) => {
@@ -151,7 +150,7 @@ function registrarEncuesta() {
                 });
         }
     })
-    
+
 }
 
 
@@ -168,10 +167,9 @@ function modificarEncuesta() {
     var pregunta8 = $("#txt_p8_editar").val();
     var pregunta9 = $("#txt_p9_editar").val();
 
-    if(vesino.length==0 || pregunta1.length==0 || pregunta2.length==0 || pregunta3.length==0 
-        || pregunta4.length==0 || pregunta5.length==0 || pregunta6.length==0
-         || pregunta7.length==0 || pregunta8.length==0 || pregunta9.length==0 )
-    {
+    if (vesino.length == 0 || pregunta1.length == 0 || pregunta2.length == 0 || pregunta3.length == 0 ||
+        pregunta4.length == 0 || pregunta5.length == 0 || pregunta6.length == 0 ||
+        pregunta7.length == 0 || pregunta8.length == 0 || pregunta9.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
@@ -191,7 +189,7 @@ function modificarEncuesta() {
             p8: pregunta8,
             p9: pregunta9
         }
-        
+
 
     }).done(function(resp) {
         if (resp > 0) {
@@ -208,7 +206,7 @@ function modificarEncuesta() {
             Swal.fire("Mensaje De Error", "Lo sentimos, no se pudo completar la actualización", "error");
         }
     })
-    
+
 }
 
 
@@ -219,7 +217,7 @@ $('#tabla_encuesta').on('click', '.editar', function() {
     }
     $("#modal_edit").modal({ backdrop: 'static', keyboard: false })
     $("#modal_edit").modal('show');
-    
+
 })
 
 $('#tabla_encuesta').on('click', '.editar', function() {
