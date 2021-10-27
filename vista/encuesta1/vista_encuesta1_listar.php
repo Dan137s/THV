@@ -64,16 +64,10 @@
 
                 <div class="col-lg-12">
                     <label for="">Rut del vecino</label>
-                    <input type="text" class="form-control" id="txt_reparacion" placeholder="Ingrese rut del vecino" ><br>
+                    <input type="text" class="form-control" id="txt_rutvecino" placeholder="Ingrese rut del vecino" ><br>
                 </div>
 
-               
 
-            
- 
-              
-                
-                 
              
 
             </div>
