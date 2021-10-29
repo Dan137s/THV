@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="col-lg-2">
-                        <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistros()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
+                        <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistros()"><i class="glyphicon glyphicon-plus"></i>Nueva Encuesta</button>
                     </div>
                 
             </div>
@@ -69,7 +69,6 @@
                 </div>
             </div>
             <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title"><b>Detalle de la encuesta</b></h4><br>
             <h4>Responda las siguientes preguntas, considerando:<br>
 
@@ -158,7 +157,7 @@
                 <h4 style="color: #FFC300;" class="modal-title"><b>Valore los siguientes aspectos del trabajo realizado en su hogar por Fundación Trato Hecho Vecino en cuanto al equipo de trabajo</b></h4><p>
 
                 <div class="encuesta_detalle">
-                    <input type="text" id="idusuario" >
+                    <input type="text" id="idusuario" hidden >
                     <input type="text" id="txt_p1" hidden>
                     <label for="">1.-Información sobre los trabajos a realizar.</label>
                     <input type="number" class="form-control-detalle" id="txt_p1_editar" min="1" max="5"><br>

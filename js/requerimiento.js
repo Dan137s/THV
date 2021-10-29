@@ -66,6 +66,7 @@ function registrarRequerimiento() {
 
     var datoorientativa = $("#file_orientativa").val();
     var trabajador = $("#txt_travajador").val();
+
     var datogeneral = $("#file_general").val();
     var datodaño = $("#file_daño").val();
     var direccion = $("#txt_direccion_vecino").val();
@@ -83,66 +84,79 @@ function registrarRequerimiento() {
         ||propuesta.length==0||datofirma.length==0 )
     {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
-    }
+    }*/
+
+    var plano = $("#file_planos")[0].files[0];
+    var orientativ0 =  $("#file_orientativa")[0].files[0];
+    var general = $("#file_general")[0].files[0];
+    var daño = $("#file_daño")[0].files[0];
+    var firma = $("#file_firma")[0].files[0];
 
     var formData = new FormData();
-    formData.append('datoplano',datoplano);
-    formData.append('vesino',vesino);
-    formData.append('observar',observar);
-    formData.append('fono',fono);
-    formData.append('fechaejecucion',fechaejecucion);
+    formData.append("t1", plano);
+    formData.append("t2",vesino );
+    formData.append("t3", observar);
+    formData.append("t4", fono);
+    formData.append("t5", fechaejecucion);
 
-    formData.append('datoorientativa',datoorientativa);
-    formData.append('trabajador',trabajador);
+    formData.append("t6", orientativ0);
+    formData.append("t7", trabajador);
 
-    formData.append('datogeneral',datogeneral);
-    formData.append('datodaño',datodaño);
-    formData.append('direccion',direccion);
-    formData.append('voluntario',voluntario);
+    formData.append("t8", general);
+    formData.append("t9", daño);
+    formData.append("t10", direccion);
 
-    formData.append('diagnostico',diagnostico);
-    formData.append('monto',monto);
+    formData.append("t11", voluntario);
+    formData.append("t12", diagnostico);
+    formData.append("t13", monto);
+    formData.append("t14", propuesta);
+    formData.append("t15", firma);
 
-    formData.append('propuesta',propuesta);
-    formData.append('datofirma',datofirma);*/
-
-
+    
 
     $.ajax({
         url: "../controlador/requerimiento/controlador_requerimiento_registrar.php",
         type: 'POST',
-		data: {
-            t1:datoplano,
-            t2:vesino,
-            t3:observar,
-            t4:fono,
-            t5:fechaejecucion,
-
-            t6:datoorientativa,
-            t7:trabajador,
-            t8:datogeneral,
-            t9:datodaño,
-            t10:direccion,
-
-            t11:voluntario,
-            t12:diagnostico,
-            t13:monto,
-            t14:propuesta,
-            t15:datofirma
-
-        },
-
+        processData: false,
+        contentType: false,
+		data: formData
     }).done(function(resp) {
-        if (resp > 0) {
-            Swal.fire(resp, "yes, Intentos fallidos : " + (parseInt(resp)) + " Para acceder a su cuenta restablesca su contra", "warning");
+        if (resp < 0) {
+            Swal.fire("ERROR!!!", "Error en el ingreso de datos", "warning");
 
         } else {
-            Swal.fire(resp, "Error el usuario no existe ", "warning");
+            $("#modal_requerimiento_registro").modal('hide');
+            Swal.fire("Mensaje De Confirmación", " Nuevo Requerimiento Registrado", "success");
+            $("#file_planos").val("");
+            $("#txt_rut_vesino").val("");
+            $("#txt_observacion_vesino").val("");
+            $("#txt_fono_vesino").val("");
+            $("#txt_fecha_ejecucion").val("");
+            
+            $("#file_orientativa").val("");
+            $("#txt_travajador").val("");
+            
+            $("#file_general").val("");
+            $("#file_daño").val("");
+            $("#txt_direccion_vecino").val("");
+            
+            $("#txt_voluntario").val("");
+            $("#txt_diagnostico").val("");
+            $("#txt_monto").val("")
+            $("#txt_propuesta").val("");
+            $("#file_firma").val("");
+            limpiar();
+            table.ajax.reload();
 
         }
     })
     
 }
+function limpiar()
+{
+    $('imgSalida').attr('src', '');
+}
+
 
 $('#tabla_requerimiento').on('click', '.editar', function() {
     var data = table.row($(this).parents('tr')).data();
@@ -152,6 +166,7 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
     $("#modal_edit").modal({ backdrop: 'static', keyboard: false })
     $("#modal_edit").modal('show');
 
+    $("#idrequerimiento").val(data.requerimiento_id);
 
     $("#file_planos_edit").val(data.ubicacion_mapa);
     $("#txt_rut_vesino_edit").val(data.usu_alias);
@@ -175,28 +190,3 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
 })
 
 
-
-function registrar__Requerimientos() {
-    var formData = new FormData(document.getElementById("form_requerimiento_registro"));
-
-
-    $.ajax({
-        url: "../controlador/requerimiento/controlador_requerimiento_registrar.php",
-        type: "POST",
-		dataType: "HTML",
-		data: formData,
-		cache: false,
-		contentType: false,
-		processData: false
-
-    }).done(function(resp) {
-        if (resp > 0) {
-            Swal.fire(resp, "si, Intentos fallidos : " + (parseInt(resp)) + " Para acceder a su cuenta restablesca su contra", "warning");
-
-        } else {
-            Swal.fire(resp, "no de: "+file_get_contents($_FILES['file_general']['tmp_name']), "warning");
-
-        }
-    })
-    
-}

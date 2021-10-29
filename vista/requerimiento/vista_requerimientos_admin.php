@@ -70,7 +70,7 @@
         <div class="modal-content" style="width: 100%;align-items: center;">
             <div class="modal-header" >
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registre Requerimiento</b></h4>
+            <h4 class="modal-title"><b>Registrar Requerimiento</b></h4>
             </div>
             <div class="modal-body" >
             
@@ -80,8 +80,8 @@
     <tr>
       <td>
       	<div class="col-lg-12">
-                    <label for="">Plano ubicación</label>
-                    <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos" name="datoplano" placeholder="Ingrese numero de Reporte" >
+            <label for="">Plano ubicación</label>
+            <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos" name="file_planos" placeholder="Ingrese numero de Reporte" >
         </div>
       </td>
       <td><div class="col-lg-12">
@@ -189,7 +189,7 @@
         <div class="modal-content" style="width: 100%;align-items: center;">
             <div class="modal-header" >
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Registre Requerimiento</b></h4>
+            <h4 class="modal-title"><b>cambiar Requerimiento</b></h4>
             </div>
             <div class="modal-body" >
             
@@ -200,6 +200,7 @@
       <td>
       	<div class="col-lg-12">
                     <label for="">Plano ubicación</label>
+                    <input type="text" id="idrequerimiento"  >
                     <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos_edit" name="files_planos" placeholder="Ingrese numero de Reporte" >
         </div>
       </td>

@@ -453,8 +453,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta_trabajador.php')"><i class="fa fa-file-text-o"></i> Encuesta</a></li>
-            
+          <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta.php')"><i class="fa fa-file-text-o"></i> Encuesta al vecino</a></li>
+  
           </ul>
         </li>
 
@@ -507,7 +507,22 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           </ul>
         </li>
 
+        <li class="treeview">
+          <a>
+          <i class="fa fa-file-text-o"></i> <span>Encuestas de opinión</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta_trabajador.php')"><i class="fa fa-file-text-o"></i> Encuesta</a></li>
+          
+          </ul>
+        </li>
+
+
        <!--Este perfil sera solo de visual no tiene permisos de escritura solo lectura de documento-->
+
 
 
           <?php 
