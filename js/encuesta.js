@@ -227,6 +227,7 @@ $('#tabla_encuesta').on('click', '.editar', function() {
     }
     $("#modal_ver").modal({ backdrop: 'static', keyboard: false })
     $("#modal_ver").modal('show');
+    
     $("#idusuario").val(data.usu_id);
     $("#txt_p1_editar").val(data.p1);
     $("#txt_p2_editar").val(data.p2);

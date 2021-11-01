@@ -30,11 +30,11 @@
            move_uploaded_file($_FILES["t9"]["tmp_name"],"../../requerimiento_imagenes/".$_FILES["t9"]["name"])&&
            move_uploaded_file($_FILES["t15"]["tmp_name"],"../../requerimiento_imagenes/".$_FILES["t15"]["name"]))
         {
-            $ruta1 = "../../requerimiento_imagenes/".$_FILES["t1"]["name"];
-            $ruta2 = "../../requerimiento_imagenes/".$_FILES["t6"]["name"];
-            $ruta3 = "../../requerimiento_imagenes/".$_FILES["t8"]["name"];
-            $ruta4 = "../../requerimiento_imagenes/".$_FILES["t9"]["name"];
-            $ruta5 = "../../requerimiento_imagenes/".$_FILES["t15"]["name"];
+            $ruta1 = "../requerimiento_imagenes/".$_FILES["t1"]["name"];
+            $ruta2 = "../requerimiento_imagenes/".$_FILES["t6"]["name"];
+            $ruta3 = "../requerimiento_imagenes/".$_FILES["t8"]["name"];
+            $ruta4 = "../requerimiento_imagenes/".$_FILES["t9"]["name"];
+            $ruta5 = "../requerimiento_imagenes/".$_FILES["t15"]["name"];
 
             $consulta = $MR->Registrar_requerimiento_txt($vesino,$observar,$fono,$fechaejecucion,$trabajador,
             $direccion,$voluntario,$diagnostico,$monto,$propuesta,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5);

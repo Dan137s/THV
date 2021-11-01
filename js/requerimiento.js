@@ -76,7 +76,7 @@ function registrarRequerimiento() {
     var monto = $("#txt_monto").val()
     var propuesta = $("#txt_propuesta").val();
     var datofirma = $("#file_firma").val();
-/*
+
     if(datoplano.length==0 ||vesino.length==0 ||observar.length==0 ||fono.length==0 ||fechaejecucion.length==0
         ||datoorientativa.length==0||trabajador.length==0
         ||datogeneral.length==0||datodaño.length==0||direccion.length==0||voluntario.length==0
@@ -84,7 +84,7 @@ function registrarRequerimiento() {
         ||propuesta.length==0||datofirma.length==0 )
     {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
-    }*/
+    }
 
     var plano = $("#file_planos")[0].files[0];
     var orientativ0 =  $("#file_orientativa")[0].files[0];
@@ -154,9 +154,12 @@ function registrarRequerimiento() {
 }
 function limpiar()
 {
-    $('imgSalida').attr('src', '');
+    document.getElementById("imgSalida").src = '../requerimiento_imagenes/no_disponible.png';
+    document.getElementById("galeria_orientatica").src = '../requerimiento_imagenes/no_disponible.png';
+    document.getElementById("galeris_general").src = '../requerimiento_imagenes/no_disponible.png';
+    document.getElementById("galeria_daño").src = '../requerimiento_imagenes/no_disponible.png';
+    document.getElementById("galeria_recepcion").src = '../requerimiento_imagenes/no_disponible.png';
 }
-
 
 $('#tabla_requerimiento').on('click', '.editar', function() {
     var data = table.row($(this).parents('tr')).data();
@@ -165,28 +168,18 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
     }
     $("#modal_edit").modal({ backdrop: 'static', keyboard: false })
     $("#modal_edit").modal('show');
-
+    
     $("#idrequerimiento").val(data.requerimiento_id);
-
-    $("#file_planos_edit").val(data.ubicacion_mapa);
-    $("#txt_rut_vesino_edit").val(data.usu_alias);
+    $("#txt_rut_vesino_edit").val(data.usu_nombre);
     $("#txt_observacion_vesino_edit").val(data.observacion);
     $("#txt_fono_vesino_edit").val(data.fono);
     $("#txt_fecha_ejecucion_edit").val(data.fecha_ejecucion);
-
-    $("#file_orientativa_edit").val(data.vista_orientativa);
-    $("#txt_travajador_edit").val(data.trabajador);
-
-    $("#file_general_edit").val(data.vista_general);
-    $("#file_daño_edit").val(data.danios);
-    $("#txt_direccion_vecino_edit").val(data.direccion);
-    $("#txt_voluntario_edit").val(data.voluntario);
-
-    $("#txt_diagnostico_edit").val(data.diagnostico);
-    $("#txt_monto_edit").val(data.monto)
-
-    $("#txt_propuesta_edit").val(data.propuesta);
-    $("#file_firma_edit").val(data.recepcion);
+    
+    $("#txt_p5_editar").val(data.p5);
+    $("#txt_p6_editar").val(data.p6);
+    $("#txt_p7_editar").val(data.p7);
+    $("#txt_p8_editar").val(data.p8);
+    $("#txt_p9_editar").val(data.opinion);
 })
 
 

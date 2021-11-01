@@ -105,13 +105,13 @@
     </tr>
     <tr>
       <td>
-          <img id="imgSalida" class="galeria" />
+          <img id="imgSalida" class="galeria"  src="../requerimiento_imagenes/no_disponible.png"/>
     </td>
       <td><div class="col-lg-12">
                     <label for="">Vista orientativa</label>
                     <input type="file" onchange="loadFile2(event)" id="file_orientativa" name='file_orientativa' accept=" image/jpeg, image/png" class="form-control" placeholder="Ingrese numero de Reporte" >
         </div></td>
-      <td><img id="galeria_orientatica" class="galeria" /></td>
+      <td><img id="galeria_orientatica" class="galeria" src="../requerimiento_imagenes/no_disponible.png"/></td>
       <td></td>
       
       <td><div class="col-lg-12">
@@ -128,7 +128,7 @@
                     <label for="">Vista daño</label>
                     <input type="file" onchange="loadFile4(event)" name='datodaño' accept=" image/jpeg, image/png" class="form-control"  id="file_daño">
         </div></td>
-      <td><img id="galeria_daño" class="galeria" /></td>
+      <td><img id="galeria_daño" class="galeria" src="../requerimiento_imagenes/no_disponible.png"/></td>
       <td><div class="col-lg-12">
                     <label for="">Dirección</label>
                     <input name="direccion" type="text" class="form-control" id="txt_direccion_vecino" placeholder="Ingrese la dirección"><br>
@@ -140,7 +140,7 @@
                 </div></td>
     </tr>
     <tr>
-      <td><img id="galeris_general" class="galeria" /></td>
+      <td><img id="galeris_general" class="galeria"src="../requerimiento_imagenes/no_disponible.png"/></td>
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
                     <label for="">Diagnóstico</label><br>
@@ -167,7 +167,7 @@
                     <input type="file"onchange="loadFile5(event)" name='datofirma' accept=" image/jpeg, image/png" class="form-control"  id="file_firma" placeholder="Ingrese numero de Reporte" >
         </div></td>
       
-      <td><img id="galeria_recepcion" class="galeria" /></td>
+      <td><img id="galeria_recepcion" class="galeria" src="../requerimiento_imagenes/no_disponible.png"/></td>
     </tr>
     
   </tbody>
@@ -201,77 +201,77 @@
       	<div class="col-lg-12">
                     <label for="">Plano ubicación</label>
                     <input type="text" id="idrequerimiento"  >
-                    <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos_edit" name="files_planos" placeholder="Ingrese numero de Reporte" >
+                    <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos_edit" name="files_planos"  >
         </div>
       </td>
       <td><div class="col-lg-12">
                     <label for="">RUT vecino</label>
-                    <input type="text" class="form-control" id="txt_rut_vesino_edit" placeholder="Ingresar RUT del vecino"><br>
+                    <input type="text" class="form-control" id="txt_rut_vesino_edit"><br>
                 </div></td>
       <td><div class="col-lg-12">
                     <label for="">observación</label>
-                    <input type="text" class="form-control" id="txt_observacion_vesino_edit" placeholder="observación del trabajo"><br>
+                    <input type="text" class="form-control" id="txt_observacion_vesino_edit"><br>
                 </div></td>
       
       <td><div class="col-lg-12">
                     <label for="">Fono</label>
-                    <input type="text" class="form-control" id="txt_fono_vesino_edit" placeholder="Telefono del vesino"><br>
+                    <input type="text" class="form-control" id="txt_fono_vesino_edit"><br>
                 </div></td>
       
       <td><div class="col-lg-12">
                     <label for="">Fecha de ejecución</label>
-                    <input type="date" class="form-control" id="txt_fecha_ejecucion_edit" placeholder="Ingrese la dirección"><br>
+                    <input type="date" class="form-control" id="txt_fecha_ejecucion_edit" ><br>
                 </div></td>
     </tr>
     <tr>
       <td>
-          <img id="imgSalida" class="galeria" />
+          <img id="imgSalida-edit" class="galeria"/>
     </td>
       <td><div class="col-lg-12">
                     <label for="">Vista orientativa</label>
-                    <input type="file" onchange="loadFile2(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_orientativa_edit" placeholder="Ingrese numero de Reporte" >
+                    <input type="file" onchange="loadFile2(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_orientativa_edit"  >
         </div></td>
-      <td><img id="galeria_orientatica" class="galeria" /></td>
+      <td><img id="galeria_orientatica-edit" class="galeria" /></td>
       <td></td>
       
       <td><div class="col-lg-12">
                     <label for="">Trabajador</label>
-                    <input type="text" class="form-control" id="txt_travajador_edit" placeholder="Ingrese nombre trabajador"><br>
+                    <input type="text" class="form-control" id="txt_travajador_edit" ><br>
                 </div></td>
     </tr>
     <tr>
       <td><div class="col-lg-12">
                     <label for="">Vista general</label>
-                    <input type="file"onchange="loadFile3(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_general_edit" placeholder="Ingrese numero de Reporte" >
+                    <input type="file"onchange="loadFile3(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_general_edit"  >
         </div></td>
       <td><div class="col-lg-12">
                     <label for="">Vista daño</label>
                     <input type="file"onchange="loadFile4(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_daño_edit">
         </div></td>
-      <td><img id="galeria_daño" class="galeria" /></td>
+      <td><img id="galeria_daño-edit" class="galeria" /></td>
       <td><div class="col-lg-12">
                     <label for="">Dirección</label>
-                    <input type="text" class="form-control" id="txt_direccion_vecino_edit" placeholder="Ingrese la dirección"><br>
+                    <input type="text" class="form-control" id="txt_direccion_vecino_edit" ><br>
                 </div></td>
       
       <td><div class="col-lg-12">
                     <label for="">voluntario</label>
-                    <input type="text" class="form-control" id="txt_voluntario_edit" placeholder="Ingrese nombre voluntario"><br>
+                    <input type="text" class="form-control" id="txt_voluntario_edit" ><br>
                 </div></td>
     </tr>
     <tr>
-      <td><img id="galeris_general" class="galeria" /></td>
+      <td><img id="galeris_general-edit" class="galeria" /></td>
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
                     <label for="">Diagnóstico</label><br>
-                    <textarea id="txt_diagnostico_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="diagnóstico" style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <textarea id="txt_diagnostico_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" style="margin: 0px; width: 331px; height: 76px;"></textarea>
                 </div></td>
       <td></td>
       <td></td>
       
       <td><div class="col-lg-12">
                     <label for="">Monto</label>
-                    <input type="text" class="form-control" id="txt_monto_edit" placeholder="Ingrese Monto"><br>
+                    <input type="text" class="form-control" id="txt_monto_edit" ><br>
                 </div></td>
     </tr>
     <tr>
@@ -279,15 +279,15 @@
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
                     <label for="">Propuesta THV</label><br>
-                    <textarea id="txt_propuesta_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="Propuesta thv"style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <textarea id="txt_propuesta_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" style="margin: 0px; width: 331px; height: 76px;"></textarea>
                 </div></td>
       <td></td>
       <td><div class="col-lg-12">
                     <label for="">Recepción de trabajo</label>
-                    <input type="file"onchange="loadFile5(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_firma_edit" placeholder="Ingrese numero de Reporte" >
+                    <input type="file"onchange="loadFile5(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_firma_edit" >
         </div></td>
       
-      <td><img id="galeria_recepcion" class="galeria" /></td>
+      <td><img id="galeria_recepcion-edit" class="galeria" /></td>
     </tr>
     
   </tbody>
