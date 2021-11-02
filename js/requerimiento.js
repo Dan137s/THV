@@ -266,10 +266,22 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
     $("#txt_direccion_vecino_edit").val(data.direccion);
     $("#txt_voluntario_edit").val(data.voluntario);
     $("#txt_monto_edit").val(data.monto);
-    $("#txt_p9_editar").val(data.opinion);
+
+    $("#file_planos_edit").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#imgSalida-edit').attr('src', data.ubicacion_mapa);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+
+    /////////////////////////////////////////////////////////////////////file_planos_edit
 
     
     
+    /////////////////////////////////////////////////////////////////////
     document.getElementById("imgSalida-edit").src = (data.ubicacion_mapa);
     document.getElementById("galeria_orientatica-edit").src = (data.vista_orientativa);
     document.getElementById("galeria_daño-edit").src = (data.danios);
@@ -331,7 +343,6 @@ function ModificarRequerimiento() {
         type: 'POST',
         processData: false,
         contentType: false,
-        Caches:false,
 		data: formData
     }).done(function(resp) {
         if (resp < 0) {
@@ -339,7 +350,7 @@ function ModificarRequerimiento() {
 
         } else {
             $("#modal_edit").modal('hide');
-            Swal.fire("Mensaje De Confirmación", "Requerimiento Actualizado Registrado", "success");
+            Swal.fire("Mensaje De Confirmación",resp+ "Requerimiento Actualizado Registrado", "success");
             
             table.ajax.reload();
 

@@ -55,21 +55,27 @@
             
         }
         function modificar_requerimiento($id_usu,$vesino,$observar,$fono,$fechaejecucion,
-        $trabajador,$direccion,$diagnostico,$voluntario,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5)
+        $trabajador,$direccion,$voluntario,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5,$diagnostico)
+        {
+            $sql = "call SP_MODIFICAR_REQUERIMIENTO('$id_usu','$vesino','$observar',
+            '$fono','$fechaejecucion','$trabajador','$direccion','$voluntario','$monto',
+            '$ruta1','$ruta2','$ruta3','$ruta4','$ruta5','$diagnostico')";
+
+            $sql2 = "call SP_MODIFICAR_REQUERIMIENTO('$id_usu','$vesino','$observar',
+            '$fono','$fechaejecucion','$trabajador','$direccion','$voluntario','$monto',
+            '$diagnostico')";
+
+
+            if ($consulta = $this->conexion->conexion->query($sql)) 
             {
-                $sql = "call SP_MODIFICAR_REQUERIMIENTO('$id_usu','$vesino','$observar',
-                '$fono','$fechaejecucion','$trabajador','$direccion','$voluntario','$monto',
-                '$ruta1','$ruta2','$ruta3','$ruta4','$ruta5','$diagnostico')";
-
-                if ($consulta = $this->conexion->conexion->query($sql)) 
-                {
-                    return 1;
-                    
-                }else{
-                    return -1;
-                }
+                return 1;
+                
             }
-
+            else
+            {
+                return -1;
+            }
+        }
 
     }
 ?>

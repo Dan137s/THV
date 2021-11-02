@@ -201,7 +201,7 @@
       	<div class="col-lg-12">
                     <label for="">Plano ubicación</label>
                     <input type="text" id="idrequerimiento"  hidden>
-                    <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos_edit" name="files_planos"  >
+                    <input type="file" onchange="loadFile6(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos_edit" name="files_planos"  >
         </div>
       </td>
       <td><div class="col-lg-12">
@@ -229,7 +229,7 @@
     </td>
       <td><div class="col-lg-12">
                     <label for="">Vista orientativa</label>
-                    <input type="file" onchange="loadFile2(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_orientativa_edit"  >
+                    <input type="file" onchange="loadFile7(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_orientativa_edit"  >
         </div></td>
       <td><img id="galeria_orientatica-edit" class="galeria" /></td>
       <td></td>
@@ -242,11 +242,11 @@
     <tr>
       <td><div class="col-lg-12">
                     <label for="">Vista general</label>
-                    <input type="file"onchange="loadFile3(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_general_edit"  >
+                    <input type="file"onchange="loadFile8(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_general_edit"  >
         </div></td>
       <td><div class="col-lg-12">
                     <label for="">Vista daño</label>
-                    <input type="file"onchange="loadFile4(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_daño_edit">
+                    <input type="file"onchange="loadFile9(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_daño_edit">
         </div></td>
       <td><img id="galeria_daño-edit" class="galeria" /></td>
       <td><div class="col-lg-12">
@@ -284,7 +284,7 @@
       <td></td>
       <td><div class="col-lg-12">
                     <label for="">Recepción de trabajo</label>
-                    <input type="file"onchange="loadFile5(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_firma_edit" >
+                    <input type="file"onchange="loadFile10(event)" name='imagen' accept=" image/jpeg, image/png" class="form-control"  id="file_firma_edit" >
         </div></td>
       
       <td><img id="galeria_recepcion-edit" class="galeria" /></td>
@@ -361,4 +361,40 @@ var loadFile = function(event) {
 
 
 
+
+  var loadFile6 = function(event) {
+    var output = document.getElementById('imgSalida-edit');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+  var loadFile7 = function(event) {
+    var output = document.getElementById('galeria_orientatica-edit');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+  var loadFile8 = function(event) {
+    var output = document.getElementById('galeris_general-edit');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+  var loadFile9 = function(event) {
+    var output = document.getElementById('galeria_daño-edit');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+  var loadFile10 = function(event) {
+    var output = document.getElementById('galeria_recepcion-edit');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
 </script>

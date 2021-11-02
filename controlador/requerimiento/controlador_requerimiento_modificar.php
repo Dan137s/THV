@@ -5,11 +5,12 @@
     $MR = new Modelo_Requerimiento();
 
     $id_usu         =  htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8');
-   
+
     $vesino         =  htmlspecialchars($_POST['t2'],ENT_QUOTES,'UTF-8');
     $observar       =  htmlspecialchars($_POST['t3'],ENT_QUOTES,'UTF-8');
     $fono           =  htmlspecialchars($_POST['t4'],ENT_QUOTES,'UTF-8');
     $fechaejecucion =  htmlspecialchars($_POST['t5'],ENT_QUOTES,'UTF-8');
+
     $trabajador     =  htmlspecialchars($_POST['t7'],ENT_QUOTES,'UTF-8');
     $direccion      =  htmlspecialchars($_POST['t10'],ENT_QUOTES,'UTF-8');
     $voluntario     =  htmlspecialchars($_POST['t11'],ENT_QUOTES,'UTF-8');
@@ -22,6 +23,12 @@
     $ruta3 = "";
     $ruta4 = "";
     $ruta5 = "";
+
+    $consulta = $MR->modificar_requerimiento($id_usu,$vesino,$observar,$fono,$fechaejecucion,
+            $trabajador,$direccion,$voluntario,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5,$diagnostico);
+            echo $consulta;
+
+            /*
     
     if(is_array($_FILES) && count($_FILES)>0 )
     {
@@ -38,14 +45,14 @@
             $ruta5 = "../requerimiento_imagenes/".$_FILES["t15"]["name"];
 
             $consulta = $MR->modificar_requerimiento($id_usu,$vesino,$observar,$fono,$fechaejecucion,
-            $trabajador,$direccion,$diagnostico,$voluntario,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5);
+            $trabajador,$direccion,$voluntario,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5,$diagnostico);
             echo $consulta;
         }
     }
     else
     {
         echo -1;
-    }
+    }*/
     
 
 ?>
