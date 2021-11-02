@@ -95,7 +95,7 @@
       
       <td><div class="col-lg-12">
                     <label for="">Fono</label>
-                    <input name="observar" type="text" class="form-control" id="txt_fono_vesino" placeholder="Telefono del vesino"><br>
+                    <input name="observar" type="number" class="form-control" id="txt_fono_vesino" placeholder="Telefono del vesino"><br>
                 </div></td>
       
       <td><div class="col-lg-12">
@@ -143,8 +143,8 @@
       <td><img id="galeris_general" class="galeria"src="../requerimiento_imagenes/no_disponible.png"/></td>
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
-                    <label for="">Diagnóstico</label><br>
-                    <textarea  id="txt_diagnostico" name="diagnostico" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="diagnóstico" style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <label for="">N° Ticket</label><br>
+                    <input type="number" class="form-control-detalle-area" id="txt_diagnostico"><br>
                 </div></td>
       <td></td>
       <td></td>
@@ -158,8 +158,8 @@
       <td></td>
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
-                    <label for="">Propuesta THV</label><br>
-                    <textarea name="propuesta" id="txt_propuesta" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="Propuesta thv"style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <label for="" hidden>Propuesta THV</label><br>
+                    <textarea hidden name="propuesta" id="txt_propuesta" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" placeholder="Propuesta thv"style="margin: 0px; width: 331px; height: 76px;"></textarea>
                 </div></td>
       <td></td>
       <td><div class="col-lg-12">
@@ -200,13 +200,13 @@
       <td>
       	<div class="col-lg-12">
                     <label for="">Plano ubicación</label>
-                    <input type="text" id="idrequerimiento"  >
+                    <input type="text" id="idrequerimiento"  hidden>
                     <input type="file" onchange="loadFile(event)" accept=" image/jpeg, image/png" class="form-control"  id="file_planos_edit" name="files_planos"  >
         </div>
       </td>
       <td><div class="col-lg-12">
-                    <label for="">RUT vecino</label>
-                    <input type="text" class="form-control" id="txt_rut_vesino_edit"><br>
+                    <label for="" >RUT vecino</label>
+                    <input type="text" class="form-control" id="txt_rut_vesino_edit" disabled><br>
                 </div></td>
       <td><div class="col-lg-12">
                     <label for="">observación</label>
@@ -215,7 +215,7 @@
       
       <td><div class="col-lg-12">
                     <label for="">Fono</label>
-                    <input type="text" class="form-control" id="txt_fono_vesino_edit"><br>
+                    <input type="number" class="form-control" id="txt_fono_vesino_edit"><br>
                 </div></td>
       
       <td><div class="col-lg-12">
@@ -263,8 +263,8 @@
       <td><img id="galeris_general-edit" class="galeria" /></td>
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
-                    <label for="">Diagnóstico</label><br>
-                    <textarea id="txt_diagnostico_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <label for="">N° Ticket</label><br>
+                    <input type="number" class="form-control-detalle-area" id="txt_diagnostico_edit"><br>
                 </div></td>
       <td></td>
       <td></td>
@@ -278,8 +278,8 @@
       <td></td>
       <td><div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
-                    <label for="">Propuesta THV</label><br>
-                    <textarea id="txt_propuesta_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" style="margin: 0px; width: 331px; height: 76px;"></textarea>
+                    <label for="" hidden>Propuesta THV</label><br>
+                    <textarea hidden id="txt_propuesta_edit" name="detalles" class="form-control-detalle-area" form="form-requerimiento-detalle" style="margin: 0px; width: 331px; height: 76px;"></textarea>
                 </div></td>
       <td></td>
       <td><div class="col-lg-12">
@@ -295,7 +295,7 @@
                 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="registrarRequerimiento()"><i class="fa fa-check"><b>&nbsp;Registrar</b></i></button>
+                <button class="btn btn-primary" onclick="ModificarRequerimiento()"><i class="fa fa-check"><b>&nbsp;Modificar</b></i></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>

@@ -4,6 +4,7 @@
 
     $MR = new Modelo_Requerimiento();
 
+    $id_usu         =  htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8');
    
     $vesino         =  htmlspecialchars($_POST['t2'],ENT_QUOTES,'UTF-8');
     $observar       =  htmlspecialchars($_POST['t3'],ENT_QUOTES,'UTF-8');
@@ -36,8 +37,8 @@
             $ruta4 = "../requerimiento_imagenes/".$_FILES["t9"]["name"];
             $ruta5 = "../requerimiento_imagenes/".$_FILES["t15"]["name"];
 
-            $consulta = $MR->Registrar_requerimiento_txt($vesino,$observar,$fono,$fechaejecucion,$trabajador,
-            $direccion,$voluntario,$diagnostico,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5);
+            $consulta = $MR->modificar_requerimiento($id_usu,$vesino,$observar,$fono,$fechaejecucion,
+            $trabajador,$direccion,$diagnostico,$voluntario,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5);
             echo $consulta;
         }
     }

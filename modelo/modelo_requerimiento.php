@@ -23,11 +23,11 @@
 
         
         function Registrar_requerimiento_txt($vesino,$observar,$fono,$fechaejecucion,$trabajador,
-        $direccion,$voluntario,$diagnostico,$monto,$propuesta,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5)
+        $direccion,$voluntario,$diagnostico,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5)
         {
             $id = 0;
             $sql = "call SP_REGISTRAR_REQUERIMIENTOS_TXT('$vesino','$observar','$fono','$fechaejecucion',
-            '$trabajador','$direccion','$voluntario','$diagnostico','$monto','$propuesta','$ruta1','$ruta2','$ruta3','$ruta4','$ruta5')";
+            '$trabajador','$direccion','$voluntario','$diagnostico','$monto','$ruta1','$ruta2','$ruta3','$ruta4','$ruta5')";
             
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($consulta)) {
@@ -43,7 +43,32 @@
             }
             $this->conexion->cerrar();
         }
+        function Modificar_Estatus_requerimiento($idusuario,$estatus)
+        {
+            $sql = "call SP_MODIFICAR_ESTATUS_REQUERIMIENTO('$idusuario','$estatus')";
+			if ($consulta = $this->conexion->conexion->query($sql)) {
+				return 1;
+				
+			}else{
+				return -1;
+			}
+            
+        }
+        function modificar_requerimiento($id_usu,$vesino,$observar,$fono,$fechaejecucion,
+        $trabajador,$direccion,$diagnostico,$voluntario,$monto,$ruta1,$ruta2,$ruta3,$ruta4,$ruta5)
+            {
+                $sql = "call SP_MODIFICAR_REQUERIMIENTO('$id_usu','$vesino','$observar',
+                '$fono','$fechaejecucion','$trabajador','$direccion','$voluntario','$monto',
+                '$ruta1','$ruta2','$ruta3','$ruta4','$ruta5','$diagnostico')";
 
+                if ($consulta = $this->conexion->conexion->query($sql)) 
+                {
+                    return 1;
+                    
+                }else{
+                    return -1;
+                }
+            }
 
 
     }
