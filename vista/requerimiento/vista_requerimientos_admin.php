@@ -43,6 +43,7 @@
                         <th>N° Presupuesto</th>
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
+                        <th>Fecha ejecución</th>
                         <th>Estado</th>
                         <th>Acción</th>
                     </tr>
@@ -54,6 +55,7 @@
                         <th>N° Presupuesto</th>
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
+                        <th>Fecha ejecución</th>
                         <th>Estado</th>
                         <th>Acción</th>
                     </tr>

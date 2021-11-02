@@ -23,6 +23,7 @@ function listar_requerimiento() {
             { "data": "monto" },
             { "data": "usu_alias" },
             { "data": "direccion" },
+            { "data": "fecha_ejecucion" },
             {"data": "requerimiento_estado",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
