@@ -32,9 +32,9 @@
                             <span class="input-group-addon"><i class="fa fa-search"></i></span>
                         </div>
                     </div>
-                    <div class="col-lg-2">
+                    <!-- <div class="col-lg-2">
                         <button class="btn btn-danger" style="width:100%" onclick="AbrirModalRegistro()"><i class="glyphicon glyphicon-plus"></i>Nuevo Registro</button>
-                    </div>
+                    </div>-->
                 
             </div>
             <table id="tabla_requerimiento" class="display responsive nowrap" style="width:100%">
@@ -44,6 +44,8 @@
                         <th>N° Reporte</th>
                         <th>N° Presupuesto</th>
                         <th>Nombre vecino</th>
+                        <th>trabajador</th>
+                        <th>voluntario</th>
                         <th>Dirección</th>
                         <th>Fecha ejecución</th>
                         <th>Estado</th>
@@ -55,6 +57,8 @@
                         <th>N° Reporte</th>
                         <th>N° Presupuesto</th>
                         <th>Nombre vecino</th>
+                        <th>trabajador</th>
+                        <th>voluntario</th>
                         <th>Dirección</th>
                         <th>Fecha ejecución</th>
                         <th>Estado</th>

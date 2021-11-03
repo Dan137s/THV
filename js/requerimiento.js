@@ -83,6 +83,8 @@ function listar_requerimiento2() {
             { "data": "requerimiento_id" },
             { "data": "monto" },
             { "data": "usu_alias" },
+            { "data": "trabajador" },
+            { "data": "voluntario" },
             { "data": "direccion" },
             { "data": "fecha_ejecucion" },
             {"data": "requerimiento_estado",
