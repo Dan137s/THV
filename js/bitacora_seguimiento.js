@@ -14,7 +14,7 @@ function listar_requerimiento() {
         "async": false,
         "processing": true,
         "ajax": {
-            "url": "../controlador/requerimiento/controlador_bitacora_segumiento.php",
+            "url": "../controlador/requerimiento/controlador_requerimiento_listar.php",
             type: 'POST'
         },
         "columns": [

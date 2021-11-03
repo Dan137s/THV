@@ -38,15 +38,15 @@
                 
             </div>
             <table id="tabla_requerimiento" class="display responsive nowrap" style="width:100%">
-                <thead>
+            <thead>
                     <tr>
                         <th>#</th>
                         <th>N° Reporte</th>
                         <th>N° Presupuesto</th>
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
+                        <th>Fecha ejecución</th>
                         <th>Estado</th>
-                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -56,8 +56,8 @@
                         <th>N° Presupuesto</th>
                         <th>Nombre vecino</th>
                         <th>Dirección</th>
+                        <th>Fecha ejecución</th>
                         <th>Estado</th>
-                        <th>Acción</th>
                     </tr>
                 </tfoot>
             </table>
@@ -157,7 +157,7 @@
 </form>
 <script>
 $(document).ready(function() {
-    listar_requerimiento();
+    listar_requerimiento2();
     $('.js-example-basic-single').select2();
     listar_combo_rol();
     $("#modal_registro").on('shown.bs.modal',function(){
