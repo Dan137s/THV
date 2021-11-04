@@ -503,24 +503,13 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
           <ul class="treeview-menu">
 
           <!--Las pestañas que se cargaran en el menú izquierdo-->
-          
-          <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta_trabajador.php')"><i class="fa fa-file-text-o"></i> Encuesta de vecinos</a></li>
-          <li><a href = # onclick="cargar_contenido('contenido_principal','bitacora/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li>  
+          <li><a href = # onclick="cargar_contenido('contenido_principal','bitacora/vista_bitacora_seguimiento.php')"><i class="fa fa-hand-o-right"></i>Seguimiento</a></li> 
+          <li><a href = # onclick="cargar_contenido('contenido_principal','encuesta/vista_encuesta_trabajador.php')"><i class="fa fa-file-text-o"></i>Encuesta de vecinos</a></li>
+          <li><a href = # onclick="location.href='../subir_imagenes/index2.php'"><i class="fa fa-picture-o"></i>Galeria</a></li>  
         </ul>
         </li>
      
-        <li class="treeview">
-          <a>
-          <i class="fa fa-picture-o"></i> <span>Galeria</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href = # onclick="location.href='../subir_imagenes/index2.php'" ><i class="fa fa-file-text-o"></i> Trabajos hechos</a></li>
-            
-          </ul>
-        </li>
+        
    
 
        <!--Este perfil sera solo de visual no tiene permisos de escritura solo lectura de documento-->
