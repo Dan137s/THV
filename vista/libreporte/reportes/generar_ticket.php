@@ -11,7 +11,7 @@ $html="<style>
     padding: 1.5mm;
     margin: 0;
     vertical-align: top;
-    color: #000044;
+    color: black;
 }
 .barcodecell {
     text-align: center;
@@ -31,8 +31,8 @@ $resultado = $mysqli->query($consulta);
 while($row = $resultado->fetch_assoc()){
 
     $html.="
-    <br><b>N° Ticket:</b> ".$row['reparacion_id'].'<br>
-    <br><b>Fecha:</b> '.$row['reparacion_fregistro'].'<br>
+    <br><b>N° Ticket:</b> ".$row['reparacion_id']."<br>
+    <br><b>Fecha:</b> ".$row['reparacion_fregistro']."<br>
     .............................................
     <table>
     <tr>
@@ -43,8 +43,8 @@ while($row = $resultado->fetch_assoc()){
 
    
     Trato Hecho Vecino 2021
-
-    ';
+ 
+<div class='barcodecell'><barcode code='".$row['reparacion_id']."' type='I25' class='barcode' /><br>".$row['reparacion_id']."</div>";
 
 }
 $mpdf=new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' =>[80, 150]]);
