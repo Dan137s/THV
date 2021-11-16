@@ -34,7 +34,11 @@ function listar_reparacion() {
                 render: function(data, type, row) {
                     if (data == 'ACEPTADO') {
                         return "<span class='label label-success'>" + data + "</span>";
-                    } else {
+                    }
+                    if (data == 'SOLICITUD') {
+                        return "<span class='label label-black' style='background:black'>" + data + "</span>";
+                    }
+                    if (data == 'INACTIVO') {
                         return "<span class='label label-danger'>" + data + "</span>";
                     }
 
