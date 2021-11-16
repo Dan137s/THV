@@ -144,10 +144,30 @@ function Registrar_Reparacion() {
                 listar_reparacion();
                 LimpiarCampos();
 
-                Swal.fire("Mensaje de Confirmacion", "Datos guardados correctamante, reparacion registrada", "success");
+                Swal.fire({
+                    title: "Datos correctamente, nueva cotizacion registrada",
+                    text: 'Datos de confirmacion',
+                    icon: 'success',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Imprimir ticket'
+                }).then((result) => {
+                    if (result.value) {
+                        window.open("../vista/libreporte/reportes/generar_ticket.php?id=" + parseInt(resp) + "#zoom=100%", "Ticket", "scrollbars=NO");
+                    } else {
+                        $("#modal_registro").modal('hide'); //Cierro el modal del registro
+                        listar_reparacion();
+                        LimpiarCampos();
+                        Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
+                    }
+                })
+
             } else {
                 LimpiarCampos();
                 Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+
 
             }
         } else {

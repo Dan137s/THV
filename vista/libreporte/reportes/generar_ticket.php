@@ -4,7 +4,7 @@ require_once '../../../conexion_reportes/r_conexion.php';
 
 $consulta = /**"select * from reparacion";**/
 "SELECT reparacion.reparacion_id, reparacion.reparacion_fregistro
-FROM reparacion where reparacion_id='1'";
+FROM reparacion where reparacion_id='".$_GET['id']."'";
 
 $html="<style>
 .barcode {
