@@ -149,7 +149,7 @@ function Registrar_Reparacion() {
                 LimpiarCampos();
 
                 Swal.fire({
-                    title: "Datos correctamente, nueva cotizacion registrada",
+                    title: "Datos correctamente, Solicitud ingresada",
                     text: 'Datos de confirmacion',
                     icon: 'success',
                     showCancelButton: true,
@@ -163,7 +163,7 @@ function Registrar_Reparacion() {
                         $("#modal_registro").modal('hide'); //Cierro el modal del registro
                         listar_reparacion();
                         LimpiarCampos();
-                        Swal.fire("Mensaje de Advertencia", "No se puede duplicar ya existe", "warning");
+                        Swal.fire("Listo", "Solicitud ingresada", "success");
 
                     }
                 })

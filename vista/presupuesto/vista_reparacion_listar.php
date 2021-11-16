@@ -83,9 +83,9 @@
                     <label for="">Nivel</label>
                     <select class="js-example-basic-single" name="state" id="txt_nivel" style="width:100%;">
                         <option value="">--</option>
-                        <option value="Trabajos 1 Día">1</option>
-                        <option value="Trabajos 1/2 Día">2</option>
-                        <option value="Trabajos Inmediatos o minimos">3</option>
+                        <option value="Trabajos 1 Día">Un Día</option>
+                        <option value="Trabajos 1/2 Día">Medio Día</option>
+                        <option value="Trabajos Inmediatos o minimos">Inmediato</option>
                       
                     </select><br><br>
                 </div>
