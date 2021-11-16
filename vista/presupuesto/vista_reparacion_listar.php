@@ -120,7 +120,7 @@
         <div class="modal-content">
             <div class="modal-header" style="text-align:center;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Editar Reparación</b></h4>
+            <h4 class="modal-title"><b>Reparación Ingresada</b></h4>
             </div>
             
             <div class="modal-body">
@@ -131,11 +131,11 @@
             <input type="text" id="id_reparacion" disabled > <br><br>
 
             </div>
-             <div class="col-lg-12">
+             <div class="col-lg-12" >
                     
                     <label for="">Nombre</label>
                     <input type="text"  id="txt_reparacion_actual_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)" hidden><br>
-                    <input type="text" class="form-control" id="txt_reparacion_nueva_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)"><br>
+                    <input type="text" class="form-control" id="txt_reparacion_nueva_editar" placeholder="Ingrese Reparacion" onkeypress="return soloLetras(event)" disabled><br>
                 </div>
 
                 
@@ -143,12 +143,12 @@
 
                 <div class="col-lg-12">
                     <label for="">Descripcion del elemento</label>
-                    <p> <textarea class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion de Reparacion"></textarea></p>   
+                    <p> <textarea class="form-control" id="txt_descripcion_editar" placeholder="Ingrese Descripcion de Reparacion" disabled></textarea></p>   
                 </div>
 
                 <div class="col-lg-12">
                     <label for="">Nivel</label>
-                    <select class="js-example-basic-single" name="state" id="txt_nivel_editar" style="width:100%;">
+                    <select class="js-example-basic-single" name="state" id="txt_nivel_editar" style="width:100%;" disabled>
                         <option value="">--</option>
                         <option value="Trabajos 1 Día">1</option>
                         <option value="Trabajos 1/2 Día">2</option>
@@ -159,7 +159,7 @@
  
                 <div class="col-lg-12">
                     <label for="">Cantidad de persondas</label>
-                    <input type="number" class="form-control" min="1" max="5"  id="txt_c_personas_editar" placeholder="Ingrese cantidad de personas" onkeypress="return soloNumeros(event)"><br>
+                    <input type="number" class="form-control" min="1" max="5"  id="txt_c_personas_editar" placeholder="Ingrese cantidad de personas" onkeypress="return soloNumeros(event)" disabled><br>
                 </div>
 
                 <div class="col-lg-12" hidden>
@@ -194,7 +194,7 @@
 
             </div>
             <div class="modal-footer" >
-                <button class="btn btn-primary" onclick="Editar_Reparacion()"><i class="fa fa-check"><b>&nbsp;Editar</b></i></button>
+                
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
             </div>
         </div>
