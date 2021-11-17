@@ -96,7 +96,7 @@ $('#tabla_reparacion').on('click', '.imprimir', function() {
     if (tablereparacion.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
         var data = tablereparacion.row(this).data();
     }
-    window.open("../vista/libreporte/reportes/generar_ticket.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
+    window.open("../vista/libreporte/reportes/ticket_solicitud.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
 
 })
 
@@ -159,16 +159,16 @@ function Registrar_Reparacion() {
                 LimpiarCampos();
 
                 Swal.fire({
-                    title: "Datos correctamente, Solicitud ingresada",
-                    text: 'Datos de confirmacion',
+                    title: "Datos correctamente, Nueva solicitud ingresada",
+                    text: 'Desea imprimir el ticket?',
                     icon: 'success',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Imprimir ticket'
+                    confirmButtonText: 'Aceptar'
                 }).then((result) => {
                     if (result.value) {
-                        window.open("../vista/libreporte/reportes/generar_ticket.php?id=" + parseInt(resp) + "#zoom=100%", "Ticket", "scrollbars=NO");
+                        window.open("../vista/libreporte/reportes/ticket_solicitud.php?id=" + parseInt(resp) + "#zoom=100%", "Ticket", "scrollbars=NO");
                     } else {
                         $("#modal_registro").modal('hide'); //Cierro el modal del registro
                         listar_reparacion();

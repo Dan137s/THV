@@ -45,7 +45,7 @@ function listar_reparacion() {
             },
 
 
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-comment'></i></button>" }
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-comment'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>" }
         ],
 
         "language": idioma_espanol,
@@ -87,6 +87,16 @@ $('#tabla_reparacion').on('click', '.editar', function() {
     $("#txt_estatus_editar").val(data.reparacion_estatus).trigger("change");
     $("#txt_insu_herra_editar").val(data.reparacion_insu_herra);
     $("#txt_req_veci_editar").val(data.reparacion_req_vecino);
+})
+
+
+$('#tabla_reparacion').on('click', '.imprimir', function() {
+    var data = tablereparacion.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tablereparacion.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tablereparacion.row(this).data();
+    }
+    window.open("../vista/libreporte/reportes/generar_ticket.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
+
 })
 
 function filterGlobal() {
