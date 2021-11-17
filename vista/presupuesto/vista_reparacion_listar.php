@@ -99,7 +99,7 @@
                     <label for="">Estatus</label>
                     <select class="js-example-basic-single" name="state" id="txt_estatus" style="width:100%;">
                        
-                        <option value="INACTIVO">INACTIVO</option>
+                        <option value="ENTRAMITE">ENTRAMITE</option>
                     </select><br><br>
                 </div>
              

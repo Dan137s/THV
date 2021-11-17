@@ -144,7 +144,8 @@
                     <select class="js-example-basic-single" name="state" id="txt_estatus_editar" style="width:100%;"  >
                     <option value="">--</option>
                         <option value="ACEPTADO">ACEPTADO</option>
-                        <option value="INACTIVO">INACTIVO</option>
+                        <option value="ENTRAMITE">ENTRAMITE</option>
+                        <option value="RECHAZADO">RECHAZADO</option>
                     </select><br><br>
                 </div>
             
