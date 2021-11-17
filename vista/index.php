@@ -567,7 +567,13 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             <!-- /.box-header -->
             <div class="box-body" style="text-align:center;">
                <?php  echo $_SESSION['S_ROL']; ?>
+
+
+               
             </div> 
+
+
+            
           </div>
 
             <!--Añadir Para admin -->
@@ -884,6 +890,8 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+
+<!-- Cambio de  contraseña para el usuario -->
 <div class="modal fade" id="modal_editar_contra" role="dialog">
         <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -898,8 +906,6 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
                     <label for="">Contraseña Actual</label>
                     <input type="text" class="form-control" id="txtcontraactual_editar" 
                     placeholder="Contraseña Actual"  > <br>
-             
-
 
                 </div>
 
