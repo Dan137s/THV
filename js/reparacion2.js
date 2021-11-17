@@ -45,7 +45,7 @@ function listar_reparacion() {
             },
 
 
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-comment'></i></button>" }
         ],
 
         "language": idioma_espanol,

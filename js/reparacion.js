@@ -46,7 +46,7 @@ function listar_reparacion() {
             },
 
 
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-eye'></i></button>" }
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'title='Ver'><i class='fa fa-eye'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>" }
         ],
 
         "language": idioma_espanol,
