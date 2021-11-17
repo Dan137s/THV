@@ -90,6 +90,16 @@ $('#tabla_reparacion').on('click', '.editar', function() {
     $("#txt_req_veci_editar").val(data.reparacion_req_vecino);
 })
 
+
+$('#tabla_reparacion').on('click', '.imprimir', function() {
+    var data = tablereparacion.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tablereparacion.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tablereparacion.row(this).data();
+    }
+    window.open("../vista/libreporte/reportes/generar_ticket.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
+
+})
+
 function filterGlobal() {
     $('#tabla_reparacion').DataTable().search(
         $('#global_filter').val(),
