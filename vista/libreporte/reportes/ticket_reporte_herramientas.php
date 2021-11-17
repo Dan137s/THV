@@ -7,7 +7,7 @@ $consulta = /**"select * from reparacion";**/
 $html="Herramientas";
 $resultado = $mysqli->query($consulta);
 while($row = $resultado->fetch_assoc()){
-    $html.="<br>[ID]:".$row['herramienta_id'].''. " [Marca]:".$row['herramienta_marca'];
+    $html.="<br>[ID:".$row['herramienta_id'].']' . " [S/N:".$row['herramienta_serial'].']' ." [Marca:".$row['herramienta_marca'] .']'. " [Modelo:".$row['herramienta_modelo'].']'. " [Estado:".$row['herramienta_estatus'].']';
 
 
 }
