@@ -95,7 +95,7 @@ $('#tabla_reparacion').on('click', '.imprimir', function() {
     if (tablereparacion.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
         var data = tablereparacion.row(this).data();
     }
-    window.open("../vista/libreporte/reportes/generar_ticket.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
+    window.open("../vista/libreporte/reportes/ticket_cotizacion.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
 
 })
 

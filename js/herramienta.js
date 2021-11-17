@@ -47,7 +47,7 @@ function listar_herramienta() {
             },
 
 
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>" }
         ],
 
         "language": idioma_espanol,
@@ -88,6 +88,18 @@ $('#tabla_herramienta').on('click', '.editar', function() {
     $("#txt_descripcion_editar").val(data.herramienta_descripcion)
     $("#txt_estatus_editar").val(data.herramienta_estatus).trigger("change");
 })
+
+
+$('#tabla_herramienta').on('click', '.imprimir', function() {
+    var data = tableherramienta.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tableherramienta.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tableherramienta.row(this).data();
+    }
+    window.open("../vista/libreporte/reportes/ticket_reporte_herramientas.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
+
+
+})
+
 
 function filterGlobal() {
     $('#tabla_herramienta').DataTable().search(
