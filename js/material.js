@@ -45,7 +45,7 @@ function listar_material() {
             },
 
 
-            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
+            { "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>" }
         ],
 
         "language": idioma_espanol,

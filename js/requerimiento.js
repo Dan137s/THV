@@ -13,7 +13,7 @@ function listar_requerimiento() {
         "destroy": true,
         "async": false,
         "processing": true,
-        "ajax": {       
+        "ajax": {
             "url": "../controlador/requerimiento/controlador_requerimiento_listar.php",
             type: 'POST'
         },
@@ -24,7 +24,8 @@ function listar_requerimiento() {
             { "data": "usu_alias" },
             { "data": "direccion" },
             { "data": "fecha_ejecucion" },
-            {"data": "requerimiento_estado",
+            {
+                "data": "requerimiento_estado",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
                         return "<span class='label label-success'>" + data + "</span>";
@@ -37,17 +38,17 @@ function listar_requerimiento() {
                 "data": "requerimiento_estado",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
-                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success' disabled><i class='fa fa-check'></i></button>";
+                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success' disabled><i class='fa fa-check'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>";
                     } else {
 
-                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger' disabled><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'><i class='fa fa-check'></i></button>";
+                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger' disabled><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'><i class='fa fa-check'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>";
                     }
                 }
             }
 
             //{ "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
-        
-           ],
+
+        ],
 
         "language": idioma_espanol,
         select: true
@@ -74,7 +75,7 @@ function listar_requerimiento2() {
         "destroy": true,
         "async": false,
         "processing": true,
-        "ajax": {       
+        "ajax": {
             "url": "../controlador/requerimiento/controlador_requerimiento_listar.php",
             type: 'POST'
         },
@@ -87,7 +88,8 @@ function listar_requerimiento2() {
             { "data": "voluntario" },
             { "data": "direccion" },
             { "data": "fecha_ejecucion" },
-            {"data": "requerimiento_estado",
+            {
+                "data": "requerimiento_estado",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
                         return "<span class='label label-success'>" + data + "</span>";
@@ -98,8 +100,8 @@ function listar_requerimiento2() {
             },
 
             //{ "defaultContent": "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>" }
-        
-           ],
+
+        ],
 
         "language": idioma_espanol,
         select: true
@@ -189,10 +191,12 @@ function filterGlobal() {
         $('#global_filter').val(),
     ).draw();
 }
+
 function AbrirModalRegistros() {
     $("#modal_requerimiento_registro").modal({ backdrop: 'static', keyboard: false })
     $("#modal_requerimiento_registro").modal('show');
 }
+
 function registrarRequerimiento() {
 
     var datoplano = $("#file_planos").val();
@@ -211,27 +215,26 @@ function registrarRequerimiento() {
     var voluntario = $("#txt_voluntario").val();
     var diagnostico = $("#txt_diagnostico").val();
     var monto = $("#txt_monto").val()
-    //var propuesta = $("#txt_propuesta").val();
+        //var propuesta = $("#txt_propuesta").val();
     var datofirma = $("#file_firma").val();
 
-    if(datoplano.length==0 ||vesino.length==0 ||observar.length==0 ||fono.length==0 ||fechaejecucion.length==0
-        ||datoorientativa.length==0||trabajador.length==0
-        ||datogeneral.length==0||datodaño.length==0||direccion.length==0||voluntario.length==0
-        ||diagnostico.length==0||monto.length==0
-        ||datofirma.length==0 )
-    {
+    if (datoplano.length == 0 || vesino.length == 0 || observar.length == 0 || fono.length == 0 || fechaejecucion.length == 0 ||
+        datoorientativa.length == 0 || trabajador.length == 0 ||
+        datogeneral.length == 0 || datodaño.length == 0 || direccion.length == 0 || voluntario.length == 0 ||
+        diagnostico.length == 0 || monto.length == 0 ||
+        datofirma.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
     var plano = $("#file_planos")[0].files[0];
-    var orientativ0 =  $("#file_orientativa")[0].files[0];
+    var orientativ0 = $("#file_orientativa")[0].files[0];
     var general = $("#file_general")[0].files[0];
     var daño = $("#file_daño")[0].files[0];
     var firma = $("#file_firma")[0].files[0];
 
     var formData = new FormData();
     formData.append("t1", plano);
-    formData.append("t2",vesino );
+    formData.append("t2", vesino);
     formData.append("t3", observar);
     formData.append("t4", fono);
     formData.append("t5", fechaejecucion);
@@ -249,15 +252,15 @@ function registrarRequerimiento() {
     //formData.append("t14", propuesta);
     formData.append("t15", firma);
 
-    
+
 
     $.ajax({
         url: "../controlador/requerimiento/controlador_requerimiento_registrar.php",
         type: 'POST',
         processData: false,
         contentType: false,
-        Caches:false,
-		data: formData
+        Caches: false,
+        data: formData
     }).done(function(resp) {
         if (resp < 0) {
             Swal.fire("ERROR!!!", "Error en el ingreso de datos", "warning");
@@ -270,28 +273,28 @@ function registrarRequerimiento() {
             $("#txt_observacion_vesino").val("");
             $("#txt_fono_vesino").val("");
             $("#txt_fecha_ejecucion").val("");
-            
+
             $("#file_orientativa").val("");
             $("#txt_travajador").val("");
-            
+
             $("#file_general").val("");
             $("#file_daño").val("");
             $("#txt_direccion_vecino").val("");
-            
+
             $("#txt_voluntario").val("");
             $("#txt_diagnostico").val("");
             $("#txt_monto").val("")
-            //$("#txt_propuesta").val("");
+                //$("#txt_propuesta").val("");
             $("#file_firma").val("");
             limpiar();
             table.ajax.reload();
 
         }
     })
-    
+
 }
-function limpiar()
-{
+
+function limpiar() {
     document.getElementById("imgSalida").src = '../requerimiento_imagenes/no_disponible.png';
     document.getElementById("galeria_orientatica").src = '../requerimiento_imagenes/no_disponible.png';
     document.getElementById("galeris_general").src = '../requerimiento_imagenes/no_disponible.png';
@@ -306,7 +309,7 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
     }
     $("#modal_edit").modal({ backdrop: 'static', keyboard: false })
     $("#modal_edit").modal('show');
-    
+
     $("#idrequerimiento").val(data.requerimiento_id);
     $("#txt_rut_vesino_edit").val(data.usu_nombre);
     $("#txt_observacion_vesino_edit").val(data.observacion);
@@ -314,16 +317,16 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
     $("#txt_fecha_ejecucion_edit").val(data.fecha_ejecucion);
 
     $("#txt_diagnostico_edit").val(data.diagnostico);
-    
+
     $("#txt_travajador_edit").val(data.trabajador);
     $("#txt_direccion_vecino_edit").val(data.direccion);
     $("#txt_voluntario_edit").val(data.voluntario);
     $("#txt_monto_edit").val(data.monto);
 
-    $("#file_planos_edit").change(function () {
+    $("#file_planos_edit").change(function() {
         if (this.files && this.files[0]) {
             var reader = new FileReader();
-            reader.onload = function (e) {
+            reader.onload = function(e) {
                 $('#imgSalida-edit').attr('src', data.ubicacion_mapa);
             }
             reader.readAsDataURL(this.files[0]);
@@ -332,8 +335,8 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
 
     /////////////////////////////////////////////////////////////////////file_planos_edit
 
-    
-    
+
+
     /////////////////////////////////////////////////////////////////////
     document.getElementById("imgSalida-edit").src = (data.ubicacion_mapa);
     document.getElementById("galeria_orientatica-edit").src = (data.vista_orientativa);
@@ -341,6 +344,7 @@ $('#tabla_requerimiento').on('click', '.editar', function() {
     document.getElementById("galeris_general-edit").src = (data.vista_general);
     document.getElementById("galeria_recepcion-edit").src = (data.recepcion);
 })
+
 function ModificarRequerimiento() {
 
     var id_usuario = $("#idrequerimiento").val();
@@ -355,60 +359,58 @@ function ModificarRequerimiento() {
     var diagnostico = $("#txt_diagnostico_edit").val();
     var monto = $("#txt_monto_edit").val()
 
-    if(vesino.length==0 ||observar.length==0 ||fono.length==0 ||fechaejecucion.length==0
-        ||trabajador.length==0
-        ||direccion.length==0||voluntario.length==0
-        ||diagnostico.length==0||monto.length==0)
-    {
+    if (vesino.length == 0 || observar.length == 0 || fono.length == 0 || fechaejecucion.length == 0 ||
+        trabajador.length == 0 ||
+        direccion.length == 0 || voluntario.length == 0 ||
+        diagnostico.length == 0 || monto.length == 0) {
         return Swal.fire("Mensaje De Advertencia", "Llene los campos vacios", "warning");
     }
 
     var plano = $("#file_planos_edit")[0].files[0];
-    var orientativ0 =  $("#file_orientativa_edit")[0].files[0];
+    var orientativ0 = $("#file_orientativa_edit")[0].files[0];
     var general = $("#file_general_edit")[0].files[0];
     var daño = $("#file_daño_edit")[0].files[0];
     var firma = $("#file_firma_edit")[0].files[0];
 
     var formData = new FormData();
 
-    formData.append("id", id_usuario);//
-    formData.append("t1", plano);//
-    formData.append("t2",vesino );//
-    formData.append("t3", observar);//
-    formData.append("t4", fono);//
+    formData.append("id", id_usuario); //
+    formData.append("t1", plano); //
+    formData.append("t2", vesino); //
+    formData.append("t3", observar); //
+    formData.append("t4", fono); //
 
-    formData.append("t5", fechaejecucion);//
-    formData.append("t6", orientativ0);//
-    formData.append("t7", trabajador);//
-    formData.append("t8", general);//
-    formData.append("t9", daño);//
+    formData.append("t5", fechaejecucion); //
+    formData.append("t6", orientativ0); //
+    formData.append("t7", trabajador); //
+    formData.append("t8", general); //
+    formData.append("t9", daño); //
 
-    formData.append("t10", direccion);//
-    formData.append("t11", voluntario);//
-    formData.append("t12", diagnostico);//
-    formData.append("t13", monto);//
-    formData.append("t15", firma);//
+    formData.append("t10", direccion); //
+    formData.append("t11", voluntario); //
+    formData.append("t12", diagnostico); //
+    formData.append("t13", monto); //
+    formData.append("t15", firma); //
 
-    
+
 
     $.ajax({
         url: "../controlador/requerimiento/controlador_requerimiento_modificar.php",
         type: 'POST',
         processData: false,
         contentType: false,
-		data: formData
+        data: formData
     }).done(function(resp) {
         if (resp < 0) {
             Swal.fire("ERROR!!!", "Error en el ingreso de datos", "warning");
 
         } else {
             $("#modal_edit").modal('hide');
-            Swal.fire("Mensaje De Confirmación",resp+ "Requerimiento Actualizado Registrado", "success");
-            
+            Swal.fire("Mensaje De Confirmación", resp + "Requerimiento Actualizado Registrado", "success");
+
             table.ajax.reload();
 
         }
     })
-    
-}
 
+}
