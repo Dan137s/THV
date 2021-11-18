@@ -7,7 +7,7 @@ $consulta = /**"select * from reparacion";**/
 $html="
 <table border='1'>
     <tr>
-        <td style='border-bottom:0px solid; border-left:0px; border-right:0px; border-top:0px;'><h2 style='font-size:18px;'> Reporte de herramientas</h2></td>
+        <td style='border-bottom:0px solid; border-left:0px; border-right:0px; border-top:0px;'><h2 style='font-size:18px;'> Reporte & estado de herramientas</h2></td>
     </tr>
 </table>";
 

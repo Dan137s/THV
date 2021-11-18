@@ -3,17 +3,17 @@ require_once __DIR__ .'/../vendor/autoload.php';
 require_once '../../../conexion_reportes/r_conexion.php';
 
 $consulta = /**"select * from reparacion";**/
-"SELECT * FROM herramienta";
+"SELECT * FROM material";
 $html="
 <table border='1'>
     <tr>
-        <td style='border-bottom:0px solid; border-left:0px; border-right:0px; border-top:0px;'><h2 style='font-size:18px;'> Reporte de herramientas</h2></td>
+        <td style='border-bottom:0px solid; border-left:0px; border-right:0px; border-top:0px;'><h2 style='font-size:18px;'> Reporte & estado de materiales</h2></td>
     </tr>
 </table>";
 
 $resultado = $mysqli->query($consulta);
 while($row = $resultado->fetch_assoc()){
-    $html.="<br>[ID:".$row['herramienta_id'].']' . " [S/N:".$row['herramienta_serial'].']' ." [Marca:".$row['herramienta_marca'] .']'. " [Modelo:".$row['herramienta_modelo'].']'. " [Estado:".$row['herramienta_estatus'].']';
+    $html.="<br>[ID:".$row['material_id'].']' . " [Nombre:".$row['material_nombre'].']' ." [Disponible:".$row['material_stock'] .']'. " [Stock:".$row['material_estatus'].']'. " [Stock:".$row['material_estatus'].']';
 
 
 }
