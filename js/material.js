@@ -85,6 +85,17 @@ $('#tabla_material').on('click', '.editar', function() {
     $("#txt_estatus_editar").val(data.material_estatus).trigger("change");
 })
 
+
+$('#tabla_material').on('click', '.imprimir', function() {
+    var data = tablematerial.row($(this).parents('tr')).data(); //Capturar a la fila que clickeo los datos en la variable data
+    if (tablematerial.row(this).child.isShown()) { //Aqui cuando esta en tamaño responsivo
+        var data = tablematerial.row(this).data();
+    }
+    window.open("../vista/libreporte/reportes/ticket_reporte_materiales.php?id=" + parseInt(data.reparacion_id) + "#zoom=100%", "Ticket", "scrollbars=NO");
+
+
+})
+
 function filterGlobal() {
     $('#tabla_material').DataTable().search(
         $('#global_filter').val(),
