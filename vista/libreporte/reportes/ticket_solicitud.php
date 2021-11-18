@@ -43,6 +43,7 @@ while($row = $resultado->fetch_assoc()){
 
    
     Trato Hecho Vecino 2021
+    <br>
  
 <div class='barcodecell'><barcode code='".$row['reparacion_id']."' type='I25' class='barcode' /><br>".$row['reparacion_id']."</div>";
 
