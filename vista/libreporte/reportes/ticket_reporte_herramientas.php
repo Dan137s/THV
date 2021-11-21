@@ -10,6 +10,7 @@ $html= ' <!DOCTYPE html>
     <link rel="stylesheet" href="style.css" media="all" />
   </head>
   <body>
+  
     <header class="clearfix">
       <div id="logo">
         <img src="../../libreporte/css/thv.png" style="width:300px">
@@ -44,13 +45,13 @@ $html= ' <!DOCTYPE html>
         
         $html.=' <tr>
             <td class="service">'.$contador.'</td>
-            <td class="desc">'.$row['herramienta_serial'].'</td>
-            <td class="unit">'.$row['herramienta_tipo'].'</td>
-            <td class="qty">'.$row['herramienta_marca'].'</td>
-            <td class="total">'.$row['herramienta_modelo'].'</td>
-            <td class="total">'.$row['herramienta_fecregistro'].'</td>
-            <td class="total">'.$row['herramienta_descripcion'].'</td>
-            <td class="total">'.$row['herramienta_estatus'].'</td>';
+            <td class="service">'.$row['herramienta_serial'].'</td>
+            <td class="service">'.$row['herramienta_tipo'].'</td>
+            <td class="service">'.$row['herramienta_marca'].'</td>
+            <td class="service">'.$row['herramienta_modelo'].'</td>
+            <td class="service">'.$row['herramienta_fecregistro'].'</td>
+            <td class="service">'.$row['herramienta_descripcion'].'</td>
+            <td class="service">'.$row['herramienta_estatus'].'</td>';
             
         }
          $html.=' </tr>
@@ -58,12 +59,12 @@ $html= ' <!DOCTYPE html>
         </tbody>
       </table>
       <div id="notices">
-        <div>NOTICE:</div>
-        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+        <div>OBSERVACIÓN ADICIONAL:</div>
+        <div class="service"></div>
       </div>
     </main>
-    <footer>
-      Invoice was created on a computer and is valid without the signature and seal.
+    <footer style="text-align:LEFT;">
+    Experiencia Desarrollo Tecnológico © IP SANTO TOMÁS LA SERENA - HOGAR DE CRISTO - THV COQUIMBO. 2021 VERSION 1
       
     </footer>
     

@@ -42,11 +42,11 @@ $html= ' <!DOCTYPE html>
 
         $html.=' <tr>
             <td class="service">'.$contador.'</td>
-            <td class="desc">'.$row['material_nombre'].'</td>
-            <td class="unit">'.$row['material_descripcion'].'</td>
-            <td class="qty">'.$row['material_stock'].'</td>
-            <td class="total">'.$row['material_fregistro'].'</td>
-            <td class="total">'.$row['material_estatus'].'</td>';
+            <td class="service">'.$row['material_nombre'].'</td>
+            <td class="service">'.$row['material_descripcion'].'</td>
+            <td class="service">'.$row['material_stock'].'</td>
+            <td class="service">'.$row['material_fregistro'].'</td>
+            <td class="service">'.$row['material_estatus'].'</td>';
             
         }
          $html.=' </tr>
@@ -54,13 +54,15 @@ $html= ' <!DOCTYPE html>
         </tbody>
       </table>
       <div id="notices">
-        <div>NOTICE:</div>
-        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
-      </div>
+      <div>OBSERVACIÓN ADICIONAL:</div>
+      <div class="service"></div>
+    </div>
     </main>
-    <footer>
-      Invoice was created on a computer and is valid without the signature and seal.
+    <footer style="text-align:LEFT;">
+    Experiencia Desarrollo Tecnológico © IP SANTO TOMÁS LA SERENA - HOGAR DE CRISTO - THV COQUIMBO. 2021 VERSION 1
+      
     </footer>
+    
   </body>
 </html>';
 $mpdf=new \Mpdf\Mpdf();
