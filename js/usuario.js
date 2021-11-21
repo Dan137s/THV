@@ -136,10 +136,10 @@ function listar_usuario() {
                 "data": "usu_estatus",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
-                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'title='Modificar cuenta'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'title='Desactivar cuenta'><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success' title='Activar cuenta' disabled><i class='fa fa-check'></i></button>";
+                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'title='Modificar cuenta'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'title='Desactivar cuenta'><i class='fa fa-minus-circle'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success' title='Activar cuenta' disabled><i class='fa fa-check'></i></button>";
                     } else {
 
-                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'title='Modificar cuenta'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger' title='Desactivar cuenta' disabled><i class='fa fa-trash'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'title='Activar cuenta'><i class='fa fa-check'></i></button>";
+                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'title='Modificar cuenta'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger' title='Desactivar cuenta' disabled><i class='fa fa-minus-circle'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'title='Activar cuenta'><i class='fa fa-check'></i></button>";
                     }
                 }
             }
