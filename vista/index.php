@@ -576,7 +576,8 @@ if(!isset($_SESSION['S_IDUSUARIO'])){
             
           </div>
 
-            <!--Añadir Para admin -->
+ <!-- [][][][][][][][][]##################################-Añadir Para admin -##############################[][][][][][][][][]-->
+         
 <?php
 if($_SESSION['S_ROL']=='ADMINISTRADOR'){
 ?>
@@ -678,10 +679,124 @@ if($_SESSION['S_ROL']=='ADMINISTRADOR'){
           }
           ?>
           </div>
+       <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-ADMIN-##############################[][][][][][][][][]-->
+       <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-ADMIN-##############################[][][][][][][][][]-->
 
+ 
+ 
+  <!-- [][][][][][][][][]##################################-Añadir-PARA-TRABAJADOR-##############################[][][][][][][][][]-->
 
+           
+  <?php
+if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
+?>
 
-            <!--Añadir Para vecino -->
+<!-- Contenido del panel admin -->
+  <section class="content">
+      
+<!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+
+<!-- small box -->
+ <div class="small-box bg-yellow">
+            <div class="inner">
+  
+  <h3>
+    <!-- Consulta para seleccionar todos los usuarios en la bd y mostrar el total -->
+  <?php
+              require '../modelo/modelo_count.php';
+              $con=Conectar();
+              $count = current($con->query("SELECT count(*) FROM `usuario`")->fetch());
+              echo"Total ".$count;
+  ?>
+  
+</h3>
+            <p>Usuarios</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+           
+            <a href="#"  onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')" class="small-box-footer">Ver usuarios <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>Ir Stock</h3>
+
+              <p>Herramientas</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-settings"></i>
+            </div>
+            <a href="#" onclick="cargar_contenido('contenido_principal','herramienta/vista_herramienta_listar.php')" class="small-box-footer">Ver herramientas <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>Ir Stock</h3>
+
+              <p>Materiales </p>
+            </div>
+            <div class="icon">
+              <i class="ion-ios-paper-outline  "></i>
+            </div>
+            <a href="#" onclick="cargar_contenido('contenido_principal','material/vista_material_listar.php')" class="small-box-footer">Ver materiales <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+         
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>  
+
+              Revisión
+
+              </h3>
+
+              <p>Presupuestos</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-clipboard"></i>
+            </div>
+            <a href="#" onclick="cargar_contenido('contenido_principal','presupuesto/vista_reparacion_listar2.php')"  class="small-box-footer">Ver reportes <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        
+          <?php 
+          }
+          
+          ?>
+            <?php
+          if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
+
+          ?>
+           <?php 
+          }
+          ?>
+          </div>
+      
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-TRABAJADOR-##############################[][][][][][][][][]-->
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-TRABAJADOR-##############################[][][][][][][][][]-->
+                
+ 
+ 
+       <!-- [][][][][][][][][]##################################-Añadir Para Junta de vecino  -##############################[][][][][][][][][]-->
+
+           
             <?php
 if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
 ?>
@@ -784,7 +899,8 @@ if($_SESSION['S_ROL']=='JUNTA-VECINAL'){
           ?>
           </div>
       
-          
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-JUNTA-VECINOS-##############################[][][][][][][][][]-->
+          <!-- [][][][][][][][][]##################################-FINAL-DE-PERFIL-JUNTA-VECINOS-##############################[][][][][][][][][]-->
                 
           
           <!-- /.box -->
