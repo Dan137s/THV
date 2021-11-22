@@ -38,10 +38,10 @@ function listar_requerimiento() {
                 "data": "requerimiento_estado",
                 render: function(data, type, row) {
                     if (data == 'ACTIVO') {
-                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'><i class='fa fa-minus-circle'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success' disabled><i class='fa fa-check'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>";
+                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-eye'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger'><i class='fa fa-minus-circle'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success' disabled><i class='fa fa-check'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>";
                     } else {
 
-                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-edit'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger' disabled><i class='fa fa-minus-circle'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'><i class='fa fa-check'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>";
+                        return "<button style='font-size:13px;' type='button' class='editar btn btn-primary'><i class='fa fa-eye'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='desactivar btn btn-danger' disabled><i class='fa fa-minus-circle'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='activar btn btn-success'><i class='fa fa-check'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='imprimir btn btn-danger' title='Imprimir'><i class='fa fa-print'></i></button>";
                     }
                 }
             }
