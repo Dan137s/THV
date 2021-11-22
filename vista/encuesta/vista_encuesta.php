@@ -60,7 +60,7 @@
         <div class="modal-content" style="width: 100%;align-items: center;" >
             <div class="modal-header" >
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h3 style="text-align:center;" class="modal-title"><b>Encuesta de opinión</b></h3>
+            <h3 style="text-align:center;" class="modal-title"><b>★Encuesta de opinión★</b></h3>
             </div>
             <div class="modal-body" >
                 <div class="col-lg-12">
@@ -69,9 +69,10 @@
              <hr>   
             <h5>Responda las siguientes preguntas, considerando:<br>
 
-            - En los ítems del 1 al 6 el número 1 como muy insatisfecho/a y el número 5 como muy satisfecho/a.<br>
+            -En el ítem (A) "pregunta del 1 a la 6" se califica desde el numero 1 al 5 como nivel de Satisfacción.<br>
 
-            - En los ítems del 7 al 8 el número 1 como muy en desacuerdo y el número 5 como muy de acuerdo.</h5><hr>
+            
+            -En el ítem (B) "pregunta del 7 a la 8" se califica desde el numero 1 al 5 como nivel de Desacuerdos.</h5><hr>
                     <label for="">RUT vecino</label>
                     <input type="text" class="form-control" id="txt_vesino" placeholder="Ingrese rut del vecino(a)">
                 </div>
@@ -81,21 +82,22 @@
 
             </div>
             <hr>
+            <h3 style="text-align:center;">ÍTEM (A)</h3>
             <div class="modal-body">
                 <h4 style="color: #FFC300; text-align:center;" class="modal-title"><b>Valore los siguientes aspectos del trabajo realizado en su hogar por Fundación Trato Hecho Vecino en cuanto al equipo de trabajo.</b></h4><p>
 
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p1" hidden>
                     <label for="">1.-Información sobre los trabajos a realizar.</label><br>
-                    <input  type="number" class="form-control-detalle" id="txt_1" min="1" max="5"><br>
-                </div><br>
+                    <input  type="number" class="form-control-detalle" id="txt_1" min="1" max="5">
+                </div>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p2" hidden>
                     <label for="">2.-Comunicación con el equipo de trabajo.</label><br>
-                    <input type="number" class="form-control-detalle" id="txt_2" min="1" max="5"><br>
+                    <input type="number" class="form-control-detalle" id="txt_2" min="1" max="5">
                 </div><br>
 
-                <h4 style="color: #FFC300; text-align:center;" class="modal-title"><b>Respeto del equipo de trabajo.</b></h4><p>
+                <h4 style="color: #FFC300; text-align:left;" class="modal-title"><b>Respeto del equipo de trabajo.</b></h4><p>
                 
                 <br><div class="encuesta_detalle">
                     <input type="text" id="txt_p3" hidden>
@@ -116,7 +118,8 @@
                     <input type="text" id="txt_p6" hidden>
                     <label for="">6.-Calidad del trabajo realizado por la Fundación Trato Hecho Vecino</label><br>
                     <input type="number" class="form-control-detalle" id="txt_6" min="1" max="5"><br>
-                </div> <hr><br>
+                </div> <hr>
+                <h3 style="text-align:center;">ÍTEM (B)</h3>
                 <h4 style="color: #FFC300; text-align:center;"  class="modal-title"><b>Valore los siguientes aspectos del trabajo realizado en su hogar por Fundación Trato Hecho Vecino en cuanto a la vinculación con la hospedería.</b></h4><p>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
@@ -130,8 +133,8 @@
                 </div><br> <hr>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p9" hidden>
-                    <label for="">¿Qué aspectos de Trato Hecho Vecino destacarías y qué aspectos sugieres mejorar</label><br>
-                    <textarea name="detalles" id="txt_9" class="form-control-detalle-area" form="form-encuesta-detalle"></textarea>
+                    <h4 style="text-align:center;" ><b>¿Qué aspectos de Trato Hecho Vecino destacarías y qué aspectos sugieres mejorar?</b></h4><br>
+                    <textarea style="center;"  name="detalles" id="txt_9" class="form-control-detalle-area" form="form-encuesta-detalle"></textarea>
                 </div>
 
             </div>
