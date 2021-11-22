@@ -79,7 +79,7 @@
         <div class="modal-content" style="width: 100%;align-items: center;">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><b>Detalle de la encuesta </b></h4>
+            <h4 style="text-align:center;" class="modal-title"><b>Detalle de encuestas a vecinos(as). </b></h4>
             </div>
             <div class="modal-body">
                 <h4 style="color: #FFC300;" class="modal-title"><b>Valore los siguientes aspectos del trabajo realizado en su hogar por Fundación Trato Hecho Vecino en cuanto al equipo de trabajo</b></h4><p>
@@ -87,12 +87,12 @@
                 <div class="encuesta_detalle">
                     <input type="text" id="idusuario" hidden>
                     <input type="text" id="txt_p1" hidden>
-                    <label for="">Información sobre los trabajos a realizar.</label>
+                    <label for="">Información sobre los trabajos a realizar.</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p1_editar" value="3" disabled><br>
                 </div>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p2" hidden>
-                    <label for="">Comunicación con el equipo de trabajo.</label>
+                    <label for="">Comunicación con el equipo de trabajo.</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p2_editar" value="3" disabled><br>
                 </div>
 
@@ -100,33 +100,33 @@
                 
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p3" hidden>
-                    <label for="">Valore los siguientes aspectos del trabajo realizado en su hogar por Fundación Trato Hecho Vecino en cuanto a la ejecución de los trabajos.</label>
+                    <label for="">Valore los siguientes aspectos del trabajo realizado en su hogar por Fundación Trato Hecho Vecino en cuanto a la ejecución de los trabajos.</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p3_editar" value="3" disabled><br>
                 </div>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p4" hidden>
-                    <label for="">Puntualidad del equipo de trabajo según hora acordada.</label>
+                    <label for="">Puntualidad del equipo de trabajo según hora acordada.</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p4_editar" value="3" disabled><br>
                 </div>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p5" hidden>
-                    <label for="">Limpieza del espacio donde se realizaron los trabajos por parte del equipo.</label>
+                    <label for="">Limpieza del espacio donde se realizaron los trabajos por parte del equipo.</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p5_editar" value="3" disabled><br>
                 </div>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p6" hidden>
-                    <label for="">Calidad del trabajo realizado por la Fundación Trato Hecho Vecino</label>
+                    <label for="">Calidad del trabajo realizado por la Fundación Trato Hecho Vecino</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p6_editar" value="3" disabled><br>
                 </div>
                 <h4 style="color: #FFC300;" class="modal-title"><b>Valore los siguientes aspectos del trabajo realizado en su hogar por Fundación Trato Hecho Vecino en cuanto a la vinculación con la hospedería</b></h4><p>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
-                    <label for="">Considero que al participar de esta iniciativa genero un aporte a mi comunidad</label>
+                    <label for="">Considero que al participar de esta iniciativa genero un aporte a mi comunidad</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p7_editar" value="3" disabled><br>
                 </div>
                 <div class="encuesta_detalle">
                     <input type="text" id="txt_p7" hidden>
-                    <label for="">Considero que a partir de esta iniciativa reconozco a los usuarios de la hospedería como vecinos de mi barrio</label>
+                    <label for="">Considero que a partir de esta iniciativa reconozco a los usuarios de la hospedería como vecinos de mi barrio</label><br>
                     <input type="text" class="form-control-detalle" id="txt_p7_editar" value="3" disabled><br>
                 </div><br>
                 <div class="encuesta_detalle">
