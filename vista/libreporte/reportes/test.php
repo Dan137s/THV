@@ -1,53 +1,70 @@
 <?php
 require_once __DIR__ .'/../vendor/autoload.php';
-require_once '../../../conexion_reportes/r_conexion.php';
 
-$consulta = /**"select * from reparacion";**/
-"SELECT reparacion.reparacion_id, reparacion.reparacion_fregistro
-FROM reparacion where reparacion_id='".$_GET['id']."'";
+$html= ' <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../../plantilla/dist/img/hc.png">
+    <title> Fundación | Trato Hecho Vecino |</title>
+    <link rel="stylesheet" href="style.css" media="all" />
+  </head>
+  <body>
+  
+    <header class="clearfix">
+      <div id="logo">
+        <img src="../../libreporte/css/thv.png" style="width:300px">
+        </br>
+      </div>
+      </br>
+      <h1>PROPUESTA AL VECINO(A)</h1>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+          <th class="service" style="text-align:center;">#</th>
+          <th class="service" style="text-align:center;">N° Serial</th>
+            
+          <th>Estatus</th>
+          </tr>
+        </thead>
+        <tbody>';
+        require_once '../../../conexion_reportes/r_conexion.php';
+        $consulta = /**"select * from reparacion";**/
+        "SELECT reparacion.reparacion_id, reparacion.reparacion_fregistro,reparacion.reparacion_req_vecino,reparacion.reparacion_estatus
+        FROM reparacion where reparacion_id='".$_GET['id']."'";
+        $resultado = $mysqli->query($consulta);
+        $contador=0;
+        while($row = $resultado->fetch_assoc()){
+        $contador++;
+        $html.="<br>[ID:".$row['reparacion_id'].']' . " [S/N:".$row['reparacion_estatus'].']' . " [Estado:".$row['herramienta_estatus'].']';
+        
+        $html.=' <tr>
+            <td class="service">'.$contador.'</td>
+            <td class="service">'.$row['reparacion_id'].'</td>
+            
+            <td class="service">'.$row['reparacion_estatus'].'</td>';
+            
+        }
+         $html.=' </tr>
 
-$html="<style>
-.barcode {
-    padding: 1.5mm;
-    margin: 0;
-    vertical-align: top;
-    color: black;
-}
-.barcodecell {
-    text-align: center;
-    vertical-align: middle;
-}
-</style>
-
-
-
-<table style='border-collapse:collapse' border ='1'>
-    <tr>
-    <td style='border-bottom:1px solid;border-left:0px;border-right:0px;border-top:0px;'> <h2 style='font-size:14px;'>SOLICITUD REPARACION</h2> </td>
-    </tr>
-</table>";
-
-$resultado = $mysqli->query($consulta);
-while($row = $resultado->fetch_assoc()){
-
-    $html.="
-    <br><b>N° Ticket:</b> ".$row['reparacion_id']."<br>
-    <br><b>Fecha:</b> ".$row['reparacion_fregistro']."<br>
-    .............................................
-    <table>
-    <tr>
-    <td style=text-align:center><b>!Gracias por confiar en nosotros...!<br></b>
-    </td>
-    </tr>
-    </table>
-
-   
-    Trato Hecho Vecino 2021
-    <br>
- 
-<div class='barcodecell'><barcode code='".$row['reparacion_id']."' type='I25' class='barcode' /><br>".$row['reparacion_id']."</div>";
-
-}
-$mpdf=new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' =>[80, 150]]);
+        </tbody>
+      </table>
+      <div id="notices">
+        <div>OBSERVACIÓN ADICIONAL:</div>
+        <div class="service"></div>
+      </div>
+    </main>
+    <footer style="text-align:LEFT;">
+    Experiencia Desarrollo Tecnológico © IP SANTO TOMÁS LA SERENA - HOGAR DE CRISTO - THV COQUIMBO. 2021 VERSION 1
+      
+    </footer>
+    
+  </body>
+</html>';
+$mpdf=new \Mpdf\Mpdf();
+$css=file_get_contents('../../libreporte/css/style.css');
+$mpdf->WriteHTML($css,1);
 $mpdf->WriteHTML($html);
 $mpdf->Output(); 
