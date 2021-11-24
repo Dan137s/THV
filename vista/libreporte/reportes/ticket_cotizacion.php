@@ -29,24 +29,27 @@ $html= ' <!DOCTYPE html>
         <thead>
           <tr>
           <th class="service" style="text-align:center;">Ticket de solicitud</th>
-          <th class="service" style="text-align:center;">Reparación</th>
+          <th class="service" style="text-align:center;">Tipo de reparación</th>
           <th class="service" style="text-align:center;">Descripción</th>
-          <th>Estatus</th>
+          <th>Nivel de trabajo</th>
+          <th class="service" style="text-align:center;">Personal de trabajo</th>
           </tr>
         </thead>
         <tbody>';
         require_once '../../../conexion_reportes/r_conexion.php';
         $consulta = /**"select * from reparacion";**/
-        "SELECT reparacion.reparacion_id,reparacion.reparacion_nombre, reparacion.reparacion_descripcion,reparacion.reparacion_fregistro,reparacion.reparacion_req_vecino,reparacion.reparacion_estatus
+        "SELECT reparacion.reparacion_id,reparacion.reparacion_nombre, reparacion.reparacion_descripcion,reparacion.reparacion_fregistro,reparacion.reparacion_req_vecino,reparacion.reparacion_nivel,reparacion.reparacion_cantidad_personas
         FROM reparacion where reparacion_id='".$_GET['id']."'";
         $resultado = $mysqli->query($consulta);
         while($row = $resultado->fetch_assoc()){
-        $html.="<br>[ID:".$row['reparacion_id'].']' . " [S/N:".$row['reparacion_nombre'].']' . " [Estado:".$row['reparacion_descripcion'].']' . " [Estado:".$row['reparacion_estatus'].']';
+        $html.="<br>[ID:".$row['reparacion_id'].']' . " [S/N:".$row['reparacion_nombre'].']' . " [Estado:".$row['reparacion_descripcion'].']' . " [Estado:".$row['reparacion_nivel'].']'. " [Estado:".$row['reparacion_cantidad_personas'].']';
         $html.=' <tr>
             <td class="service" style="text-align:center;">'.$row['reparacion_id'].'</td>
             <td class="service" style="text-align:center;">'.$row['reparacion_nombre'].'</td>
             <td class="service" style="text-align:center;">'.$row['reparacion_descripcion'].'</td>
-            <td class="service" style="text-align:center;">'.$row['reparacion_estatus'].'</td>';
+            <td class="service" style="text-align:center;">'.$row['reparacion_nivel'].'</td>
+            <td class="service" style="text-align:center;">'.$row['reparacion_cantidad_personas'].'</td>
+            ';
         }
          $html.=' </tr>
 
@@ -62,10 +65,9 @@ $html= ' <!DOCTYPE html>
       <table>
       <thead>
         <tr>
-        <th class="service" style="text-align:center;">Herramientas solicitadas</th>
-        <th class="service" style="text-align:center;">Solicitud al vecino</th>
-        <th class="service" style="text-align:center;">Jornada de trabajo</th>
-        <th> Cantidad personal</th>
+        <th class="service" style="text-align:center;">Estado </th>
+        <th class="service" style="text-align:center;">Herramientas prestadas</th>
+        <th class="service" style="text-align:center;">Material R. Vecino(a)</th>
         </tr>
       </thead><br>
       <tbody>';
@@ -77,10 +79,15 @@ $html= ' <!DOCTYPE html>
       while($row = $resultado->fetch_assoc()){
       $html.="<br>[ID:".$row['reparacion_insu_herra'].']' . " [S/N:".$row['reparacion_req_vecino'].']' . " [Estado:".$row['reparacion_nivel'].']' . " [Estado:".$row['reparacion_cantidad_personas'].']';
       $html.=' <tr>
+          <td class="service" style="text-align:center;">'.$row['reparacion_estatus'].'</td>
+        
+        
           <td class="service" style="text-align:center;">'.$row['reparacion_insu_herra'].'</td>
           <td class="service" style="text-align:center;">'.$row['reparacion_req_vecino'].'</td>
-          <td class="service" style="text-align:center;">'.$row['reparacion_nivel'].'</td>
-          <td class="service" style="text-align:center;">'.$row['reparacion_cantidad_personas'].'</td>';
+          
+          
+          
+         ';
       }
        $html.=' </tr>
 
