@@ -38,7 +38,7 @@ function listar_material() {
                         return "<span class='label label-danger'>" + data + "</span>";
                     }
                     if (data == 'AGOTADO') {
-                        return "<span class='label label-black' style='background:black'>" + data + "</span>";
+                        return "<span class='label label-yellow' style='background:gold'>" + data + "</span>";
                     }
                 }
             },
